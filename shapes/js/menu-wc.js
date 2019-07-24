@@ -61,19 +61,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                 </ul>
                 </li>
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#components-links"' :
-                            'data-target="#xs-components-links"' }>
-                            <span class="icon ion-md-cog"></span>
-                            <span>Components</span>
-                            <span class="icon ion-ios-arrow-down"></span>
-                        </div>
-                        <ul class="links collapse " ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
-                            <li class="link">
-                                <a href="components/NgMapsPolyline.html" data-type="entity-link">NgMapsPolyline</a>
-                            </li>
-                        </ul>
-                    </li>
                         <li class="chapter">
                             <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#directives-links"' :
                                 'data-target="#xs-directives-links"' }>
@@ -87,6 +74,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                                 <li class="link">
                                     <a href="directives/NgMapsPolygon.html" data-type="entity-link">NgMapsPolygon</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/NgMapsPolyline.html" data-type="entity-link">NgMapsPolyline</a>
                                 </li>
                                 <li class="link">
                                     <a href="directives/NgMapsPolylinePoint.html" data-type="entity-link">NgMapsPolylinePoint</a>

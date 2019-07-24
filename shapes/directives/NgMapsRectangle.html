@@ -84,7 +84,7 @@
 
                     <tr>
                         <td class="col-md-3">Selector</td>
-                        <td class="col-md-9"><code>agm-rectangle, map-rectangle</code></td>
+                        <td class="col-md-9"><code>map-rectangle</code></td>
                     </tr>
 
                 </tbody>
@@ -1525,7 +1525,7 @@ import { Subscription } from &#x27;rxjs&#x27;;
 import { RectangleManager } from &#x27;../managers/rectangle-manager&#x27;;
 
 @Directive({
-  selector: &#x27;agm-rectangle, map-rectangle&#x27;,
+  selector: &#x27;map-rectangle&#x27;,
   providers: [RectangleManager],
 })
 export class NgMapsRectangle implements OnInit, OnChanges, OnDestroy {

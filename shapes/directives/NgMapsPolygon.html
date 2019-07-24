@@ -45,6 +45,9 @@
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
         <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
+        </li>
+        <li >
             <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
 </ul>
@@ -62,51 +65,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>NgMapsPolygon renders a polygon on a <a href="AgmMap">AgmMap</a></p>
-<h3 id="example">Example</h3>
-<p>```typescript</p>
-<ul>
-<li>import { Component } from &#39;@angular/core&#39;;</li>
-<li></li>
-<li>@Component({</li>
-<li>selector: &#39;my-map-cmp&#39;,</li>
-<li>styles: [<code>agm-map {
-  height: 300px;
-}</code>],</li>
-<li>template: `
-&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
-  &lt;agm-polygon [paths]=&quot;paths&quot;&gt;  </agm-polygon>
-</agm-map>
-`</li>
-<li>})</li>
-<li>export class MyMapCmp {</li>
-<li>lat: number = 0;</li>
-<li>lng: number = 0;</li>
-<li>zoom: number = 10;</li>
-<li>paths: Array<LatLngLiteral> = [</li>
-<li>{ lat: 0,  lng: 10 },</li>
-<li>{ lat: 0,  lng: 20 },</li>
-<li>{ lat: 10, lng: 20 },</li>
-<li>{ lat: 10, lng: 10 },</li>
-<li>{ lat: 0,  lng: 10 }</li>
-<li>]</li>
-<li>// Nesting paths will create a hole where they overlap;</li>
-<li>nestedPaths: Array&lt;Array<LatLngLiteral>&gt; = [[</li>
-<li>{ lat: 0,  lng: 10 },</li>
-<li>{ lat: 0,  lng: 20 },</li>
-<li>{ lat: 10, lng: 20 },</li>
-<li>{ lat: 10, lng: 10 },</li>
-<li>{ lat: 0,  lng: 10 }</li>
-<li>], [</li>
-<li>{ lat: 0, lng: 15 },</li>
-<li>{ lat: 0, lng: 20 },</li>
-<li>{ lat: 5, lng: 20 },</li>
-<li>{ lat: 5, lng: 15 },</li>
-<li>{ lat: 0, lng: 15 }</li>
-<li>]]</li>
-<li>}</li>
-<li>```</li>
-</ul>
+                <p>NgMapsPolygon renders a polygon on a <a href="https://ng-maps.github.io/core/components/NgMapsViewComponent.html">NgMapsView</a></p>
 
             </p>
 
@@ -135,7 +94,7 @@
 
                     <tr>
                         <td class="col-md-3">Selector</td>
-                        <td class="col-md-9"><code>agm-polygon, map-polygon</code></td>
+                        <td class="col-md-9"><code>map-polygon</code></td>
                     </tr>
 
                 </tbody>
@@ -321,7 +280,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:246</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:200</a></div>
                             </td>
                         </tr>
 
@@ -382,7 +341,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:71</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:25</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -414,7 +373,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:84</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:38</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -442,7 +401,7 @@ points shown at the vertices and on each segment. Defaults to false.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:90</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:44</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -470,7 +429,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:95</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:49</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -502,7 +461,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:104</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:58</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -538,7 +497,7 @@ are maintained relative to the surface of the earth. Defaults to false.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:117</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:71</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -578,7 +537,7 @@ the polygon on the map.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:78</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:32</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -606,7 +565,7 @@ property defines the mode of dragging. Defaults to false.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:127</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:81</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -634,7 +593,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:132</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:86</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -661,7 +620,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:137</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:91</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -688,7 +647,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:142</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:96</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -715,7 +674,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:147</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:101</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -745,7 +704,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:152</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:106</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -772,7 +731,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:159</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:113</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -799,7 +758,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:166</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:120</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -826,7 +785,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:171</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:125</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -853,7 +812,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:178</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:132</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -880,7 +839,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:185</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:139</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -907,7 +866,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="192" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:192</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:146</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -934,7 +893,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:199</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:153</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -961,7 +920,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:206</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:160</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -988,7 +947,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:213</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:167</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -1015,7 +974,7 @@ named colors.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:220</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:174</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -1058,8 +1017,8 @@ named colors.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="275"
-                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:275</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="229"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:229</a></div>
                 </td>
             </tr>
 
@@ -1099,8 +1058,8 @@ named colors.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="269"
-                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:269</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="223"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:223</a></div>
                 </td>
             </tr>
 
@@ -1140,8 +1099,8 @@ named colors.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="331"
-                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:331</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="285"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:285</a></div>
                 </td>
             </tr>
 
@@ -1210,8 +1169,8 @@ named colors.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="343"
-                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:343</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="297"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:297</a></div>
                 </td>
             </tr>
 
@@ -1249,8 +1208,8 @@ named colors.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="251"
-                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:251</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="205"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:205</a></div>
                 </td>
             </tr>
 
@@ -1288,8 +1247,8 @@ named colors.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="257"
-                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:257</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="211"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:211</a></div>
                 </td>
             </tr>
 
@@ -1358,8 +1317,8 @@ named colors.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="348"
-                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:348</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="302"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:302</a></div>
                 </td>
             </tr>
 
@@ -1402,7 +1361,7 @@ named colors.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="244" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:244</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="198" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:198</a></div>
                             </td>
                         </tr>
 
@@ -1435,7 +1394,7 @@ named colors.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="245" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:245</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:199</a></div>
                             </td>
                         </tr>
 
@@ -1487,7 +1446,7 @@ named colors.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:224</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:178</a></div>
                             </td>
                         </tr>
 
@@ -1520,7 +1479,7 @@ named colors.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:246</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:200</a></div>
                             </td>
                         </tr>
 
@@ -1532,6 +1491,49 @@ named colors.</p>
 
     </div>
 
+    <div class="tab-pane fade " id="c-readme">
+        <p><h2 id="component">Component</h2>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
+
+&#64;Component({
+  selector: &#39;my-map&#39;,
+  styles: [`
+    map-view {
+      height: 300px;
+    }
+ `],
+  templateUrl: &#39;./my-map.component.html&#39;
+ })
+export class MyMapComponent {
+  lat: number = 0;
+  lng: number = 0;
+  zoom: number = 10;
+  paths: Array&lt;LatLngLiteral&gt; = [
+    { lat: 0,  lng: 10 },
+    { lat: 0,  lng: 20 },
+    { lat: 10, lng: 20 },
+    { lat: 10, lng: 10 },
+    { lat: 0,  lng: 10 }
+  ]
+  // Nesting paths will create a hole where they overlap;
+  nestedPaths: Array&lt;Array&lt;LatLngLiteral&gt;&gt; = [[
+    { lat: 0,  lng: 10 },
+    { lat: 0,  lng: 20 },
+    { lat: 10, lng: 20 },
+    { lat: 10, lng: 10 },
+    { lat: 0,  lng: 10 }
+  ], [
+    { lat: 0, lng: 15 },
+    { lat: 0, lng: 20 },
+    { lat: 5, lng: 20 },
+    { lat: 5, lng: 15 },
+    { lat: 0, lng: 15 }
+  ]]
+}</code></pre></div><h2 id="template">Template</h2>
+<div><pre class="line-numbers"><code class="language-angular2html">&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+  &lt;agm-polygon [paths]=&quot;paths&quot;&gt;&lt;/agm-polygon&gt;
+&lt;/agm-map&gt;</code></pre></div></p>
+    </div>
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
@@ -1548,56 +1550,10 @@ import { Subscription } from &#x27;rxjs&#x27;;
 import { PolygonManager } from &#x27;../managers/polygon-manager&#x27;;
 
 /**
- * NgMapsPolygon renders a polygon on a {@link AgmMap}
- *
- * ### Example
- * &#x60;&#x60;&#x60;typescript
- * import { Component } from &#x27;@angular/core&#x27;;
- *
- * @Component({
- *  selector: &#x27;my-map-cmp&#x27;,
- *  styles: [&#x60;
- *    agm-map {
- *      height: 300px;
- *    }
- * &#x60;],
- *  template: &#x60;
- *    &lt;agm-map [latitude]&#x3D;&quot;lat&quot; [longitude]&#x3D;&quot;lng&quot; [zoom]&#x3D;&quot;zoom&quot;&gt;
- *      &lt;agm-polygon [paths]&#x3D;&quot;paths&quot;&gt;
- *      &lt;/agm-polygon&gt;
- *    &lt;/agm-map&gt;
- *  &#x60;
- * })
- * export class MyMapCmp {
- *   lat: number &#x3D; 0;
- *   lng: number &#x3D; 0;
- *   zoom: number &#x3D; 10;
- *   paths: Array&lt;LatLngLiteral&gt; &#x3D; [
- *     { lat: 0,  lng: 10 },
- *     { lat: 0,  lng: 20 },
- *     { lat: 10, lng: 20 },
- *     { lat: 10, lng: 10 },
- *     { lat: 0,  lng: 10 }
- *   ]
- *   // Nesting paths will create a hole where they overlap;
- *   nestedPaths: Array&lt;Array&lt;LatLngLiteral&gt;&gt; &#x3D; [[
- *     { lat: 0,  lng: 10 },
- *     { lat: 0,  lng: 20 },
- *     { lat: 10, lng: 20 },
- *     { lat: 10, lng: 10 },
- *     { lat: 0,  lng: 10 }
- *   ], [
- *     { lat: 0, lng: 15 },
- *     { lat: 0, lng: 20 },
- *     { lat: 5, lng: 20 },
- *     { lat: 5, lng: 15 },
- *     { lat: 0, lng: 15 }
- *   ]]
- * }
- * &#x60;&#x60;&#x60;
+ * NgMapsPolygon renders a polygon on a {@link https://ng-maps.github.io/core/components/NgMapsViewComponent.html|NgMapsView}
  */
 @Directive({
-  selector: &#x27;agm-polygon, map-polygon&#x27;,
+  selector: &#x27;map-polygon&#x27;,
   providers: [PolygonManager],
 })
 export class NgMapsPolygon implements OnDestroy, OnChanges, AfterContentInit {
