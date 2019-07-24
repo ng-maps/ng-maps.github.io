@@ -1,0 +1,314 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ng-maps/core</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ng-maps/core</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>FitBoundsAccessor</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/core/src/lib/services/fit-bounds.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Class to implement when you what to be able to make it work with the auto fit bounds feature
+of AGM.</p>
+
+            </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Abstract</span>
+                                <a href="#getFitBoundsDetails$">getFitBoundsDetails$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFitBoundsDetails$"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Abstract</span>
+                            getFitBoundsDetails$
+                        </b>
+                        <a href="#getFitBoundsDetails$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFitBoundsDetails$()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">projects/core/src/lib/services/fit-bounds.ts:23</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/FitBoundsDetails.html" target="_self" >Observable&lt;FitBoundsDetails&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { BehaviorSubject, from, Observable, timer } from &#x27;rxjs&#x27;;
+import { flatMap, map, sample, shareReplay, switchMap } from &#x27;rxjs/operators&#x27;;
+import { MapsAPILoader } from &#x27;./maps-api-loader/maps-api-loader&#x27;;
+
+export interface FitBoundsDetails {
+  latLng: google.maps.LatLng | google.maps.LatLngLiteral;
+}
+
+/**
+ * @internal
+ */
+export type BoundsMap &#x3D; Map&lt;
+  string,
+  google.maps.LatLng | google.maps.LatLngLiteral
+&gt;;
+
+/**
+ * Class to implement when you what to be able to make it work with the auto fit bounds feature
+ * of AGM.
+ */
+export abstract class FitBoundsAccessor {
+  abstract getFitBoundsDetails$(): Observable&lt;FitBoundsDetails&gt;;
+}
+
+/**
+ * The FitBoundsService is responsible for computing the bounds of the a single map.
+ */
+@Injectable()
+export class FitBoundsService {
+  protected readonly bounds$: Observable&lt;google.maps.LatLngBounds&gt;;
+  protected readonly _boundsChangeSampleTime$ &#x3D; new BehaviorSubject&lt;number&gt;(
+    200,
+  );
+  protected readonly _includeInBounds$ &#x3D; new BehaviorSubject&lt;BoundsMap&gt;(
+    new Map&lt;string, google.maps.LatLng | google.maps.LatLngLiteral&gt;(),
+  );
+
+  constructor(loader: MapsAPILoader) {
+    this.bounds$ &#x3D; from(loader.load()).pipe(
+      flatMap(() &#x3D;&gt; this._includeInBounds$),
+      sample(
+        this._boundsChangeSampleTime$.pipe(switchMap((time) &#x3D;&gt; timer(0, time))),
+      ),
+      map((includeInBounds) &#x3D;&gt; this._generateBounds(includeInBounds)),
+      shareReplay(1),
+    );
+  }
+
+  private _generateBounds(
+    includeInBounds: Map&lt;
+      string,
+      google.maps.LatLng | google.maps.LatLngLiteral
+    &gt;,
+  ) {
+    const bounds &#x3D; new google.maps.LatLngBounds();
+    includeInBounds.forEach((b) &#x3D;&gt; bounds.extend(b));
+    return bounds;
+  }
+
+  addToBounds(latLng: google.maps.LatLng | google.maps.LatLngLiteral) {
+    const id &#x3D; this._createIdentifier(latLng);
+    if (this._includeInBounds$.value.has(id)) {
+      return;
+    }
+    const bounds &#x3D; this._includeInBounds$.value;
+    bounds.set(id, latLng);
+    this._includeInBounds$.next(bounds);
+  }
+
+  removeFromBounds(latLng: google.maps.LatLng | google.maps.LatLngLiteral) {
+    const bounds &#x3D; this._includeInBounds$.value;
+    bounds.delete(this._createIdentifier(latLng));
+    this._includeInBounds$.next(bounds);
+  }
+
+  changeFitBoundsChangeSampleTime(timeMs: number) {
+    this._boundsChangeSampleTime$.next(timeMs);
+  }
+
+  getBounds$(): Observable&lt;google.maps.LatLngBounds&gt; {
+    return this.bounds$;
+  }
+
+  protected _createIdentifier(
+    latLng: google.maps.LatLng | google.maps.LatLngLiteral,
+  ): string {
+    return &#x60;${latLng.lat}+${latLng.lng}&#x60;;
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'FitBoundsAccessor.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1955 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ng-maps/shapes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ng-maps/shapes</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>NgMapsPolygon</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/shapes/src/lib/directives/polygon.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>NgMapsPolygon renders a polygon on a <a href="AgmMap">AgmMap</a></p>
+<h3 id="example">Example</h3>
+<p>```typescript</p>
+<ul>
+<li>import { Component } from &#39;@angular/core&#39;;</li>
+<li></li>
+<li>@Component({</li>
+<li>selector: &#39;my-map-cmp&#39;,</li>
+<li>styles: [<code>agm-map {
+  height: 300px;
+}</code>],</li>
+<li>template: `
+&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+  &lt;agm-polygon [paths]=&quot;paths&quot;&gt;  </agm-polygon>
+</agm-map>
+`</li>
+<li>})</li>
+<li>export class MyMapCmp {</li>
+<li>lat: number = 0;</li>
+<li>lng: number = 0;</li>
+<li>zoom: number = 10;</li>
+<li>paths: Array<LatLngLiteral> = [</li>
+<li>{ lat: 0,  lng: 10 },</li>
+<li>{ lat: 0,  lng: 20 },</li>
+<li>{ lat: 10, lng: 20 },</li>
+<li>{ lat: 10, lng: 10 },</li>
+<li>{ lat: 0,  lng: 10 }</li>
+<li>]</li>
+<li>// Nesting paths will create a hole where they overlap;</li>
+<li>nestedPaths: Array&lt;Array<LatLngLiteral>&gt; = [[</li>
+<li>{ lat: 0,  lng: 10 },</li>
+<li>{ lat: 0,  lng: 20 },</li>
+<li>{ lat: 10, lng: 20 },</li>
+<li>{ lat: 10, lng: 10 },</li>
+<li>{ lat: 0,  lng: 10 }</li>
+<li>], [</li>
+<li>{ lat: 0, lng: 15 },</li>
+<li>{ lat: 0, lng: 20 },</li>
+<li>{ lat: 5, lng: 20 },</li>
+<li>{ lat: 5, lng: 15 },</li>
+<li>{ lat: 0, lng: 15 }</li>
+<li>]]</li>
+<li>}</li>
+<li>```</li>
+</ul>
+
+            </p>
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                            <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                            <code><a href="https://angular.io/api/core/AfterContentInit" target="_blank" >AfterContentInit</a></code>
+            </p>
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+                    <tr>
+                        <td class="col-md-3">Providers</td>
+                        <td class="col-md-9">
+                            <code>
+                                PolygonManager
+                            </code>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>agm-polygon, map-polygon</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_id">_id</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_polygonAddedToManager">_polygonAddedToManager</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#_polygonOptionsAttributes">_polygonOptionsAttributes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_subscriptions">_subscriptions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_addEventListeners">_addEventListeners</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_init">_init</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_updatePolygonOptions">_updatePolygonOptions</a>
+                            </li>
+                            <li>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterContentInit">ngAfterContentInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clickable">clickable</a>
+                            </li>
+                            <li>
+                                <a href="#editable">editable</a>
+                            </li>
+                            <li>
+                                <a href="#fillColor">fillColor</a>
+                            </li>
+                            <li>
+                                <a href="#fillOpacity">fillOpacity</a>
+                            </li>
+                            <li>
+                                <a href="#geodesic">geodesic</a>
+                            </li>
+                            <li>
+                                <a href="#paths">paths</a>
+                            </li>
+                            <li>
+                                <a href="#polyDraggable">polyDraggable</a>
+                            </li>
+                            <li>
+                                <a href="#strokeColor">strokeColor</a>
+                            </li>
+                            <li>
+                                <a href="#strokeOpacity">strokeOpacity</a>
+                            </li>
+                            <li>
+                                <a href="#strokeWeight">strokeWeight</a>
+                            </li>
+                            <li>
+                                <a href="#visible">visible</a>
+                            </li>
+                            <li>
+                                <a href="#zIndex">zIndex</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#polyClick">polyClick</a>
+                            </li>
+                            <li>
+                                <a href="#polyDblClick">polyDblClick</a>
+                            </li>
+                            <li>
+                                <a href="#polyDrag">polyDrag</a>
+                            </li>
+                            <li>
+                                <a href="#polyDragEnd">polyDragEnd</a>
+                            </li>
+                            <li>
+                                <a href="#polyDragStart">polyDragStart</a>
+                            </li>
+                            <li>
+                                <a href="#polyMouseDown">polyMouseDown</a>
+                            </li>
+                            <li>
+                                <a href="#polyMouseMove">polyMouseMove</a>
+                            </li>
+                            <li>
+                                <a href="#polyMouseOut">polyMouseOut</a>
+                            </li>
+                            <li>
+                                <a href="#polyMouseOver">polyMouseOver</a>
+                            </li>
+                            <li>
+                                <a href="#polyMouseUp">polyMouseUp</a>
+                            </li>
+                            <li>
+                                <a href="#polyRightClick">polyRightClick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_polygonManager: <a href="../injectables/PolygonManager.html">PolygonManager</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:246</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_polygonManager</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PolygonManager.html" target="_self" >PolygonManager</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clickable"></a>
+                        <b>clickable</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:71</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Indicates whether this Polygon handles mouse events. Defaults to true.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="editable"></a>
+                        <b>editable</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:84</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>If set to true, the user can edit this shape by dragging the control
+points shown at the vertices and on each segment. Defaults to false.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fillColor"></a>
+                        <b>fillColor</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:90</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The fill color. All CSS3 colors are supported except for extended
+named colors.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fillOpacity"></a>
+                        <b>fillOpacity</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:95</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The fill opacity between 0.0 and 1.0</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="geodesic"></a>
+                        <b>geodesic</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:104</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>When true, edges of the polygon are interpreted as geodesic and will
+follow the curvature of the Earth. When false, edges of the polygon are
+rendered as straight lines in screen space. Note that the shape of a
+geodesic polygon may appear to change when dragged, as the dimensions
+are maintained relative to the surface of the earth. Defaults to false.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paths"></a>
+                        <b>paths</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;google.maps.LatLng&gt; | Array&lt;google.maps.LatLngLiteral&gt; | Array&lt;Array&lt;google.maps.LatLng&gt;&gt; | Array&lt;Array&lt;google.maps.LatLngLiteral&gt;&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:117</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The ordered sequence of coordinates that designates a closed loop.
+Unlike polylines, a polygon may consist of one or more paths.
+  As a result, the paths property may specify one or more arrays of
+LatLng coordinates. Paths are closed automatically; do not repeat the
+first vertex of the path as the last vertex. Simple polygons may be
+defined using a single array of LatLngs. More complex polygons may
+specify an array of arrays. Any simple arrays are converted into Arrays.
+Inserting or removing LatLngs from the Array will automatically update
+the polygon on the map.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyDraggable"></a>
+                        <b>polyDraggable</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:78</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>If set to true, the user can drag this shape over the map. The geodesic
+property defines the mode of dragging. Defaults to false.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="strokeColor"></a>
+                        <b>strokeColor</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:127</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The stroke color. All CSS3 colors are supported except for extended
+named colors.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="strokeOpacity"></a>
+                        <b>strokeOpacity</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:132</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The stroke opacity between 0.0 and 1.0</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="strokeWeight"></a>
+                        <b>strokeWeight</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:137</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The stroke width in pixels.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="visible"></a>
+                        <b>visible</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:142</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Whether this polygon is visible on the map. Defaults to true.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="zIndex"></a>
+                        <b>zIndex</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:147</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The zIndex compared to other polys.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+            <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyClick"></a>
+                        <b>polyClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.PolyMouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:152</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired when the DOM click event is fired on the Polygon.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyDblClick"></a>
+                        <b>polyDblClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.PolyMouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:159</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired when the DOM dblclick event is fired on the Polygon.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyDrag"></a>
+                        <b>polyDrag</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;MouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:166</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is repeatedly fired while the user drags the polygon.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyDragEnd"></a>
+                        <b>polyDragEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;MouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:171</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired when the user stops dragging the polygon.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyDragStart"></a>
+                        <b>polyDragStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;MouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:178</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired when the user starts dragging the polygon.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyMouseDown"></a>
+                        <b>polyMouseDown</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.PolyMouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:185</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired when the DOM mousedown event is fired on the Polygon.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyMouseMove"></a>
+                        <b>polyMouseMove</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.PolyMouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="192" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:192</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired when the DOM mousemove event is fired on the Polygon.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyMouseOut"></a>
+                        <b>polyMouseOut</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.PolyMouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:199</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired on Polygon mouseout.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyMouseOver"></a>
+                        <b>polyMouseOver</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.PolyMouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:206</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired on Polygon mouseover.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyMouseUp"></a>
+                        <b>polyMouseUp</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.PolyMouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:213</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired whe the DOM mouseup event is fired on the Polygon</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="polyRightClick"></a>
+                        <b>polyRightClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.PolyMouseEvent&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:220</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This even is fired when the Polygon is right-clicked on.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_addEventListeners"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _addEventListeners
+                        </b>
+                        <a href="#_addEventListeners"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_addEventListeners()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="275"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:275</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_init"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _init
+                        </b>
+                        <a href="#_init"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_init()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="269"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:269</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_updatePolygonOptions"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _updatePolygonOptions
+                        </b>
+                        <a href="#_updatePolygonOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_updatePolygonOptions(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="331"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:331</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>google.maps.PolygonOptions</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="id"></a>
+                    <span class="name">
+                        <b>
+                            id
+                        </b>
+                        <a href="#id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>id()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="343"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:343</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterContentInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterContentInit
+                        </b>
+                        <a href="#ngAfterContentInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterContentInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="251"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:251</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
+                            ngOnChanges
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="257"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:257</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="348"
+                            class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:348</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_id"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _id</b>
+                            <a href="#_id"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="244" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:244</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_polygonAddedToManager"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _polygonAddedToManager</b>
+                            <a href="#_polygonAddedToManager"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="245" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:245</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_polygonOptionsAttributes"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Static</span>
+                            _polygonOptionsAttributes</b>
+                            <a href="#_polygonOptionsAttributes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;string&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    &#x27;clickable&#x27;,
+    &#x27;draggable&#x27;,
+    &#x27;editable&#x27;,
+    &#x27;fillColor&#x27;,
+    &#x27;fillOpacity&#x27;,
+    &#x27;geodesic&#x27;,
+    &#x27;icon&#x27;,
+    &#x27;map&#x27;,
+    &#x27;paths&#x27;,
+    &#x27;strokeColor&#x27;,
+    &#x27;strokeOpacity&#x27;,
+    &#x27;strokeWeight&#x27;,
+    &#x27;visible&#x27;,
+    &#x27;zIndex&#x27;,
+    &#x27;draggable&#x27;,
+    &#x27;editable&#x27;,
+    &#x27;visible&#x27;,
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:224</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_subscriptions"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _subscriptions</b>
+                            <a href="#_subscriptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">projects/shapes/src/lib/directives/polygon.ts:246</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  AfterContentInit,
+  Directive,
+  EventEmitter,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges,
+  Input,
+  Output,
+} from &#x27;@angular/core&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { PolygonManager } from &#x27;../managers/polygon-manager&#x27;;
+
+/**
+ * NgMapsPolygon renders a polygon on a {@link AgmMap}
+ *
+ * ### Example
+ * &#x60;&#x60;&#x60;typescript
+ * import { Component } from &#x27;@angular/core&#x27;;
+ *
+ * @Component({
+ *  selector: &#x27;my-map-cmp&#x27;,
+ *  styles: [&#x60;
+ *    agm-map {
+ *      height: 300px;
+ *    }
+ * &#x60;],
+ *  template: &#x60;
+ *    &lt;agm-map [latitude]&#x3D;&quot;lat&quot; [longitude]&#x3D;&quot;lng&quot; [zoom]&#x3D;&quot;zoom&quot;&gt;
+ *      &lt;agm-polygon [paths]&#x3D;&quot;paths&quot;&gt;
+ *      &lt;/agm-polygon&gt;
+ *    &lt;/agm-map&gt;
+ *  &#x60;
+ * })
+ * export class MyMapCmp {
+ *   lat: number &#x3D; 0;
+ *   lng: number &#x3D; 0;
+ *   zoom: number &#x3D; 10;
+ *   paths: Array&lt;LatLngLiteral&gt; &#x3D; [
+ *     { lat: 0,  lng: 10 },
+ *     { lat: 0,  lng: 20 },
+ *     { lat: 10, lng: 20 },
+ *     { lat: 10, lng: 10 },
+ *     { lat: 0,  lng: 10 }
+ *   ]
+ *   // Nesting paths will create a hole where they overlap;
+ *   nestedPaths: Array&lt;Array&lt;LatLngLiteral&gt;&gt; &#x3D; [[
+ *     { lat: 0,  lng: 10 },
+ *     { lat: 0,  lng: 20 },
+ *     { lat: 10, lng: 20 },
+ *     { lat: 10, lng: 10 },
+ *     { lat: 0,  lng: 10 }
+ *   ], [
+ *     { lat: 0, lng: 15 },
+ *     { lat: 0, lng: 20 },
+ *     { lat: 5, lng: 20 },
+ *     { lat: 5, lng: 15 },
+ *     { lat: 0, lng: 15 }
+ *   ]]
+ * }
+ * &#x60;&#x60;&#x60;
+ */
+@Directive({
+  selector: &#x27;agm-polygon, map-polygon&#x27;,
+  providers: [PolygonManager],
+})
+export class NgMapsPolygon implements OnDestroy, OnChanges, AfterContentInit {
+  /**
+   * Indicates whether this Polygon handles mouse events. Defaults to true.
+   */
+  @Input() clickable: boolean &#x3D; true;
+
+  /**
+   * If set to true, the user can drag this shape over the map. The geodesic
+   * property defines the mode of dragging. Defaults to false.
+   */
+  // tslint:disable-next-line:no-input-rename
+  @Input(&#x27;polyDraggable&#x27;) draggable: boolean &#x3D; false;
+
+  /**
+   * If set to true, the user can edit this shape by dragging the control
+   * points shown at the vertices and on each segment. Defaults to false.
+   */
+  @Input() editable: boolean &#x3D; false;
+
+  /**
+   * The fill color. All CSS3 colors are supported except for extended
+   * named colors.
+   */
+  @Input() fillColor: string;
+
+  /**
+   * The fill opacity between 0.0 and 1.0
+   */
+  @Input() fillOpacity: number;
+
+  /**
+   * When true, edges of the polygon are interpreted as geodesic and will
+   * follow the curvature of the Earth. When false, edges of the polygon are
+   * rendered as straight lines in screen space. Note that the shape of a
+   * geodesic polygon may appear to change when dragged, as the dimensions
+   * are maintained relative to the surface of the earth. Defaults to false.
+   */
+  @Input() geodesic: boolean &#x3D; false;
+
+  /**
+   * The ordered sequence of coordinates that designates a closed loop.
+   * Unlike polylines, a polygon may consist of one or more paths.
+   *  As a result, the paths property may specify one or more arrays of
+   * LatLng coordinates. Paths are closed automatically; do not repeat the
+   * first vertex of the path as the last vertex. Simple polygons may be
+   * defined using a single array of LatLngs. More complex polygons may
+   * specify an array of arrays. Any simple arrays are converted into Arrays.
+   * Inserting or removing LatLngs from the Array will automatically update
+   * the polygon on the map.
+   */
+  @Input() paths:
+    | Array&lt;google.maps.LatLng&gt;
+    | Array&lt;google.maps.LatLngLiteral&gt;
+    | Array&lt;Array&lt;google.maps.LatLng&gt;&gt;
+    | Array&lt;Array&lt;google.maps.LatLngLiteral&gt;&gt; &#x3D; [];
+
+  /**
+   * The stroke color. All CSS3 colors are supported except for extended
+   * named colors.
+   */
+  @Input() strokeColor: string;
+
+  /**
+   * The stroke opacity between 0.0 and 1.0
+   */
+  @Input() strokeOpacity: number;
+
+  /**
+   * The stroke width in pixels.
+   */
+  @Input() strokeWeight: number;
+
+  /**
+   * Whether this polygon is visible on the map. Defaults to true.
+   */
+  @Input() visible: boolean;
+
+  /**
+   * The zIndex compared to other polys.
+   */
+  @Input() zIndex: number;
+
+  /**
+   * This event is fired when the DOM click event is fired on the Polygon.
+   */
+  @Output() polyClick: EventEmitter&lt;
+    google.maps.PolyMouseEvent
+  &gt; &#x3D; new EventEmitter&lt;google.maps.PolyMouseEvent&gt;();
+
+  /**
+   * This event is fired when the DOM dblclick event is fired on the Polygon.
+   */
+  @Output() polyDblClick: EventEmitter&lt;
+    google.maps.PolyMouseEvent
+  &gt; &#x3D; new EventEmitter&lt;google.maps.PolyMouseEvent&gt;();
+
+  /**
+   * This event is repeatedly fired while the user drags the polygon.
+   */
+  @Output() polyDrag: EventEmitter&lt;MouseEvent&gt; &#x3D; new EventEmitter&lt;MouseEvent&gt;();
+
+  /**
+   * This event is fired when the user stops dragging the polygon.
+   */
+  @Output() polyDragEnd: EventEmitter&lt;MouseEvent&gt; &#x3D; new EventEmitter&lt;
+    MouseEvent
+  &gt;();
+
+  /**
+   * This event is fired when the user starts dragging the polygon.
+   */
+  @Output() polyDragStart: EventEmitter&lt;MouseEvent&gt; &#x3D; new EventEmitter&lt;
+    MouseEvent
+  &gt;();
+
+  /**
+   * This event is fired when the DOM mousedown event is fired on the Polygon.
+   */
+  @Output() polyMouseDown: EventEmitter&lt;
+    google.maps.PolyMouseEvent
+  &gt; &#x3D; new EventEmitter&lt;google.maps.PolyMouseEvent&gt;();
+
+  /**
+   * This event is fired when the DOM mousemove event is fired on the Polygon.
+   */
+  @Output() polyMouseMove: EventEmitter&lt;
+    google.maps.PolyMouseEvent
+  &gt; &#x3D; new EventEmitter&lt;google.maps.PolyMouseEvent&gt;();
+
+  /**
+   * This event is fired on Polygon mouseout.
+   */
+  @Output() polyMouseOut: EventEmitter&lt;
+    google.maps.PolyMouseEvent
+  &gt; &#x3D; new EventEmitter&lt;google.maps.PolyMouseEvent&gt;();
+
+  /**
+   * This event is fired on Polygon mouseover.
+   */
+  @Output() polyMouseOver: EventEmitter&lt;
+    google.maps.PolyMouseEvent
+  &gt; &#x3D; new EventEmitter&lt;google.maps.PolyMouseEvent&gt;();
+
+  /**
+   * This event is fired whe the DOM mouseup event is fired on the Polygon
+   */
+  @Output() polyMouseUp: EventEmitter&lt;
+    google.maps.PolyMouseEvent
+  &gt; &#x3D; new EventEmitter&lt;google.maps.PolyMouseEvent&gt;();
+
+  /**
+   * This even is fired when the Polygon is right-clicked on.
+   */
+  @Output() polyRightClick: EventEmitter&lt;
+    google.maps.PolyMouseEvent
+  &gt; &#x3D; new EventEmitter&lt;google.maps.PolyMouseEvent&gt;();
+
+  private static _polygonOptionsAttributes: Array&lt;string&gt; &#x3D; [
+    &#x27;clickable&#x27;,
+    &#x27;draggable&#x27;,
+    &#x27;editable&#x27;,
+    &#x27;fillColor&#x27;,
+    &#x27;fillOpacity&#x27;,
+    &#x27;geodesic&#x27;,
+    &#x27;icon&#x27;,
+    &#x27;map&#x27;,
+    &#x27;paths&#x27;,
+    &#x27;strokeColor&#x27;,
+    &#x27;strokeOpacity&#x27;,
+    &#x27;strokeWeight&#x27;,
+    &#x27;visible&#x27;,
+    &#x27;zIndex&#x27;,
+    &#x27;draggable&#x27;,
+    &#x27;editable&#x27;,
+    &#x27;visible&#x27;,
+  ];
+
+  private _id: string;
+  private _polygonAddedToManager: boolean &#x3D; false;
+  private _subscriptions: Subscription[] &#x3D; [];
+
+  constructor(private _polygonManager: PolygonManager) {}
+
+  /** @internal */
+  ngAfterContentInit() {
+    if (!this._polygonAddedToManager) {
+      this._init();
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): any {
+    if (!this._polygonAddedToManager) {
+      this._init();
+      return;
+    }
+
+    this._polygonManager.setPolygonOptions(
+      this,
+      this._updatePolygonOptions(changes),
+    );
+  }
+
+  private _init() {
+    this._polygonManager.addPolygon(this);
+    this._polygonAddedToManager &#x3D; true;
+    this._addEventListeners();
+  }
+
+  private _addEventListeners() {
+    const handlers &#x3D; [
+      {
+        name: &#x27;click&#x27;,
+        handler: (ev: google.maps.PolyMouseEvent) &#x3D;&gt; this.polyClick.emit(ev),
+      },
+      {
+        name: &#x27;dblclick&#x27;,
+        handler: (ev: google.maps.PolyMouseEvent) &#x3D;&gt; this.polyDblClick.emit(ev),
+      },
+      { name: &#x27;drag&#x27;, handler: (ev: MouseEvent) &#x3D;&gt; this.polyDrag.emit(ev) },
+      {
+        name: &#x27;dragend&#x27;,
+        handler: (ev: MouseEvent) &#x3D;&gt; this.polyDragEnd.emit(ev),
+      },
+      {
+        name: &#x27;dragstart&#x27;,
+        handler: (ev: MouseEvent) &#x3D;&gt; this.polyDragStart.emit(ev),
+      },
+      {
+        name: &#x27;mousedown&#x27;,
+        handler: (ev: google.maps.PolyMouseEvent) &#x3D;&gt;
+          this.polyMouseDown.emit(ev),
+      },
+      {
+        name: &#x27;mousemove&#x27;,
+        handler: (ev: google.maps.PolyMouseEvent) &#x3D;&gt;
+          this.polyMouseMove.emit(ev),
+      },
+      {
+        name: &#x27;mouseout&#x27;,
+        handler: (ev: google.maps.PolyMouseEvent) &#x3D;&gt; this.polyMouseOut.emit(ev),
+      },
+      {
+        name: &#x27;mouseover&#x27;,
+        handler: (ev: google.maps.PolyMouseEvent) &#x3D;&gt;
+          this.polyMouseOver.emit(ev),
+      },
+      {
+        name: &#x27;mouseup&#x27;,
+        handler: (ev: google.maps.PolyMouseEvent) &#x3D;&gt; this.polyMouseUp.emit(ev),
+      },
+      {
+        name: &#x27;rightclick&#x27;,
+        handler: (ev: google.maps.PolyMouseEvent) &#x3D;&gt;
+          this.polyRightClick.emit(ev),
+      },
+    ];
+    handlers.forEach((obj) &#x3D;&gt; {
+      const os &#x3D; this._polygonManager
+        .createEventObservable(obj.name, this)
+        .subscribe(obj.handler);
+      this._subscriptions.push(os);
+    });
+  }
+
+  private _updatePolygonOptions(
+    changes: SimpleChanges,
+  ): google.maps.PolygonOptions {
+    return Object.keys(changes)
+      .filter((k) &#x3D;&gt; NgMapsPolygon._polygonOptionsAttributes.indexOf(k) !&#x3D;&#x3D; -1)
+      .reduce((obj: any, k: string) &#x3D;&gt; {
+        obj[k] &#x3D; changes[k].currentValue;
+        return obj;
+      }, {});
+  }
+
+  /** @internal */
+  id(): string {
+    return this._id;
+  }
+
+  /** @internal */
+  ngOnDestroy() {
+    this._polygonManager.deletePolygon(this);
+    // unsubscribe all registered observable subscriptions
+    this._subscriptions.forEach((s) &#x3D;&gt; s.unsubscribe());
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'NgMapsPolygon.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
