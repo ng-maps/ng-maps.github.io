@@ -30,64 +30,24 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="ngmaps">NgMaps</h1>
-<p><a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/ng-maps/ng-maps.svg" alt="Greenkeeper badge" class="img-responsive"></a>
-<a href="https://travis-ci.com/ng-maps/ng-maps"><img src="https://travis-ci.com/ng-maps/ng-maps.svg?branch=master" alt="Build Status" class="img-responsive"></a>
-<a href="https://codecov.io/github/ng-maps/ng-maps?branch=master"><img src="https://codecov.io/github/ng-maps/ng-maps/coverage.svg?branch=master" alt="codecov.io" class="img-responsive"></a></p>
-<h2 id="packages">Packages</h2>
-<p>This project is a mono repo and hosts multiple packages:</p>
-<table class="table table-bordered compodoc-table">
-<thead>
-<tr>
-<th>Package</th>
-<th>Version</th>
-<th>Docs</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>@ng-maps/core</td>
-<td><a href="https://www.npmjs.com/package/@ng-maps/core"><img src="https://img.shields.io/npm/v/@ng-maps/core.svg" alt="@ng-maps/core" class="img-responsive"></a></td>
-<td><a href="https://ng-maps.github.io/core/index.html">Docs</a> <a href="https://github.com/ng-maps/ng-maps/tree/master/projects/core">README</a></td>
-</tr>
-<tr>
-<td>@ng-maps/snazzy-info-window</td>
-<td><a href="https://www.npmjs.com/package/@ng-maps/snazzy-info-window"><img src="https://img.shields.io/npm/v/@ng-maps/snazzy-info-window.svg" alt="@ng-maps/snazzy-info-window" class="img-responsive"></a></td>
-<td></td>
-</tr>
-<tr>
-<td>@ng-maps/marker-clusterer</td>
-<td><a href="https://www.npmjs.com/package/@ng-maps/marker-clusterer"><img src="https://img.shields.io/npm/v/@ng-maps/marker-clusterer.svg" alt="@ng-maps/marker-clusterer" class="img-responsive"></a></td>
-<td><a href="https://ng-maps.github.io/marker-clusterer/index.html">Docs</a> <a href="https://github.com/ng-maps/ng-maps/tree/master/projects/marker-clusterer">README</a></td>
-</tr>
-<tr>
-<td>@ng-maps/places</td>
-<td><a href="https://www.npmjs.com/package/@ng-maps/places"><img src="https://img.shields.io/npm/v/@ng-maps/places.svg" alt="@ng-maps/places" class="img-responsive"></a></td>
-<td><a href="https://ng-maps.github.io/places/index.html">Docs</a></td>
-</tr>
-<tr>
-<td>@ng-maps/data-layer</td>
-<td><a href="https://www.npmjs.com/package/@ng-maps/data-layer"><img src="https://img.shields.io/npm/v/@ng-maps/data-layer.svg" alt="@ng-maps/data-layer" class="img-responsive"></a></td>
-<td></td>
-</tr>
-<tr>
-<td>@ng-maps/kml-layer</td>
-<td><a href="https://www.npmjs.com/package/@ng-maps/kml-layer"><img src="https://img.shields.io/npm/v/@ng-maps/kml-layer.svg" alt="@ng-maps/kml-layer" class="img-responsive"></a></td>
-<td></td>
-</tr>
-<tr>
-<td>@ng-maps/drawing-layer</td>
-<td><a href="https://www.npmjs.com/package/@ng-maps/drawing-layer"><img src="https://img.shields.io/npm/v/@ng-maps/drawing-layer.svg" alt="@ng-maps/drawing-layer" class="img-responsive"></a></td>
-<td></td>
-</tr>
-<tr>
-<td>@ng-maps/shapes</td>
-<td><a href="https://www.npmjs.com/package/@ng-maps/shapes"><img src="https://img.shields.io/npm/v/@ng-maps/shapes.svg" alt="@ng-maps/shapes" class="img-responsive"></a></td>
-<td><a href="https://ng-maps.github.io/shapes/index.html">Docs</a></td>
-</tr>
-</tbody>
-</table>
-<hr>
+<h1 id="ng-mapsmarker-clusterer">@ng-maps/marker-clusterer</h1>
+<p><strong>@ng-maps/marker-clusterer</strong> is a wrapper around <a href="https://github.com/googlemaps/v3-utility-library/tree/master/markerclusterer">MarkerClusterer</a></p>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>Npm: <code>npm install @ng-maps/marker-clusterer</code></li>
+<li>Yarn: <code>yarn add @ng-maps/marker-clusterer</code></li>
+</ul>
+<p>Add <code>NgMapsMarkerClustererModule.forRoot({imagePath: &#39;/assets/images/m&#39;})</code> to your <em>AppModule</em></p>
+<p>You need to download images for clusters from <a href="https://github.com/googlemaps/v3-utility-library/tree/master/markerclusterer/images">https://github.com/googlemaps/v3-utility-library/tree/master/markerclusterer/images</a> or provide your own. The path you placed the images to can be specified globally through configuration like mentioned above or by setting <code>imagePath</code> attribute on the component.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="markerclusterer">MarkerClusterer</h3>
+<p>Add marker clusterer component around markers</p>
+<div><pre class="line-numbers"><code class="language-angular2html">&lt;map-view [latitude]=&quot;48.858222&quot; [longitude]=&quot;2.2945&quot; [zoom]=&quot;8&quot;&gt;
+  &lt;map-marker-cluster&gt;
+    &lt;map-marker [latitude]=&quot;48.858222&quot; [longitude]=&quot;2.2945&quot;&gt;&lt;/map-marker&gt;
+  &lt;/map-marker-cluster&gt;
+&lt;/map-view&gt;</code></pre></div><h2 id="additional-features">Additional features</h2>
+<p>Other features are provided in submodules. Find out more on the <a href="https://github.com/ng-maps/ng-maps">project page at github</a></p>
 
 
 
