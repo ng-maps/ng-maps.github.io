@@ -43,6 +43,9 @@
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
         <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
+        </li>
+        <li >
             <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
         <li >
@@ -63,24 +66,6 @@
     </p>
     <p class="comment">
         <p>NgMapsMarkerComponent renders a map marker inside a <a href="../components/NgMapsViewComponent.html">NgMapsViewComponent</a>.</p>
-<h3 id="example">Example</h3>
-<p>```typescript</p>
-<ul>
-<li>import { Component } from &#39;@angular/core&#39;;</li>
-<li></li>
-<li>@Component({</li>
-<li>selector: &#39;my-map-cmp&#39;,</li>
-<li>styles: [<code>.agm-map-container {
-  height: 300px;
-}</code>],</li>
-<li>template: `
-&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
-  &lt;agm-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [label]=&quot;&#39;M&#39;&quot;&gt;  </agm-marker>
-</agm-map>
-`</li>
-<li>})</li>
-<li>```</li>
-</ul>
 
     </p>
 
@@ -95,6 +80,16 @@
                     <code><a href="../classes/FitBoundsAccessor.html" target="_self" >FitBoundsAccessor</a></code>
     </p>
 
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+                <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+   &lt;agm-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; label=&quot;M&quot;&gt;&lt;/agm-marker&gt;
+&lt;/agm-map&gt;</code></pre>
+                </div>
+    </div>
 
 <section>
     <h3>Metadata</h3>
@@ -319,7 +314,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="205" class="link-to-prism">projects/core/src/lib/directives/marker.ts:205</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">projects/core/src/lib/directives/marker.ts:190</a></div>
                             </td>
                         </tr>
 
@@ -375,7 +370,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">projects/core/src/lib/directives/marker.ts:108</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">projects/core/src/lib/directives/marker.ts:93</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -403,7 +398,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">projects/core/src/lib/directives/marker.ts:95</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">projects/core/src/lib/directives/marker.ts:80</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -430,7 +425,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">projects/core/src/lib/directives/marker.ts:80</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/core/src/lib/directives/marker.ts:65</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -457,7 +452,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">projects/core/src/lib/directives/marker.ts:85</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">projects/core/src/lib/directives/marker.ts:70</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -489,7 +484,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">projects/core/src/lib/directives/marker.ts:137</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">projects/core/src/lib/directives/marker.ts:122</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -521,7 +516,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">projects/core/src/lib/directives/marker.ts:101</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">projects/core/src/lib/directives/marker.ts:86</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -553,7 +548,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">projects/core/src/lib/directives/marker.ts:123</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">projects/core/src/lib/directives/marker.ts:108</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -585,7 +580,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">projects/core/src/lib/directives/marker.ts:118</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">projects/core/src/lib/directives/marker.ts:103</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -612,7 +607,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">projects/core/src/lib/directives/marker.ts:90</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">projects/core/src/lib/directives/marker.ts:75</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -644,7 +639,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">projects/core/src/lib/directives/marker.ts:113</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">projects/core/src/lib/directives/marker.ts:98</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -676,7 +671,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">projects/core/src/lib/directives/marker.ts:131</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">projects/core/src/lib/directives/marker.ts:116</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -709,7 +704,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">projects/core/src/lib/directives/marker.ts:167</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">projects/core/src/lib/directives/marker.ts:152</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -736,7 +731,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">projects/core/src/lib/directives/marker.ts:174</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">projects/core/src/lib/directives/marker.ts:159</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -763,7 +758,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">projects/core/src/lib/directives/marker.ts:160</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">projects/core/src/lib/directives/marker.ts:145</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -790,7 +785,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">projects/core/src/lib/directives/marker.ts:148</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">projects/core/src/lib/directives/marker.ts:133</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -817,7 +812,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">projects/core/src/lib/directives/marker.ts:155</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">projects/core/src/lib/directives/marker.ts:140</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -844,7 +839,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="188" class="link-to-prism">projects/core/src/lib/directives/marker.ts:188</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">projects/core/src/lib/directives/marker.ts:173</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -871,7 +866,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="181" class="link-to-prism">projects/core/src/lib/directives/marker.ts:181</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">projects/core/src/lib/directives/marker.ts:166</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -914,8 +909,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="298"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:298</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="283"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:283</a></div>
                 </td>
             </tr>
 
@@ -955,8 +950,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="292"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:292</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="277"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:277</a></div>
                 </td>
             </tr>
 
@@ -994,8 +989,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="288"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:288</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="273"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:273</a></div>
                 </td>
             </tr>
 
@@ -1035,8 +1030,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="219"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:219</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="204"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:204</a></div>
                 </td>
             </tr>
 
@@ -1074,8 +1069,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="353"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:353</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="338"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:338</a></div>
                 </td>
             </tr>
 
@@ -1113,8 +1108,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="214"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:214</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="199"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:199</a></div>
                 </td>
             </tr>
 
@@ -1152,8 +1147,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="231"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:231</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="216"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:216</a></div>
                 </td>
             </tr>
 
@@ -1222,8 +1217,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="363"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:363</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="348"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:348</a></div>
                 </td>
             </tr>
 
@@ -1261,8 +1256,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="358"
-                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:358</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="343"
+                            class="link-to-prism">projects/core/src/lib/directives/marker.ts:343</a></div>
                 </td>
             </tr>
 
@@ -1311,7 +1306,7 @@ screen.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="203" class="link-to-prism">projects/core/src/lib/directives/marker.ts:203</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="188" class="link-to-prism">projects/core/src/lib/directives/marker.ts:188</a></div>
                             </td>
                         </tr>
 
@@ -1339,7 +1334,7 @@ screen.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">projects/core/src/lib/directives/marker.ts:200</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">projects/core/src/lib/directives/marker.ts:185</a></div>
                             </td>
                         </tr>
 
@@ -1372,7 +1367,7 @@ screen.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">projects/core/src/lib/directives/marker.ts:199</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="184" class="link-to-prism">projects/core/src/lib/directives/marker.ts:184</a></div>
                             </td>
                         </tr>
 
@@ -1405,7 +1400,7 @@ screen.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="201" class="link-to-prism">projects/core/src/lib/directives/marker.ts:201</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">projects/core/src/lib/directives/marker.ts:186</a></div>
                             </td>
                         </tr>
 
@@ -1432,7 +1427,7 @@ screen.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">projects/core/src/lib/directives/marker.ts:143</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">projects/core/src/lib/directives/marker.ts:128</a></div>
                             </td>
                         </tr>
 
@@ -1480,7 +1475,7 @@ This can be &#39;BOUNCE&#39; or &#39;DROP&#39;</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">projects/core/src/lib/directives/marker.ts:195</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">projects/core/src/lib/directives/marker.ts:180</a></div>
                             </td>
                         </tr>
 
@@ -1491,6 +1486,23 @@ This can be &#39;BOUNCE&#39; or &#39;DROP&#39;</p>
 
 </div>
 
+    <div class="tab-pane fade " id="c-readme">
+        <p><h2 id="component">Component</h2>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
+
+&#64;Component({
+  selector: &#39;my-map&#39;,
+  styles: [`
+    .agm-map-container {
+      height: 300px;
+    }
+  `],
+  templateUrl: &#39;./my-map.component.html&#39;
+})</code></pre></div><h2 id="template">Template</h2>
+<div><pre class="line-numbers"><code class="language-angular2html">&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+  &lt;agm-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; label=&quot;M&quot;&gt;&lt;/agm-marker&gt;
+&lt;/agm-map&gt;</code></pre></div></p>
+    </div>
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
@@ -1516,25 +1528,10 @@ let markerId &#x3D; 0;
 /**
  * NgMapsMarkerComponent renders a map marker inside a {@link NgMapsViewComponent}.
  *
- * ### Example
- * &#x60;&#x60;&#x60;typescript
- * import { Component } from &#x27;@angular/core&#x27;;
- *
- * @Component({
- *  selector: &#x27;my-map-cmp&#x27;,
- *  styles: [&#x60;
- *    .agm-map-container {
- *      height: 300px;
- *    }
- * &#x60;],
- *  template: &#x60;
- *    &lt;agm-map [latitude]&#x3D;&quot;lat&quot; [longitude]&#x3D;&quot;lng&quot; [zoom]&#x3D;&quot;zoom&quot;&gt;
- *      &lt;agm-marker [latitude]&#x3D;&quot;lat&quot; [longitude]&#x3D;&quot;lng&quot; [label]&#x3D;&quot;&#x27;M&#x27;&quot;&gt;
- *      &lt;/agm-marker&gt;
- *    &lt;/agm-map&gt;
- *  &#x60;
- * })
- * &#x60;&#x60;&#x60;
+ * @example
+ * &lt;agm-map [latitude]&#x3D;&quot;lat&quot; [longitude]&#x3D;&quot;lng&quot; [zoom]&#x3D;&quot;zoom&quot;&gt;
+ *               &lt;agm-marker [latitude]&#x3D;&quot;lat&quot; [longitude]&#x3D;&quot;lng&quot; label&#x3D;&quot;M&quot;&gt;&lt;/agm-marker&gt;
+ * &lt;/agm-map&gt;
  */
 @Component({
   selector: &#x27;agm-marker, map-marker&#x27;,
