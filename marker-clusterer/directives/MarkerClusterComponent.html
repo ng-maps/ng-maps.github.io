@@ -45,6 +45,9 @@
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
         </li>
         <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
+        </li>
+        <li >
             <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
 </ul>
@@ -63,28 +66,6 @@
             </p>
             <p class="comment">
                 <p>MarkerClusterComponent clusters map marker if they are near together</p>
-<h3 id="example">Example</h3>
-<p>```typescript</p>
-<ul>
-<li>import { Component } from &#39;@angular/core&#39;;</li>
-<li></li>
-<li>@Component({</li>
-<li>selector: &#39;my-map-cmp&#39;,</li>
-<li>styles: [<code>agm-map {
-  height: 300px;
-}</code>],</li>
-<li>template: `
-&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;  <agm-marker-cluster>
-    <agm-marker [latitude]="lat" [longitude]="lng" [label]="'M'">
-    </agm-marker>
-    <agm-marker [latitude]="lat2" [longitude]="lng2" [label]="'N'">
-    </agm-marker>
-  </agm-marker-cluster>
-</agm-map>
-`</li>
-<li>})</li>
-<li>```</li>
-</ul>
 
             </p>
 
@@ -127,6 +108,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_observableSubscriptions">_observableSubscriptions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -136,6 +132,10 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_addEventListeners">_addEventListeners</a>
+                            </li>
                             <li>
                                 <a href="#ngOnChanges">ngOnChanges</a>
                             </li>
@@ -159,6 +159,9 @@
                         <ul class="index-list">
                             <li>
                                 <a href="#averageCenter">averageCenter</a>
+                            </li>
+                            <li>
+                                <a href="#calculator">calculator</a>
                             </li>
                             <li>
                                 <a href="#gridSize">gridSize</a>
@@ -185,6 +188,20 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clusterClick">clusterClick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -203,7 +220,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/lib/directives/marker-cluster.ts:84</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/lib/directives/marker-cluster.ts:71</a></div>
                             </td>
                         </tr>
 
@@ -271,12 +288,39 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/lib/directives/marker-cluster.ts:71</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/lib/directives/marker-cluster.ts:34</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Whether the center of each cluster should be the average of all markers in the cluster.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="calculator"></a>
+                        <b>calculator</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Calculator</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/lib/directives/marker-cluster.ts:39</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A function that calculates the cluster style and text based on the markers in the cluster.</p>
 </div>
                     </td>
                 </tr>
@@ -298,7 +342,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/lib/directives/marker-cluster.ts:56</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/lib/directives/marker-cluster.ts:44</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -325,7 +369,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/lib/directives/marker-cluster.ts:84</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/lib/directives/marker-cluster.ts:46</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -346,7 +390,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/lib/directives/marker-cluster.ts:83</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/lib/directives/marker-cluster.ts:47</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -367,7 +411,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/lib/directives/marker-cluster.ts:61</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/lib/directives/marker-cluster.ts:52</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -394,7 +438,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/lib/directives/marker-cluster.ts:76</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/lib/directives/marker-cluster.ts:57</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -421,7 +465,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/lib/directives/marker-cluster.ts:81</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/lib/directives/marker-cluster.ts:62</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -448,7 +492,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/lib/directives/marker-cluster.ts:66</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/lib/directives/marker-cluster.ts:67</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -460,7 +504,30 @@
             </tbody>
         </table>
 </section>
+            <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clusterClick"></a>
+                        <b>clusterClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.MouseEvent&gt;</code>
 
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/lib/directives/marker-cluster.ts:69</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
             <section>
@@ -468,6 +535,47 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_addEventListeners"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _addEventListeners
+                        </b>
+                        <a href="#_addEventListeners"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_addEventListeners()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/lib/directives/marker-cluster.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -490,8 +598,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="99"
-                            class="link-to-prism">src/lib/directives/marker-cluster.ts:99</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/lib/directives/marker-cluster.ts:87</a></div>
                 </td>
             </tr>
 
@@ -560,8 +668,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="94"
-                            class="link-to-prism">src/lib/directives/marker-cluster.ts:94</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">src/lib/directives/marker-cluster.ts:81</a></div>
                 </td>
             </tr>
 
@@ -599,8 +707,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="130"
-                            class="link-to-prism">src/lib/directives/marker-cluster.ts:130</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">src/lib/directives/marker-cluster.ts:128</a></div>
                 </td>
             </tr>
 
@@ -617,53 +725,98 @@
         </tbody>
     </table>
 </section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_observableSubscriptions"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _observableSubscriptions</b>
+                            <a href="#_observableSubscriptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;Subscription&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/lib/directives/marker-cluster.ts:71</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 
     </div>
 
+    <div class="tab-pane fade " id="c-readme">
+        <p><h2 id="component">Component</h2>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
+
+&#64;Component({
+  selector: &#39;my-map&#39;,
+  styles: [`
+    map-view {
+      height: 300px;
+    }
+  `],
+  templateUrl: &#39;./my-map.component.html&#39;
+})
+export class MyComponent {
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+  lat2: number = 51.66;
+  lng2: number = 7.80911;
+  zoom: number = 10;
+}</code></pre></div><h2 id="template">Template</h2>
+<div><pre class="line-numbers"><code class="language-angular2html">&lt;map-view [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+  &lt;map-marker-cluster&gt;
+    &lt;map-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; label=&quot;M&quot;&gt;
+    &lt;/map-marker&gt;
+    &lt;map-marker [latitude]=&quot;lat2&quot; [longitude]=&quot;lng2&quot; label=&quot;N&quot;&gt;
+    &lt;/map-marker&gt;
+  &lt;/map-marker-cluster&gt;
+&lt;/map-view&gt;</code></pre></div></p>
+    </div>
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  Directive,
+  Directive, EventEmitter,
   Inject,
   Input,
   OnChanges,
   OnDestroy,
   OnInit,
-  Optional,
+  Optional, Output,
   SimpleChanges,
 } from &#x27;@angular/core&#x27;;
 import { InfoWindowManager, MarkerManager } from &#x27;@ng-maps/core&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
 import { MARKER_CLUSTER_CONFIG, MarkerClusterConfig } from &#x27;../config&#x27;;
 
 import { ClusterManager } from &#x27;../services/managers/cluster-manager&#x27;;
 
 /**
  * MarkerClusterComponent clusters map marker if they are near together
- *
- * ### Example
- * &#x60;&#x60;&#x60;typescript
- * import { Component } from &#x27;@angular/core&#x27;;
- *
- * @Component({
- *  selector: &#x27;my-map-cmp&#x27;,
- *  styles: [&#x60;
- *    agm-map {
- *      height: 300px;
- *    }
- * &#x60;],
- *  template: &#x60;
- *    &lt;agm-map [latitude]&#x3D;&quot;lat&quot; [longitude]&#x3D;&quot;lng&quot; [zoom]&#x3D;&quot;zoom&quot;&gt;
- *      &lt;agm-marker-cluster&gt;
- *        &lt;agm-marker [latitude]&#x3D;&quot;lat&quot; [longitude]&#x3D;&quot;lng&quot; [label]&#x3D;&quot;&#x27;M&#x27;&quot;&gt;
- *        &lt;/agm-marker&gt;
- *        &lt;agm-marker [latitude]&#x3D;&quot;lat2&quot; [longitude]&#x3D;&quot;lng2&quot; [label]&#x3D;&quot;&#x27;N&#x27;&quot;&gt;
- *        &lt;/agm-marker&gt;
- *      &lt;/agm-marker-cluster&gt;
- *    &lt;/agm-map&gt;
- *  &#x60;
- * })
- * &#x60;&#x60;&#x60;
  */
 @Directive({
   selector: &#x27;map-marker-cluster&#x27;,
@@ -675,25 +828,29 @@ import { ClusterManager } from &#x27;../services/managers/cluster-manager&#x27;;
 })
 export class MarkerClusterComponent
   implements OnDestroy, OnChanges, OnInit, MarkerClustererOptions {
-  /**
-   * The grid size of a cluster in pixels
-   */
-  @Input() gridSize: number;
-
-  /**
-   * The maximum zoom level that a marker can be part of a cluster.
-   */
-  @Input() maxZoom: number;
-
-  /**
-   * Whether the default behaviour of clicking on a cluster is to zoom into it.
-   */
-  @Input() zoomOnClick: boolean;
 
   /**
    * Whether the center of each cluster should be the average of all markers in the cluster.
    */
   @Input() averageCenter: boolean;
+
+  /**
+   * A function that calculates the cluster style and text based on the markers in the cluster.
+   */
+  @Input() calculator: Calculator;
+
+  /**
+   * The grid size of a cluster in pixels
+   */
+  @Input() gridSize: number;
+
+  @Input() imageExtension: string;
+  @Input() imagePath: string;
+
+  /**
+   * The maximum zoom level that a marker can be part of a cluster.
+   */
+  @Input() maxZoom: number;
 
   /**
    * The minimum number of markers to be in a cluster before the markers are hidden and a count is shown.
@@ -705,8 +862,14 @@ export class MarkerClusterComponent
    */
   @Input() styles: Array&lt;ClusterIconStyle&gt;;
 
-  @Input() imagePath: string;
-  @Input() imageExtension: string;
+  /**
+   * Whether the default behaviour of clicking on a cluster is to zoom into it.
+   */
+  @Input() zoomOnClick: boolean;
+
+  @Output() clusterClick: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
+
+  private _observableSubscriptions: Array&lt;Subscription&gt; &#x3D; [];
 
   constructor(
     @Optional()
@@ -718,24 +881,25 @@ export class MarkerClusterComponent
   /** @internal */
   ngOnDestroy() {
     this._clusterManager.clearMarkers();
+    this._observableSubscriptions.forEach((s) &#x3D;&gt; s.unsubscribe());
   }
 
   /** @internal */
   ngOnChanges(changes: SimpleChanges) {
+    if (changes.averageCenter) {
+      this._clusterManager.setAverageCenter(this);
+    }
     if (changes.gridSize) {
       this._clusterManager.setGridSize(this);
     }
+    if (changes.imageExtension) {
+      this._clusterManager.setImageExtension(this);
+    }
+    if (changes.imagePath) {
+      this._clusterManager.setImagePath(this);
+    }
     if (changes.maxZoom) {
       this._clusterManager.setMaxZoom(this);
-    }
-    if (changes.styles) {
-      this._clusterManager.setStyles(this);
-    }
-    if (changes.zoomOnClick) {
-      this._clusterManager.setZoomOnClick(this);
-    }
-    if (changes.averageCenter) {
-      this._clusterManager.setAverageCenter(this);
     }
     if (changes.minimumClusterSize) {
       this._clusterManager.setMinimumClusterSize(this);
@@ -743,28 +907,40 @@ export class MarkerClusterComponent
     if (changes.styles) {
       this._clusterManager.setStyles(this);
     }
-    if (changes.imagePath) {
-      this._clusterManager.setImagePath(this);
+    if (changes.zoomOnClick) {
+      this._clusterManager.setZoomOnClick(this);
     }
-    if (changes.imageExtension) {
-      this._clusterManager.setImageExtension(this);
-    }
+  }
+
+  private _addEventListeners() {
+    const handlers &#x3D; [
+      {
+        name: &#x27;clusterclick&#x27;,
+        handler: (ev: google.maps.MouseEvent) &#x3D;&gt; this.clusterClick.emit(ev)
+      },
+    ];
+    handlers.forEach((obj) &#x3D;&gt; {
+      const os &#x3D; this._clusterManager.createClusterEventObservable(obj.name, this).subscribe(obj.handler);
+      this._observableSubscriptions.push(os);
+    });
   }
 
   /** @internal */
   ngOnInit() {
+    this._addEventListeners();
     this._clusterManager.init({
-      gridSize: this.gridSize,
-      maxZoom: this.maxZoom,
-      zoomOnClick: this.zoomOnClick,
       averageCenter: this.averageCenter,
-      minimumClusterSize: this.minimumClusterSize,
-      styles: this.styles,
+      calculator: this.calculator,
+      gridSize: this.gridSize,
+      imageExtension: this.imageExtension,
       imagePath:
         this.imagePath &#x3D;&#x3D; null &amp;&amp; this._config !&#x3D; null
           ? this._config.imagePath
           : this.imagePath,
-      imageExtension: this.imageExtension,
+      maxZoom: this.maxZoom,
+      minimumClusterSize: this.minimumClusterSize,
+      styles: this.styles,
+      zoomOnClick: this.zoomOnClick,
     });
   }
 }

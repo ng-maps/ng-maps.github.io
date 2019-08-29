@@ -231,6 +231,10 @@ element <code>map-view</code>.</p>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
+                                <a href="#_handleTilesLoadedEvent">_handleTilesLoadedEvent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
                                     <span class="modifier">Async</span>
                                 <a href="#_initMapInstance">_initMapInstance</a>
                             </li>
@@ -432,6 +436,9 @@ element <code>map-view</code>.</p>
                             </li>
                             <li>
                                 <a href="#mapTypeIdChange">mapTypeIdChange</a>
+                            </li>
+                            <li>
+                                <a href="#tilesLoaded">tilesLoaded</a>
                             </li>
                             <li>
                                 <a href="#zoomChange">zoomChange</a>
@@ -1090,7 +1097,7 @@ enabled by default.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>&quot;roadmap&quot; | &quot;hybrid&quot; | &quot;satellite&quot; | &quot;terrain&quot; | string</code>
+                        <i>Type : </i>    <code>&quot;roadmap&quot; | &quot;hybrid&quot; | &quot;satellite&quot; | &quot;terrain&quot; | string | google.maps.MapTypeId</code>
 
                     </td>
                 </tr>
@@ -1391,11 +1398,6 @@ are enforced.</p>
 
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>true</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
                                     <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/lib/directives/map.ts:195</a></div>
@@ -1448,7 +1450,7 @@ on which the Street View road overlay should not appear (e.g. a non-Earth map ty
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>google.maps.MapTypeStyle[]</code>
+                        <i>Type : </i>    <code>Array&lt;google.maps.MapTypeStyle&gt;</code>
 
                     </td>
                 </tr>
@@ -1594,11 +1596,6 @@ center the map. See: <a href="https://developers.google.com/maps/documentation/j
 
                     </td>
                 </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>true</code>
-                    </td>
-                </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
                                     <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">src/lib/directives/map.ts:170</a></div>
@@ -1733,7 +1730,7 @@ center the map. See: <a href="https://developers.google.com/maps/documentation/j
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>EventEmitter&lt;MouseEvent&gt;</code>
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.MouseEvent&gt;</code>
 
                     </td>
                 </tr>
@@ -1761,7 +1758,7 @@ marker or infoWindow).</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>EventEmitter&lt;MouseEvent&gt;</code>
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.MouseEvent&gt;</code>
 
                     </td>
                 </tr>
@@ -1789,7 +1786,7 @@ on a marker or infoWindow).</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.Map&gt;</code>
 
                     </td>
                 </tr>
@@ -1817,7 +1814,7 @@ You get the google.maps.Map instance as a result of this EventEmitter.</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>EventEmitter&lt;MouseEvent&gt;</code>
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.MouseEvent&gt;</code>
 
                     </td>
                 </tr>
@@ -1857,6 +1854,33 @@ on a marker or infoWindow).</p>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>This event is fired when the mapTypeId property changes.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tilesLoaded"></a>
+                        <b>tilesLoaded</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;void&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="381" class="link-to-prism">src/lib/directives/map.ts:381</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired when the visible tiles have finished loading.</p>
 </div>
                     </td>
                 </tr>
@@ -1921,8 +1945,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="546"
-                            class="link-to-prism">src/lib/directives/map.ts:546</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="551"
+                            class="link-to-prism">src/lib/directives/map.ts:551</a></div>
                 </td>
             </tr>
 
@@ -1962,8 +1986,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="612"
-                            class="link-to-prism">src/lib/directives/map.ts:612</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="617"
+                            class="link-to-prism">src/lib/directives/map.ts:617</a></div>
                 </td>
             </tr>
 
@@ -2003,8 +2027,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="650"
-                            class="link-to-prism">src/lib/directives/map.ts:650</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="655"
+                            class="link-to-prism">src/lib/directives/map.ts:655</a></div>
                 </td>
             </tr>
 
@@ -2044,8 +2068,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="596"
-                            class="link-to-prism">src/lib/directives/map.ts:596</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="601"
+                            class="link-to-prism">src/lib/directives/map.ts:601</a></div>
                 </td>
             </tr>
 
@@ -2085,8 +2109,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="659"
-                            class="link-to-prism">src/lib/directives/map.ts:659</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="671"
+                            class="link-to-prism">src/lib/directives/map.ts:671</a></div>
                 </td>
             </tr>
 
@@ -2126,8 +2150,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="625"
-                            class="link-to-prism">src/lib/directives/map.ts:625</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="630"
+                            class="link-to-prism">src/lib/directives/map.ts:630</a></div>
                 </td>
             </tr>
 
@@ -2167,8 +2191,49 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="638"
-                            class="link-to-prism">src/lib/directives/map.ts:638</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="643"
+                            class="link-to-prism">src/lib/directives/map.ts:643</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_handleTilesLoadedEvent"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            _handleTilesLoadedEvent
+                        </b>
+                        <a href="#_handleTilesLoadedEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_handleTilesLoadedEvent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="664"
+                            class="link-to-prism">src/lib/directives/map.ts:664</a></div>
                 </td>
             </tr>
 
@@ -2209,8 +2274,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="385"
-                            class="link-to-prism">src/lib/directives/map.ts:385</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="390"
+                            class="link-to-prism">src/lib/directives/map.ts:390</a></div>
                 </td>
             </tr>
 
@@ -2281,8 +2346,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="590"
-                            class="link-to-prism">src/lib/directives/map.ts:590</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="595"
+                            class="link-to-prism">src/lib/directives/map.ts:595</a></div>
                 </td>
             </tr>
 
@@ -2354,8 +2419,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="462"
-                            class="link-to-prism">src/lib/directives/map.ts:462</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="467"
+                            class="link-to-prism">src/lib/directives/map.ts:467</a></div>
                 </td>
             </tr>
 
@@ -2426,8 +2491,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="534"
-                            class="link-to-prism">src/lib/directives/map.ts:534</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="539"
+                            class="link-to-prism">src/lib/directives/map.ts:539</a></div>
                 </td>
             </tr>
 
@@ -2467,8 +2532,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="561"
-                            class="link-to-prism">src/lib/directives/map.ts:561</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="566"
+                            class="link-to-prism">src/lib/directives/map.ts:566</a></div>
                 </td>
             </tr>
 
@@ -2509,8 +2574,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="571"
-                            class="link-to-prism">src/lib/directives/map.ts:571</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="576"
+                            class="link-to-prism">src/lib/directives/map.ts:576</a></div>
                 </td>
             </tr>
 
@@ -2581,8 +2646,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="451"
-                            class="link-to-prism">src/lib/directives/map.ts:451</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="456"
+                            class="link-to-prism">src/lib/directives/map.ts:456</a></div>
                 </td>
             </tr>
 
@@ -2654,8 +2719,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="506"
-                            class="link-to-prism">src/lib/directives/map.ts:506</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="511"
+                            class="link-to-prism">src/lib/directives/map.ts:511</a></div>
                 </td>
             </tr>
 
@@ -2724,8 +2789,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="445"
-                            class="link-to-prism">src/lib/directives/map.ts:445</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="450"
+                            class="link-to-prism">src/lib/directives/map.ts:450</a></div>
                 </td>
             </tr>
 
@@ -2794,8 +2859,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="433"
-                            class="link-to-prism">src/lib/directives/map.ts:433</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="438"
+                            class="link-to-prism">src/lib/directives/map.ts:438</a></div>
                 </td>
             </tr>
 
@@ -2833,8 +2898,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="381"
-                            class="link-to-prism">src/lib/directives/map.ts:381</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="386"
+                            class="link-to-prism">src/lib/directives/map.ts:386</a></div>
                 </td>
             </tr>
 
@@ -2872,8 +2937,8 @@ on a marker or infoWindow).</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="491"
-                            class="link-to-prism">src/lib/directives/map.ts:491</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="496"
+                            class="link-to-prism">src/lib/directives/map.ts:496</a></div>
                 </td>
             </tr>
 
@@ -3011,7 +3076,7 @@ Returns a promise that gets resolved after the event was triggered.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>string[]</code>
+                            <i>Type : </i>    <code>Array&lt;string&gt;</code>
 
                         </td>
                     </tr>
@@ -3079,7 +3144,7 @@ Returns a promise that gets resolved after the event was triggered.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Subscription[]</code>
+                            <i>Type : </i>    <code>Array&lt;Subscription&gt;</code>
 
                         </td>
                     </tr>
@@ -3126,7 +3191,7 @@ Returns a promise that gets resolved after the event was triggered.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="378" class="link-to-prism">src/lib/directives/map.ts:378</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="383" class="link-to-prism">src/lib/directives/map.ts:383</a></div>
                             </td>
                         </tr>
 
@@ -3149,7 +3214,12 @@ Returns a promise that gets resolved after the event was triggered.</p>
     }
  `],
   templateUrl: &#39;./my-map.component.html&#39;
-})</code></pre></div><h2 id="template">Template</h2>
+})
+export class MyComponent {
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+  zoom: number = 10;
+}</code></pre></div><h2 id="template">Template</h2>
 <div><pre class="line-numbers"><code class="language-angular2html">&lt;map-view [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;&lt;/map-view&gt;</code></pre></div></p>
     </div>
 
@@ -3213,7 +3283,7 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
   /**
    * Map option attributes that can change over time
    */
-  private static _mapOptionsAttributes: string[] &#x3D; [
+  private static _mapOptionsAttributes: Array&lt;string&gt; &#x3D; [
     &#x27;disableDoubleClickZoom&#x27;,
     &#x27;scrollwheel&#x27;,
     &#x27;draggable&#x27;,
@@ -3323,7 +3393,7 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
   /**
    * The enabled/disabled state of the Zoom control.
    */
-  @Input() zoomControl: boolean &#x3D; true;
+  @Input() zoomControl: boolean;
 
   /**
    * Options for the Zoom control.
@@ -3334,7 +3404,7 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
    * Styles to apply to each of the default map types. Note that for Satellite/Hybrid and Terrain
    * modes, these styles will only apply to labels and geometry.
    */
-  @Input() styles: google.maps.MapTypeStyle[] &#x3D; [];
+  @Input() styles: Array&lt;google.maps.MapTypeStyle&gt; &#x3D; [];
 
   /**
    * When true and the latitude and/or longitude values changes, the Google Maps panTo method is
@@ -3348,7 +3418,7 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
    * This control is part of the default UI, and should be set to false when displaying a map type
    * on which the Street View road overlay should not appear (e.g. a non-Earth map type).
    */
-  @Input() streetViewControl: boolean &#x3D; true;
+  @Input() streetViewControl: boolean;
 
   /**
    * Options for the Street View control.
@@ -3422,7 +3492,7 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
   /**
    * The map mapTypeId. Defaults to &#x27;roadmap&#x27;.
    */
-  @Input() mapTypeId: &#x27;roadmap&#x27; | &#x27;hybrid&#x27; | &#x27;satellite&#x27; | &#x27;terrain&#x27; | string &#x3D;
+  @Input() mapTypeId: &#x27;roadmap&#x27; | &#x27;hybrid&#x27; | &#x27;satellite&#x27; | &#x27;terrain&#x27; | string | google.maps.MapTypeId &#x3D;
     &#x27;roadmap&#x27;;
 
   /**
@@ -3469,29 +3539,29 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
    */
   @Input() tilt: number &#x3D; 0;
 
-  private _observableSubscriptions: Subscription[] &#x3D; [];
+  private _observableSubscriptions: Array&lt;Subscription&gt; &#x3D; [];
   private _fitBoundsSubscription: Subscription;
 
   /**
    * This event emitter gets emitted when the user clicks on the map (but not when they click on a
    * marker or infoWindow).
    */
-  @Output() mapClick: EventEmitter&lt;MouseEvent&gt; &#x3D; new EventEmitter&lt;MouseEvent&gt;();
+  @Output() mapClick: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
 
   /**
    * This event emitter gets emitted when the user right-clicks on the map (but not when they click
    * on a marker or infoWindow).
    */
-  @Output() mapRightClick: EventEmitter&lt;MouseEvent&gt; &#x3D; new EventEmitter&lt;
-    MouseEvent
+  @Output() mapRightClick: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;
+    google.maps.MouseEvent
   &gt;();
 
   /**
    * This event emitter gets emitted when the user double-clicks on the map (but not when they click
    * on a marker or infoWindow).
    */
-  @Output() mapDblClick: EventEmitter&lt;MouseEvent&gt; &#x3D; new EventEmitter&lt;
-    MouseEvent
+  @Output() mapDblClick: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;
+    google.maps.MouseEvent
   &gt;();
 
   /**
@@ -3529,7 +3599,12 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
    * This event is fired when the google map is fully initialized.
    * You get the google.maps.Map instance as a result of this EventEmitter.
    */
-  @Output() mapReady: EventEmitter&lt;any&gt; &#x3D; new EventEmitter&lt;any&gt;();
+  @Output() mapReady: EventEmitter&lt;google.maps.Map&gt; &#x3D; new EventEmitter&lt;google.maps.Map&gt;();
+
+  /**
+   * This event is fired when the visible tiles have finished loading.
+   */
+  @Output() tilesLoaded: EventEmitter&lt;void&gt; &#x3D; new EventEmitter&lt;void&gt;();
 
   @ViewChild(&#x27;container&#x27;, { static: true }) container: ElementRef;
 
@@ -3567,8 +3642,7 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
       rotateControlOptions: this.rotateControlOptions,
       fullscreenControl: this.fullscreenControl,
       fullscreenControlOptions: this.fullscreenControlOptions,
-      // @ts-ignore
-      mapTypeId: this.mapTypeId,
+      mapTypeId: this.mapTypeId as google.maps.MapTypeId,
       clickableIcons: this.clickableIcons,
       gestureHandling: this.gestureHandling,
       tilt: this.tilt,
@@ -3582,6 +3656,7 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
     this._handleMapMouseEvents();
     this._handleBoundsChange();
     this._handleMapTypeIdChange();
+    this._handleTilesLoadedEvent();
     this._handleIdleEvent();
   }
 
@@ -3812,6 +3887,13 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
     this._observableSubscriptions.push(s);
   }
 
+  private _handleTilesLoadedEvent() {
+    const s &#x3D; this._mapsWrapper.subscribeToMapEvent&lt;void&gt;(&#x27;tilesloaded&#x27;).subscribe(
+      () &#x3D;&gt; this.tilesLoaded.emit(void 0)
+    );
+    this._observableSubscriptions.push(s);
+  }
+
   private _handleMapMouseEvents() {
     interface Emitter {
       emit(value: any): void;
@@ -3822,7 +3904,7 @@ export class NgMapsViewComponent implements OnChanges, OnInit, OnDestroy {
       emitter: Emitter;
     }
 
-    const events: Event[] &#x3D; [
+    const events: Array&lt;Event&gt; &#x3D; [
       { name: &#x27;click&#x27;, emitter: this.mapClick },
       { name: &#x27;rightclick&#x27;, emitter: this.mapRightClick },
       { name: &#x27;dblclick&#x27;, emitter: this.mapDblClick },

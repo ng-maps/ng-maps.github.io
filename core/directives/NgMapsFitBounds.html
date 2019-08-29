@@ -299,14 +299,20 @@ Default: true.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">src/lib/directives/fit-bounds.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/lib/directives/fit-bounds.ts:72</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Either the location changed, or visible status changed.
+Possible state changes are
+invisible -&gt; visible
+visible -&gt; invisible
+visible -&gt; visible (new location)</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -439,8 +445,8 @@ Default: true.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="83"
-                            class="link-to-prism">src/lib/directives/fit-bounds.ts:83</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/lib/directives/fit-bounds.ts:97</a></div>
                 </td>
             </tr>
 
@@ -638,12 +644,26 @@ export class NgMapsFitBounds implements OnInit, OnDestroy, OnChanges {
       .subscribe((details) &#x3D;&gt; this._updateBounds(details));
   }
 
+  /**
+   * Either the location changed, or visible status changed.
+   * Possible state changes are
+   * invisible -&gt; visible
+   * visible -&gt; invisible
+   * visible -&gt; visible (new location)
+   */
   private _updateBounds(newFitBoundsDetails?: FitBoundsDetails) {
+    // either visibility will change, or location, so remove the old one anyway
+    if (this._latestFitBoundsDetails) {
+      this._fitBoundsService.removeFromBounds(this._latestFitBoundsDetails.latLng);
+      // don&#x27;t set latestFitBoundsDetails to null, because we can toggle visibility from
+      // true -&gt; false -&gt; true, in which case we still need old value cached here
+    }
+
     if (newFitBoundsDetails) {
       this._latestFitBoundsDetails &#x3D; newFitBoundsDetails;
     }
     if (this._latestFitBoundsDetails) {
-      if (this.mapFitBounds) {
+      if (this.mapFitBounds &#x3D;&#x3D;&#x3D; true) {
         this._fitBoundsService.addToBounds(this._latestFitBoundsDetails.latLng);
       } else {
         this._fitBoundsService.removeFromBounds(

@@ -37,7 +37,12 @@
 <li>Npm: <code>npm install @ng-maps/core</code></li>
 <li>Yarn: <code>yarn add @ng-maps/core</code></li>
 </ul>
-<p>Add <code>NgMapsCoreModule.forRoot({apiKey: &#39;YOUR_API_KEY&#39;})</code> to your <em>AppModule</em></p>
+<p>Then you will need to install typings for google maps as a dev dependency</p>
+<ul>
+<li>Npm: <code>npm install -D @types/googlemaps</code></li>
+<li>Yarn: <code>yarn add -D @types/googlemaps</code></li>
+</ul>
+<p>Now you are ready to start. Add <code>NgMapsCoreModule.forRoot({apiKey: &#39;YOUR_API_KEY&#39;})</code> to your <em>AppModule</em>. Now you can use map components.</p>
 <h2 id="usage">Usage</h2>
 <h3 id="simple-map">Simple Map</h3>
 <p>Add the map to your components template</p>

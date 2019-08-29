@@ -1493,15 +1493,20 @@ This can be &#39;BOUNCE&#39; or &#39;DROP&#39;</p>
 &#64;Component({
   selector: &#39;my-map&#39;,
   styles: [`
-    .agm-map-container {
+    map-view {
       height: 300px;
     }
   `],
   templateUrl: &#39;./my-map.component.html&#39;
-})</code></pre></div><h2 id="template">Template</h2>
-<div><pre class="line-numbers"><code class="language-angular2html">&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
-  &lt;agm-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; label=&quot;M&quot;&gt;&lt;/agm-marker&gt;
-&lt;/agm-map&gt;</code></pre></div></p>
+})
+export class MyComponent {
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+  zoom: number = 10;
+}</code></pre></div><h2 id="template">Template</h2>
+<div><pre class="line-numbers"><code class="language-angular2html">&lt;map-view [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+  &lt;map-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; label=&quot;M&quot;&gt;&lt;/map-marker&gt;
+&lt;/map-view&gt;</code></pre></div></p>
     </div>
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
