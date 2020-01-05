@@ -445,8 +445,8 @@ visible -&gt; visible (new location)</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">src/lib/directives/fit-bounds.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/lib/directives/fit-bounds.ts:99</a></div>
                 </td>
             </tr>
 
@@ -654,7 +654,9 @@ export class NgMapsFitBounds implements OnInit, OnDestroy, OnChanges {
   private _updateBounds(newFitBoundsDetails?: FitBoundsDetails) {
     // either visibility will change, or location, so remove the old one anyway
     if (this._latestFitBoundsDetails) {
-      this._fitBoundsService.removeFromBounds(this._latestFitBoundsDetails.latLng);
+      this._fitBoundsService.removeFromBounds(
+        this._latestFitBoundsDetails.latLng,
+      );
       // don&#x27;t set latestFitBoundsDetails to null, because we can toggle visibility from
       // true -&gt; false -&gt; true, in which case we still need old value cached here
     }

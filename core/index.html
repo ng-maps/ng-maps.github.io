@@ -43,6 +43,9 @@
 <li>Yarn: <code>yarn add -D @types/googlemaps</code></li>
 </ul>
 <p>Now you are ready to start. Add <code>NgMapsCoreModule.forRoot({apiKey: &#39;YOUR_API_KEY&#39;})</code> to your <em>AppModule</em>. Now you can use map components.</p>
+<h3 id="lazy-loading-configuration">Lazy loading configuration</h3>
+<p>If you can not provide configuration at module import level you can load it at a later time.</p>
+<p>You just need to inject <code>MapsAPILoader</code> into a component or service and call the method <code>configure(config)</code> with a valid configuration.</p>
 <h2 id="usage">Usage</h2>
 <h3 id="simple-map">Simple Map</h3>
 <p>Add the map to your components template</p>

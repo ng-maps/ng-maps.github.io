@@ -1327,10 +1327,15 @@ export class ClusterManager extends MarkerManager {
     });
   }
 
-  createClusterEventObservable&lt;T&gt;(eventName: string, marker: MarkerClusterComponent): Observable&lt;T&gt; {
+  createClusterEventObservable&lt;T&gt;(
+    eventName: string,
+    marker: MarkerClusterComponent,
+  ): Observable&lt;T&gt; {
     return new Observable&lt;T&gt;((observer: Observer&lt;T&gt;) &#x3D;&gt; {
       this._clustererInstance.then((m: MarkerClusterer) &#x3D;&gt; {
-        m.addListener(eventName, (e: T) &#x3D;&gt; this._zone.run(() &#x3D;&gt; observer.next(e)));
+        m.addListener(eventName, (e: T) &#x3D;&gt;
+          this._zone.run(() &#x3D;&gt; observer.next(e)),
+        );
       });
     });
   }
