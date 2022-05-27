@@ -62,9 +62,7 @@
             <h3>Description</h3>
         </p>
         <p class="comment">
-            <p>The angular-google-maps core module. Contains all Directives/Services/Pipes
-of the core module. Please use <code>NgMapsCoreModule.forRoot()</code> in your app module.</p>
-<p>Provide configuration with values defined by <a href="../interfaces/LazyMapsAPILoaderConfigLiteral.html">LazyMapsAPILoaderConfigLiteral</a></p>
+            <p>The ng-maps core module. Contains all Directives/Services/Pipes</p>
 
         </p>
 
@@ -74,101 +72,31 @@ of the core module. Please use <code>NgMapsCoreModule.forRoot()</code> in your a
             </div>
         </div>
 
-        <section>
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="forRoot"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Static</span>
-                            forRoot
-                        </b>
-                        <a href="#forRoot"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>forRoot(lazyMapsAPILoaderConfig?: <a href="../interfaces/LazyMapsAPILoaderConfigLiteral.html">LazyMapsAPILoaderConfigLiteral</a>)</code>
-                </td>
-            </tr>
 
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/lib/core.module.ts:39</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Please use this method when you register the module at the root level.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>lazyMapsAPILoaderConfig</td>
-                                    <td>
-                                                <code><a href="../interfaces/LazyMapsAPILoaderConfigLiteral.html" target="_self" >LazyMapsAPILoaderConfigLiteral</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>ModuleWithProviders&lt;NgMapsCoreModule&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ModuleWithProviders, NgModule } from &#x27;@angular/core&#x27;;
-import { NgMapsFitBounds } from &#x27;./directives/fit-bounds&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { InjectionToken, NgModule } from &#x27;@angular/core&#x27;;
+import { NgMapsCircleDirective } from &#x27;./directives/circle&#x27;;
+import { NgMapsFitBoundsDirective } from &#x27;./directives/fit-bounds&#x27;;
 import { NgMapsInfoWindowComponent } from &#x27;./directives/info-window&#x27;;
 import { NgMapsViewComponent } from &#x27;./directives/map&#x27;;
 import { NgMapsMarkerComponent } from &#x27;./directives/marker&#x27;;
-import { LazyMapsAPILoader } from &#x27;./services/maps-api-loader/lazy-maps-api-loader&#x27;;
-import {
-  LAZY_MAPS_API_CONFIG,
-  LazyMapsAPILoaderConfigLiteral,
-} from &#x27;./services/maps-api-loader/lazy-maps-api-loader-config&#x27;;
-import { MapsAPILoader } from &#x27;./services/maps-api-loader/maps-api-loader&#x27;;
+import { NgMapsPolygonDirective } from &#x27;./directives/polygon&#x27;;
+import { NgMapsPolyline } from &#x27;./directives/polyline&#x27;;
+import { NgMapsPolylinePoint } from &#x27;./directives/polyline-point&#x27;;
+import { NgMapsRectangleDirective } from &#x27;./directives/rectangle&#x27;;
+
+export const MAP_PROVIDER &#x3D; new InjectionToken&lt;string&gt;(&#x27;Map Provider&#x27;);
+
+export function isGoogleMaps(token: string) {
+  return token &#x3D;&#x3D;&#x3D; &#x27;GoogleMaps&#x27;;
+}
+
+export function isHereMaps(token: string) {
+  return token &#x3D;&#x3D;&#x3D; &#x27;HereMaps&#x27;;
+}
 
 /**
  * @internal
@@ -178,36 +106,23 @@ export function coreDirectives() {
     NgMapsViewComponent,
     NgMapsMarkerComponent,
     NgMapsInfoWindowComponent,
-    NgMapsFitBounds,
+    NgMapsFitBoundsDirective,
+    NgMapsCircleDirective,
+    NgMapsPolygonDirective,
+    NgMapsPolyline,
+    NgMapsPolylinePoint,
+    NgMapsRectangleDirective,
   ];
 }
 
 /**
- * The angular-google-maps core module. Contains all Directives/Services/Pipes
- * of the core module. Please use &#x60;NgMapsCoreModule.forRoot()&#x60; in your app module.
- *
- * Provide configuration with values defined by {@link LazyMapsAPILoaderConfigLiteral}
+ * The ng-maps core module. Contains all Directives/Services/Pipes
  */
 @NgModule({
   declarations: coreDirectives(),
   exports: coreDirectives(),
 })
-export class NgMapsCoreModule {
-  /**
-   * Please use this method when you register the module at the root level.
-   */
-  static forRoot(
-    lazyMapsAPILoaderConfig?: LazyMapsAPILoaderConfigLiteral,
-  ): ModuleWithProviders&lt;NgMapsCoreModule&gt; {
-    return {
-      ngModule: NgMapsCoreModule,
-      providers: [
-        { provide: MapsAPILoader, useClass: LazyMapsAPILoader },
-        { provide: LAZY_MAPS_API_CONFIG, useValue: lazyMapsAPILoaderConfig },
-      ],
-    };
-  }
-}
+export class NgMapsCoreModule {}
 </code></pre>
     </div>
 </div>
@@ -244,6 +159,7 @@ export class NgMapsCoreModule {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
             var COMPODOC_CURRENT_PAGE_URL = 'NgMapsCoreModule.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

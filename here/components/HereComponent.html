@@ -1,0 +1,912 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ng-maps/here</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ng-maps/here</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HereComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/lib/here.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+            <code>NgMapsViewComponent</code>
+    </p>
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/HereMapsWrapperService.html" target="_self" >{ provide: MapsApiWrapper, useClass: HereMapsWrapperService }</a></code>
+                                <code><a href="../injectables/HereMapsFitBoundsService.html" target="_self" >{ provide: FitBoundsService, useClass: HereMapsFitBoundsService }</a></code>
+                                <code><a href="../injectables/HereMapsMarkerManager.html" target="_self" >{ provide: MarkerManager, useClass: HereMapsMarkerManager }</a></code>
+                                <code><a href="../injectables/HereCircleManager.html" target="_self" >{ provide: CircleManager, useClass: HereCircleManager }</a></code>
+                                <code><a href="../injectables/HerePolygonManager.html" target="_self" >{ provide: PolygonManager, useClass: HerePolygonManager }</a></code>
+                                <code><a href="../injectables/HerePolylineManager.html" target="_self" >{ provide: PolylineManager, useClass: HerePolylineManager }</a></code>
+                                <code><a href="../injectables/HereRectangleManager.html" target="_self" >{ provide: RectangleManager, useClass: HereRectangleManager }</a></code>
+                                <code><a href="../injectables/HereMapsInfoWindowManager.html" target="_self" >{ provide: InfoWindowManager, useClass: HereMapsInfoWindowManager }</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>map-view</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">styles</td>
+                <td class="col-md-9"><code>
+      .map-container-inner {
+        width: inherit;
+        height: inherit;
+      }
+
+      .map-content {
+        display: none;
+      }
+    </code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;map-container-inner&quot; #container&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;map-content&quot;&gt;
+  &lt;ng-content&gt;&lt;/ng-content&gt;
+&lt;/div&gt;
+</code></pre></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_handleBoundsChange">_handleBoundsChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_handleIdleEvent">_handleIdleEvent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#_handleMapCenterChange">_handleMapCenterChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_handleMapMouseEvents">_handleMapMouseEvents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_handleMapTypeIdChange">_handleMapTypeIdChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_handleMapZoomChange">_handleMapZoomChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#_handleTilesLoadedEvent">_handleTilesLoadedEvent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ui">ui</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:resize">window:resize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_mapsWrapper: MapsApiWrapper<H.Map>, _fitBoundsService: FitBoundsService, _zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/lib/here.component.ts:73</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_mapsWrapper</td>
+                                                  
+                                                        <td>
+                                                                    <code>MapsApiWrapper&lt;H.Map&gt;</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_fitBoundsService</td>
+                                                  
+                                                        <td>
+                                                                    <code>FitBoundsService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_zone</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ui"></a>
+                        <b>ui</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;H.ui.UI&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/lib/here.component.ts:73</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Event that returns the UI object if available</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="window:resize"></a>
+                    <span class="name">
+                        <b>
+                            window:resize
+                        </b>
+                        <a href="#window:resize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>window:resize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/lib/here.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_handleBoundsChange"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Protected</span>
+                            _handleBoundsChange
+                        </b>
+                        <a href="#_handleBoundsChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_handleBoundsChange()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/lib/here.component.ts:118</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_handleIdleEvent"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Protected</span>
+                            _handleIdleEvent
+                        </b>
+                        <a href="#_handleIdleEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_handleIdleEvent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/lib/here.component.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_handleMapCenterChange"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Protected</span>
+                            <span class="modifier">Async</span>
+                            _handleMapCenterChange
+                        </b>
+                        <a href="#_handleMapCenterChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_handleMapCenterChange()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/lib/here.component.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_handleMapMouseEvents"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Protected</span>
+                            _handleMapMouseEvents
+                        </b>
+                        <a href="#_handleMapMouseEvents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_handleMapMouseEvents()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">src/lib/here.component.ts:137</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_handleMapTypeIdChange"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Protected</span>
+                            _handleMapTypeIdChange
+                        </b>
+                        <a href="#_handleMapTypeIdChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_handleMapTypeIdChange()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">src/lib/here.component.ts:116</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_handleMapZoomChange"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Protected</span>
+                            _handleMapZoomChange
+                        </b>
+                        <a href="#_handleMapZoomChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_handleMapZoomChange()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/lib/here.component.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_handleTilesLoadedEvent"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Protected</span>
+                            _handleTilesLoadedEvent
+                        </b>
+                        <a href="#_handleTilesLoadedEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_handleTilesLoadedEvent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/lib/here.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  EventEmitter,
+  HostListener,
+  NgZone,
+  Output,
+  SimpleChanges,
+} from &#x27;@angular/core&#x27;;
+import {
+  CircleManager,
+  FitBoundsService,
+  InfoWindowManager,
+  MapsApiWrapper,
+  MarkerManager,
+  NgMapsViewComponent,
+  PolygonManager,
+  PolylineManager,
+  RectangleManager,
+} from &#x27;@ng-maps/core&#x27;;
+import { from } from &#x27;rxjs&#x27;;
+import { distinctUntilChanged, mergeMap } from &#x27;rxjs/operators&#x27;;
+import { HereMapsFitBoundsService } from &#x27;./here-maps-fit-bounds.service&#x27;;
+import { HereMapsMarkerManager } from &#x27;./here-maps-marker.manager&#x27;;
+import { HereMapsWrapperService } from &#x27;./here-maps-wrapper.service&#x27;;
+import { HereCircleManager } from &#x27;./managers/circle-manager&#x27;;
+import { HereMapsInfoWindowManager } from &#x27;./managers/info-window.manager&#x27;;
+import { HerePolygonManager } from &#x27;./managers/polygon-manager&#x27;;
+import { HerePolylineManager } from &#x27;./managers/polyline-manager&#x27;;
+import { HereRectangleManager } from &#x27;./managers/rectangle-manager&#x27;;
+
+@Component({
+  selector: &#x27;map-view&#x27;,
+  providers: [
+    { provide: MapsApiWrapper, useClass: HereMapsWrapperService },
+    { provide: FitBoundsService, useClass: HereMapsFitBoundsService },
+    { provide: MarkerManager, useClass: HereMapsMarkerManager },
+    { provide: CircleManager, useClass: HereCircleManager },
+    { provide: PolygonManager, useClass: HerePolygonManager },
+    { provide: PolylineManager, useClass: HerePolylineManager },
+    { provide: RectangleManager, useClass: HereRectangleManager },
+    { provide: InfoWindowManager, useClass: HereMapsInfoWindowManager },
+  ],
+  styles: [
+    &#x60;
+      .map-container-inner {
+        width: inherit;
+        height: inherit;
+      }
+
+      .map-content {
+        display: none;
+      }
+    &#x60;,
+  ],
+  template: &#x60;
+    &lt;div class&#x3D;&quot;map-container-inner&quot; #container&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;map-content&quot;&gt;
+      &lt;ng-content&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
+  &#x60;,
+})
+export class HereComponent extends NgMapsViewComponent&lt;H.Map&gt; {
+  @HostListener(&#x27;window:resize&#x27;)
+  onResize() {
+    this._mapsWrapper.getNativeMap().then((map) &#x3D;&gt; {
+      map.getViewPort().resize();
+    });
+  }
+
+  /**
+   * Event that returns the UI object if available
+   */
+  @Output() public readonly ui: EventEmitter&lt;H.ui.UI&gt; &#x3D; new EventEmitter();
+
+  constructor(
+    _mapsWrapper: MapsApiWrapper&lt;H.Map&gt;,
+    _fitBoundsService: FitBoundsService,
+    _zone: NgZone,
+  ) {
+    super(_mapsWrapper, _fitBoundsService, _zone);
+    (this._mapsWrapper as HereMapsWrapperService).ui$.subscribe(this.ui);
+  }
+
+  protected async _handleMapCenterChange(): Promise&lt;void&gt; {
+    const s &#x3D; this._mapsWrapper
+      .subscribeToMapEvent(&#x27;mapviewchangeend&#x27;)
+      .pipe(
+        mergeMap(() &#x3D;&gt; from(this._mapsWrapper.getCenter())),
+        distinctUntilChanged(
+          (p1, p2) &#x3D;&gt; p1.lat &#x3D;&#x3D;&#x3D; p2.lat &amp;&amp; p1.lng &#x3D;&#x3D;&#x3D; p2.lng,
+        ),
+      )
+      .subscribe((center) &#x3D;&gt; {
+        this.centerChange.emit(center);
+      });
+    this.subscription.add(s);
+  }
+
+  protected _handleMapZoomChange(): void {
+    const s &#x3D; this._mapsWrapper
+      .subscribeToMapEvent(&#x27;mapviewchangeend&#x27;)
+      .pipe(
+        mergeMap(() &#x3D;&gt; from(this._mapsWrapper.getZoom())),
+        distinctUntilChanged((z1, z2) &#x3D;&gt; z1 &#x3D;&#x3D;&#x3D; z2),
+      )
+      .subscribe((zoom) &#x3D;&gt; {
+        this.zoomChange.emit(zoom);
+      });
+    this.subscription.add(s);
+  }
+
+  protected _handleIdleEvent() {}
+
+  protected _handleTilesLoadedEvent() {}
+
+  protected _handleMapTypeIdChange() {}
+
+  protected _handleBoundsChange() {
+    const s &#x3D; this._mapsWrapper
+      .subscribeToMapEvent(&#x27;mapviewchangeend&#x27;)
+      .pipe(
+        mergeMap(() &#x3D;&gt; from(this._mapsWrapper.getBounds())),
+        distinctUntilChanged(
+          (b1, b2) &#x3D;&gt;
+            b1.east &#x3D;&#x3D;&#x3D; b2.east &amp;&amp;
+            b1.north &#x3D;&#x3D;&#x3D; b2.north &amp;&amp;
+            b1.west &#x3D;&#x3D;&#x3D; b2.west &amp;&amp;
+            b1.south &#x3D;&#x3D;&#x3D; b2.south,
+        ),
+      )
+      .subscribe((bounds) &#x3D;&gt; {
+        this.boundsChange.emit(bounds);
+      });
+    this.subscription.add(s);
+  }
+
+  protected _handleMapMouseEvents() {}
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-styleData">
+            <pre class="line-numbers"><code class="language-scss">
+      .map-container-inner {
+        width: inherit;
+        height: inherit;
+      }
+
+      .map-content {
+        display: none;
+      }
+    
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="map-container-inner" #container></div><div class="map-content">  <ng-content></ng-content></div></div>'
+    var COMPONENTS = [{'name': 'HereComponent', 'selector': 'map-view'}];
+    var DIRECTIVES = [{'name': 'MarkerClusterComponent', 'selector': 'map-marker-cluster'}];
+    var ACTUAL_COMPONENT = {'name': 'HereComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HereComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -95,10 +95,12 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
                                     <span class="modifier">Abstract</span>
                                 <a href="#configure">configure</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                     <span class="modifier">Abstract</span>
                                 <a href="#load">load</a>
                             </li>
@@ -127,6 +129,7 @@
                     <a name="configure"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             <span class="modifier">Abstract</span>
                             configure
                         </b>
@@ -137,15 +140,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>configure(config: <a href="../interfaces/LazyMapsAPILoaderConfigLiteral.html">LazyMapsAPILoaderConfigLiteral</a>)</code>
+                    <code>configure(config: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">src/lib/services/maps-api-loader/maps-api-loader.ts:9</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="8"
+                            class="link-to-prism">src/lib/services/maps-api-loader/maps-api-loader.ts:8</a></div>
                 </td>
             </tr>
 
@@ -167,7 +170,7 @@
                                 <tr>
                                     <td>config</td>
                                     <td>
-                                                <code><a href="../interfaces/LazyMapsAPILoaderConfigLiteral.html" target="_self" >LazyMapsAPILoaderConfigLiteral</a></code>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                     </td>
 
                                     <td>
@@ -199,6 +202,7 @@
                     <a name="load"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             <span class="modifier">Abstract</span>
                             load
                         </b>
@@ -216,8 +220,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="8"
-                            class="link-to-prism">src/lib/services/maps-api-loader/maps-api-loader.ts:8</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="7"
+                            class="link-to-prism">src/lib/services/maps-api-loader/maps-api-loader.ts:7</a></div>
                 </td>
             </tr>
 
@@ -260,7 +264,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/lib/services/maps-api-loader/maps-api-loader.ts:7</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/lib/services/maps-api-loader/maps-api-loader.ts:6</a></div>
                             </td>
                         </tr>
 
@@ -288,7 +292,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/lib/services/maps-api-loader/maps-api-loader.ts:6</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/lib/services/maps-api-loader/maps-api-loader.ts:5</a></div>
                             </td>
                         </tr>
 
@@ -302,14 +306,13 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { LazyMapsAPILoaderConfigLiteral } from &#x27;../../services&#x27;;
 
 @Injectable()
 export abstract class MapsAPILoader {
   protected _window: Window;
   protected _document: Document;
-  abstract load(): Promise&lt;void&gt;;
-  abstract configure(config: LazyMapsAPILoaderConfigLiteral): void;
+  public abstract load(): Promise&lt;void&gt;;
+  public abstract configure(config: any): void;
 }
 </code></pre>
     </div>
@@ -345,6 +348,7 @@ export abstract class MapsAPILoader {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
             var COMPODOC_CURRENT_PAGE_URL = 'MapsAPILoader.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

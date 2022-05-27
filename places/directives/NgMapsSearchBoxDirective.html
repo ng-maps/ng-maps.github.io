@@ -1,0 +1,960 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ng-maps/places</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ng-maps/places</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>NgMapsSearchBoxDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/directives/search-box.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                            <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                            <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+            </p>
+
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">&lt;input [mapAutocomplete]='options' (placeResult)='onPlacesResult($event)' /&gt;</code></pre>
+                        </div>
+            </div>
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>[mapSearchBox]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#searchBox">searchBox</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#subscription">subscription</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addHandler">addHandler</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#init">init</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#removeHandler">removeHandler</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#mapSearchBox">mapSearchBox</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#bounds">bounds</a>
+                            </li>
+                            <li>
+                                <a href="#placeResult">placeResult</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(element: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, mapsAPILoader: MapsAPILoader, defaultConfig: <a href="../interfaces/NgMapsPlacesConfiguration.html">NgMapsPlacesConfiguration</a>, _zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/lib/directives/search-box.ts:56</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>element</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>mapsAPILoader</td>
+                                                  
+                                                        <td>
+                                                                    <code>MapsAPILoader</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>defaultConfig</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/NgMapsPlacesConfiguration.html" target="_self" >NgMapsPlacesConfiguration</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_zone</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mapSearchBox"></a>
+                        <b>mapSearchBox</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.places.SearchBoxOptions</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/lib/directives/search-box.ts:35</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Configuration Input described by the AutocompleteOptions Interface
+<a href="https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-widget#AutocompleteOptions">https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-widget#AutocompleteOptions</a></p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+            <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="bounds"></a>
+                        <b>bounds</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.LatLngBounds&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/lib/directives/search-box.ts:53</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired on selection of an element from the autocomplete list.
+The event contains a LatLngBounds from GoogleMapsAPI
+<a href="https://developers.google.com/maps/documentation/javascript/reference/3.exp/coordinates#LatLngBounds">https://developers.google.com/maps/documentation/javascript/reference/3.exp/coordinates#LatLngBounds</a></p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="placeResult"></a>
+                        <b>placeResult</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;Array&lt;google.maps.places.PlaceResult&gt;&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/lib/directives/search-box.ts:43</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>This event is fired on selection of an element from the autocomplete list.
+The event contains a PlaceResult from GoogleMapsAPI
+<a href="https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-service#PlaceResult">https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-service#PlaceResult</a></p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addHandler"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            addHandler
+                        </b>
+                        <a href="#addHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addHandler(handler: (args: Array<any>) => void)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/lib/directives/search-box.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>handler</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="init"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Async</span>
+                            init
+                        </b>
+                        <a href="#init"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>init()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/lib/directives/search-box.ts:85</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            ngOnChanges
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/lib/directives/search-box.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">src/lib/directives/search-box.ts:116</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/lib/directives/search-box.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeHandler"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            removeHandler
+                        </b>
+                        <a href="#removeHandler"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeHandler()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">src/lib/directives/search-box.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchBox"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            searchBox</b>
+                            <a href="#searchBox"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>google.maps.places.SearchBox</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/lib/directives/search-box.ts:55</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            subscription</b>
+                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subscription()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/lib/directives/search-box.ts:56</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Directive,
+  ElementRef,
+  EventEmitter,
+  Inject,
+  Input,
+  NgZone,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  Output,
+  SimpleChanges,
+} from &#x27;@angular/core&#x27;;
+import { MapsAPILoader } from &#x27;@ng-maps/core&#x27;;
+import { fromEventPattern, Subscription } from &#x27;rxjs&#x27;;
+import {
+  NgMapsPlacesConfiguration,
+  NG_MAPS_PLACES_DEFAULT_CONFIGURATION,
+} from &#x27;../configuration&#x27;;
+
+/**
+ * @example
+ * &lt;input [mapAutocomplete]&#x3D;&#x27;options&#x27; (placeResult)&#x3D;&#x27;onPlacesResult($event)&#x27; /&gt;
+ */
+@Directive({
+  selector: &#x27;[mapSearchBox]&#x27;,
+})
+export class NgMapsSearchBoxDirective implements OnInit, OnChanges, OnDestroy {
+  /**
+   * Configuration Input described by the AutocompleteOptions Interface
+   * https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-widget#AutocompleteOptions
+   */
+  // eslint-disable-next-line @angular-eslint/no-input-rename
+  @Input(&#x27;mapSearchBox&#x27;)
+  public config: google.maps.places.SearchBoxOptions;
+
+  /**
+   * This event is fired on selection of an element from the autocomplete list.
+   * The event contains a PlaceResult from GoogleMapsAPI
+   * https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-service#PlaceResult
+   */
+  @Output()
+  public placeResult: EventEmitter&lt;
+    Array&lt;google.maps.places.PlaceResult&gt;
+  &gt; &#x3D; new EventEmitter&lt;Array&lt;google.maps.places.PlaceResult&gt;&gt;();
+
+  /**
+   * This event is fired on selection of an element from the autocomplete list.
+   * The event contains a LatLngBounds from GoogleMapsAPI
+   * https://developers.google.com/maps/documentation/javascript/reference/3.exp/coordinates#LatLngBounds
+   */
+  @Output()
+  public bounds: EventEmitter&lt;google.maps.LatLngBounds&gt; &#x3D; new EventEmitter&lt;google.maps.LatLngBounds&gt;();
+
+  private searchBox: google.maps.places.SearchBox;
+  private readonly subscription: Subscription &#x3D; new Subscription();
+
+  constructor(
+    private element: ElementRef,
+    private mapsAPILoader: MapsAPILoader,
+    @Inject(NG_MAPS_PLACES_DEFAULT_CONFIGURATION)
+    private defaultConfig: NgMapsPlacesConfiguration,
+    private _zone: NgZone,
+  ) {}
+
+  /** @internal */
+  public ngOnInit(): void {
+    if (typeof this.config &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      this.config &#x3D; this.defaultConfig.searchBox;
+    } else {
+      this.config &#x3D; {
+        ...this.defaultConfig.searchBox,
+        ...this.config,
+      };
+    }
+
+    if (this.element.nativeElement instanceof HTMLInputElement) {
+      this.init();
+    } else {
+      throw new Error(&#x27;Directive can only be applied to an HTMLInputElement&#x27;);
+    }
+  }
+
+  /** @internal */
+  public async init() {
+    await this.mapsAPILoader.load();
+    this.searchBox &#x3D; new google.maps.places.SearchBox(
+      this.element.nativeElement,
+      this.config,
+    );
+    this.subscription.add(
+      fromEventPattern(
+        (handler: any) &#x3D;&gt; this.addHandler(handler),
+        () &#x3D;&gt; this.removeHandler(),
+      ).subscribe({
+        next: () &#x3D;&gt; {
+          this.placeResult.emit(this.searchBox.getPlaces());
+          this.bounds.emit(this.searchBox.getBounds());
+        },
+      }),
+    );
+  }
+
+  /** @internal */
+  public ngOnChanges(changes: SimpleChanges): void {
+    if (typeof changes.config !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp; !changes.config.firstChange) {
+      const config &#x3D; changes.config
+        .currentValue as google.maps.places.SearchBoxOptions;
+      if (typeof config.bounds !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+        this.searchBox.setBounds(config.bounds);
+      }
+    }
+  }
+
+  /** @internal */
+  public ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+  /** @internal */
+  private addHandler(handler: (...args: Array&lt;any&gt;) &#x3D;&gt; void) {
+    return this.searchBox.addListener(&#x27;places_changed&#x27;, () &#x3D;&gt;
+      this._zone.run(handler),
+    );
+  }
+
+  /** @internal */
+  private removeHandler() {
+    this.searchBox.unbindAll();
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'NgMapsSearchBoxDirective.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -162,93 +162,13 @@
             </div>
         </div>
 
-        <section>
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="forRoot"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Static</span>
-                            forRoot
-                        </b>
-                        <a href="#forRoot"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>forRoot(markerClusterConfig?: <a href="../interfaces/MarkerClusterConfig.html">MarkerClusterConfig</a>)</code>
-                </td>
-            </tr>
 
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/lib/marker-clusterer.module.ts:15</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Please use this method when you register the module at the root level.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>markerClusterConfig</td>
-                                    <td>
-                                                <code><a href="../interfaces/MarkerClusterConfig.html" target="_self" >MarkerClusterConfig</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>ModuleWithProviders&lt;NgMapsMarkerClustererModule&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ModuleWithProviders, NgModule } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { NgMapsCoreModule } from &#x27;@ng-maps/core&#x27;;
-import { MARKER_CLUSTER_CONFIG, MarkerClusterConfig } from &#x27;./config&#x27;;
 import { MarkerClusterComponent } from &#x27;./directives/marker-cluster&#x27;;
 
 @NgModule({
@@ -256,21 +176,7 @@ import { MarkerClusterComponent } from &#x27;./directives/marker-cluster&#x27;;
   declarations: [MarkerClusterComponent],
   exports: [MarkerClusterComponent],
 })
-export class NgMapsMarkerClustererModule {
-  /**
-   * Please use this method when you register the module at the root level.
-   */
-  static forRoot(
-    markerClusterConfig?: MarkerClusterConfig,
-  ): ModuleWithProviders&lt;NgMapsMarkerClustererModule&gt; {
-    return {
-      ngModule: NgMapsMarkerClustererModule,
-      providers: [
-        { provide: MARKER_CLUSTER_CONFIG, useValue: markerClusterConfig },
-      ],
-    };
-  }
-}
+export class NgMapsMarkerClustererModule {}
 </code></pre>
     </div>
 </div>
@@ -307,6 +213,7 @@ export class NgMapsMarkerClustererModule {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
             var COMPODOC_CURRENT_PAGE_URL = 'NgMapsMarkerClustererModule.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

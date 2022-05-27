@@ -78,6 +78,7 @@
                     <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
                     <code><a href="https://angular.io/api/core/AfterContentInit" target="_blank" >AfterContentInit</a></code>
                     <code><a href="../classes/FitBoundsAccessor.html" target="_self" >FitBoundsAccessor</a></code>
+                    <code><a href="../interfaces/MarkerOptions.html" target="_self" >MarkerOptions</a></code>
     </p>
 
     <p class="comment">
@@ -116,7 +117,7 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>agm-marker, map-marker</code></td>
+                <td class="col-md-9"><code>map-marker</code></td>
             </tr>
 
 
@@ -164,14 +165,16 @@
                                 <a href="#_markerAddedToManger">_markerAddedToManger</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#_observableSubscriptions">_observableSubscriptions</a>
-                            </li>
-                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#animation">animation</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#infoWindow">infoWindow</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#subscription">subscription</a>
                             </li>
                         </ul>
                     </td>
@@ -186,7 +189,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Protected</span>
                                 <a href="#_addEventListeners">_addEventListeners</a>
                             </li>
                             <li>
@@ -194,6 +197,7 @@
                                 <a href="#_updateFitBoundsDetails">_updateFitBoundsDetails</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getFitBoundsDetails$">getFitBoundsDetails$</a>
                             </li>
                             <li>
@@ -201,18 +205,23 @@
                                 <a href="#handleInfoWindowUpdate">handleInfoWindowUpdate</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#id">id</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#ngAfterContentInit">ngAfterContentInit</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#ngOnChanges">ngOnChanges</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#ngOnDestroy">ngOnDestroy</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#toString">toString</a>
                             </li>
                         </ul>
@@ -227,6 +236,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#icon">icon</a>
+                            </li>
                             <li>
                                 <a href="#iconUrl">iconUrl</a>
                             </li>
@@ -317,7 +329,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">src/lib/directives/marker.ts:197</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="201" class="link-to-prism">src/lib/directives/marker.ts:201</a></div>
                             </td>
                         </tr>
 
@@ -361,6 +373,27 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="icon"></a>
+                        <b>icon</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/MarkerIcon.html" target="_self" >MarkerIcon</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/lib/directives/marker.ts:104</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="iconUrl"></a>
                         <b>iconUrl</b>
                     </td>
@@ -373,7 +406,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/lib/directives/marker.ts:94</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">src/lib/directives/marker.ts:102</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -401,7 +434,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/lib/directives/marker.ts:81</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/lib/directives/marker.ts:89</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -428,7 +461,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/lib/directives/marker.ts:66</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/lib/directives/marker.ts:74</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -455,7 +488,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/lib/directives/marker.ts:71</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/lib/directives/marker.ts:79</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -487,7 +520,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/lib/directives/marker.ts:129</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">src/lib/directives/marker.ts:139</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -519,7 +552,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/lib/directives/marker.ts:87</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/lib/directives/marker.ts:95</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -551,7 +584,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/lib/directives/marker.ts:109</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/lib/directives/marker.ts:119</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -583,7 +616,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/lib/directives/marker.ts:104</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/lib/directives/marker.ts:114</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -615,7 +648,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/lib/directives/marker.ts:115</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/lib/directives/marker.ts:125</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -643,7 +676,7 @@ Default it is true</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/lib/directives/marker.ts:76</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/lib/directives/marker.ts:84</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -675,7 +708,7 @@ Default it is true</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/lib/directives/marker.ts:99</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/lib/directives/marker.ts:109</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -707,7 +740,7 @@ Default it is true</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/lib/directives/marker.ts:123</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">src/lib/directives/marker.ts:133</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -740,7 +773,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/lib/directives/marker.ts:159</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/lib/directives/marker.ts:169</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -767,7 +800,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">src/lib/directives/marker.ts:166</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">src/lib/directives/marker.ts:175</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -794,7 +827,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">src/lib/directives/marker.ts:152</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/lib/directives/marker.ts:163</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -821,7 +854,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/lib/directives/marker.ts:140</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">src/lib/directives/marker.ts:151</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -848,7 +881,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">src/lib/directives/marker.ts:147</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">src/lib/directives/marker.ts:157</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -875,7 +908,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">src/lib/directives/marker.ts:180</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">src/lib/directives/marker.ts:187</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -902,7 +935,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">src/lib/directives/marker.ts:173</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="181" class="link-to-prism">src/lib/directives/marker.ts:181</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -928,7 +961,7 @@ screen.</p>
                     <a name="_addEventListeners"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Private</span>
+                            <span class="modifier">Protected</span>
                             _addEventListeners
                         </b>
                         <a href="#_addEventListeners"><span class="icon ion-ios-link"></span></a>
@@ -945,8 +978,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="290"
-                            class="link-to-prism">src/lib/directives/marker.ts:290</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="297"
+                            class="link-to-prism">src/lib/directives/marker.ts:297</a></div>
                 </td>
             </tr>
 
@@ -986,8 +1019,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="284"
-                            class="link-to-prism">src/lib/directives/marker.ts:284</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="291"
+                            class="link-to-prism">src/lib/directives/marker.ts:291</a></div>
                 </td>
             </tr>
 
@@ -1010,6 +1043,7 @@ screen.</p>
                     <a name="getFitBoundsDetails$"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             getFitBoundsDetails$
                         </b>
                         <a href="#getFitBoundsDetails$"><span class="icon ion-ios-link"></span></a>
@@ -1018,15 +1052,16 @@ screen.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getFitBoundsDetails$()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFitBoundsDetails$()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="280"
-                            class="link-to-prism">src/lib/directives/marker.ts:280</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="287"
+                            class="link-to-prism">src/lib/directives/marker.ts:287</a></div>
                 </td>
             </tr>
 
@@ -1066,8 +1101,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="211"
-                            class="link-to-prism">src/lib/directives/marker.ts:211</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="215"
+                            class="link-to-prism">src/lib/directives/marker.ts:215</a></div>
                 </td>
             </tr>
 
@@ -1090,6 +1125,7 @@ screen.</p>
                     <a name="id"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             id
                         </b>
                         <a href="#id"><span class="icon ion-ios-link"></span></a>
@@ -1098,15 +1134,16 @@ screen.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>id()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>id()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="345"
-                            class="link-to-prism">src/lib/directives/marker.ts:345</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="360"
+                            class="link-to-prism">src/lib/directives/marker.ts:360</a></div>
                 </td>
             </tr>
 
@@ -1129,6 +1166,7 @@ screen.</p>
                     <a name="ngAfterContentInit"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             ngAfterContentInit
                         </b>
                         <a href="#ngAfterContentInit"><span class="icon ion-ios-link"></span></a>
@@ -1137,15 +1175,16 @@ screen.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngAfterContentInit()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngAfterContentInit()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="206"
-                            class="link-to-prism">src/lib/directives/marker.ts:206</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="210"
+                            class="link-to-prism">src/lib/directives/marker.ts:210</a></div>
                 </td>
             </tr>
 
@@ -1168,6 +1207,7 @@ screen.</p>
                     <a name="ngOnChanges"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             ngOnChanges
                         </b>
                         <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
@@ -1176,15 +1216,16 @@ screen.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnChanges(changes: literal type)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnChanges(changes: literal type)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="223"
-                            class="link-to-prism">src/lib/directives/marker.ts:223</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="227"
+                            class="link-to-prism">src/lib/directives/marker.ts:227</a></div>
                 </td>
             </tr>
 
@@ -1238,6 +1279,7 @@ screen.</p>
                     <a name="ngOnDestroy"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             ngOnDestroy
                         </b>
                         <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
@@ -1246,15 +1288,16 @@ screen.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnDestroy()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnDestroy()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="355"
-                            class="link-to-prism">src/lib/directives/marker.ts:355</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="370"
+                            class="link-to-prism">src/lib/directives/marker.ts:370</a></div>
                 </td>
             </tr>
 
@@ -1277,6 +1320,7 @@ screen.</p>
                     <a name="toString"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             toString
                         </b>
                         <a href="#toString"><span class="icon ion-ios-link"></span></a>
@@ -1285,15 +1329,16 @@ screen.</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>toString()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>toString()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="350"
-                            class="link-to-prism">src/lib/directives/marker.ts:350</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="365"
+                            class="link-to-prism">src/lib/directives/marker.ts:365</a></div>
                 </td>
             </tr>
 
@@ -1337,12 +1382,14 @@ screen.</p>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new ReplaySubject&lt;FitBoundsDetails&gt;(1)</code>
+                            <i>Default value : </i><code>new ReplaySubject&lt;FitBoundsDetails&gt;(
+    1,
+  )</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/lib/directives/marker.ts:195</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">src/lib/directives/marker.ts:199</a></div>
                             </td>
                         </tr>
 
@@ -1370,7 +1417,7 @@ screen.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="192" class="link-to-prism">src/lib/directives/marker.ts:192</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="196" class="link-to-prism">src/lib/directives/marker.ts:196</a></div>
                             </td>
                         </tr>
 
@@ -1403,40 +1450,7 @@ screen.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">src/lib/directives/marker.ts:191</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="_observableSubscriptions"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _observableSubscriptions</b>
-                            <a href="#_observableSubscriptions"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Subscription[]</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/lib/directives/marker.ts:193</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/lib/directives/marker.ts:195</a></div>
                             </td>
                         </tr>
 
@@ -1450,6 +1464,7 @@ screen.</p>
                         <a name="animation"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Public</span>
                             animation</b>
                             <a href="#animation"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -1463,7 +1478,7 @@ screen.</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">src/lib/directives/marker.ts:135</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/lib/directives/marker.ts:145</a></div>
                             </td>
                         </tr>
 
@@ -1484,6 +1499,7 @@ This can be &#39;BOUNCE&#39; or &#39;DROP&#39;</p>
                         <a name="infoWindow"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Public</span>
                             infoWindow</b>
                             <a href="#infoWindow"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -1511,7 +1527,40 @@ This can be &#39;BOUNCE&#39; or &#39;DROP&#39;</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">src/lib/directives/marker.ts:187</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/lib/directives/marker.ts:193</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="subscription"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            subscription</b>
+                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subscription()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">src/lib/directives/marker.ts:197</a></div>
                             </td>
                         </tr>
 
@@ -1562,8 +1611,10 @@ export class MyComponent {
   SimpleChange,
 } from &#x27;@angular/core&#x27;;
 import { Observable, ReplaySubject, Subscription } from &#x27;rxjs&#x27;;
+import { MarkerIcon } from &#x27;../interface/marker-icon&#x27;;
+import { MarkerOptions } from &#x27;../interface/marker-options&#x27;;
 import { FitBoundsAccessor, FitBoundsDetails } from &#x27;../services/fit-bounds&#x27;;
-import { MarkerManager } from &#x27;../services/managers/marker-manager&#x27;;
+import { MarkerManager } from &#x27;../services/managers/marker.manager&#x27;;
 import { NgMapsInfoWindowComponent } from &#x27;./info-window&#x27;;
 
 let markerId &#x3D; 0;
@@ -1577,7 +1628,7 @@ let markerId &#x3D; 0;
  * &lt;/agm-map&gt;
  */
 @Component({
-  selector: &#x27;agm-marker, map-marker&#x27;,
+  selector: &#x27;map-marker&#x27;,
   providers: [
     {
       provide: FitBoundsAccessor,
@@ -1591,6 +1642,7 @@ let markerId &#x3D; 0;
     &#x27;label&#x27;,
     &#x27;draggable: markerDraggable&#x27;,
     &#x27;iconUrl&#x27;,
+    &#x27;icon&#x27;,
     &#x27;openInfoWindow&#x27;,
     &#x27;opacity&#x27;,
     &#x27;optimized&#x27;,
@@ -1609,60 +1661,67 @@ let markerId &#x3D; 0;
   template: &#x27;&lt;ng-content&gt;&lt;/ng-content&gt;&#x27;,
 })
 export class NgMapsMarkerComponent
-  implements OnDestroy, OnChanges, AfterContentInit, FitBoundsAccessor {
+  implements
+    OnDestroy,
+    OnChanges,
+    AfterContentInit,
+    FitBoundsAccessor,
+    MarkerOptions {
   /**
    * The latitude position of the marker.
    */
-  @Input() latitude: number;
+  @Input() public latitude: number;
 
   /**
    * The longitude position of the marker.
    */
-  @Input() longitude: number;
+  @Input() public longitude: number;
 
   /**
    * The title of the marker.
    */
-  @Input() title: string;
+  @Input() public title: string;
 
   /**
    * The label (a single uppercase character) for the marker.
    */
-  @Input() label: string | google.maps.MarkerLabel;
+  @Input() public label: string | google.maps.MarkerLabel;
 
   /**
    * If true, the marker can be dragged. Default value is false.
    */
-  // tslint:disable-next-line:no-input-rename
-  @Input(&#x27;markerDraggable&#x27;) draggable: boolean &#x3D; false;
+  // eslint-disable-next-line @angular-eslint/no-input-rename
+  @Input(&#x27;markerDraggable&#x27;) public draggable: boolean &#x3D; false;
 
   /**
    * Icon (the URL of the image) for the foreground.
    * Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)
    * @see &lt;a href&#x3D;&quot;https://developers.google.com/maps/documentation/javascript/reference/marker#Icon&quot;&gt;google.maps.Icon&lt;/a&gt;
    */
-  @Input() iconUrl: string | google.maps.Icon;
+  @Input() public iconUrl: string | google.maps.Icon;
+
+  @Input() public icon: MarkerIcon;
 
   /**
    * If true, the marker is visible
    */
-  @Input() visible: boolean &#x3D; true;
+  @Input() public visible: boolean &#x3D; true;
 
   /**
    * Whether to automatically open the child info window when the marker is clicked.
    */
-  @Input() openInfoWindow: boolean &#x3D; true;
+  @Input() public openInfoWindow: boolean &#x3D; true;
 
   /**
    * The marker&#x27;s opacity between 0.0 and 1.0.
    */
-  @Input() opacity: number &#x3D; 1;
+  @Input() public opacity: number &#x3D; 1;
 
   /**
    * Marker optimize flag. If it is false then it prevent duplicate rendering.
    * Default it is true
    */
-  @Input() optimized: boolean &#x3D; true;
+  @Input() public optimized: boolean &#x3D; true;
 
   /**
    * All markers are displayed on the map in order of their zIndex, with higher values displaying in
@@ -1670,81 +1729,75 @@ export class NgMapsMarkerComponent
    * vertical position on screen, with lower markers appearing in front of markers further up the
    * screen.
    */
-  @Input() zIndex: number &#x3D; 1;
+  @Input() public zIndex: number &#x3D; 1;
 
   /**
    * If true, the marker can be clicked. Default value is true.
    */
-  // tslint:disable-next-line:no-input-rename
-  @Input(&#x27;markerClickable&#x27;) clickable: boolean &#x3D; true;
+  // eslint-disable-next-line @angular-eslint/no-input-rename
+  @Input(&#x27;markerClickable&#x27;) public clickable: boolean &#x3D; true;
 
   /**
    * Which animation to play when marker is added to a map.
    * This can be &#x27;BOUNCE&#x27; or &#x27;DROP&#x27;
    */
-  animation: &#x27;BOUNCE&#x27; | &#x27;DROP&#x27; | null;
+  public animation: &#x27;BOUNCE&#x27; | &#x27;DROP&#x27; | null;
 
   /**
    * This event emitter gets emitted when the user clicks on the marker.
    */
-  @Output() markerClick: EventEmitter&lt;NgMapsMarkerComponent&gt; &#x3D; new EventEmitter&lt;
-    NgMapsMarkerComponent
-  &gt;();
+  @Output()
+  public markerClick: EventEmitter&lt;NgMapsMarkerComponent&gt; &#x3D; new EventEmitter&lt;NgMapsMarkerComponent&gt;();
 
   /**
    * This event is fired when the user rightclicks on the marker.
    */
-  @Output() markerRightClick: EventEmitter&lt;void&gt; &#x3D; new EventEmitter&lt;void&gt;();
+  @Output()
+  public markerRightClick: EventEmitter&lt;void&gt; &#x3D; new EventEmitter&lt;void&gt;();
 
   /**
    * This event is fired when the user starts dragging the marker.
    */
-  @Output() dragStart: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;
-    google.maps.MouseEvent
-  &gt;();
+  @Output()
+  public dragStart: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
 
   /**
    * This event is repeatedly fired while the user drags the marker.
    */
-  @Output() drag: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;
-    google.maps.MouseEvent
-  &gt;();
+  @Output()
+  public drag: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
 
   /**
    * This event is fired when the user stops dragging the marker.
    */
-  @Output() dragEnd: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;
-    google.maps.MouseEvent
-  &gt;();
+  @Output()
+  public dragEnd: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
 
   /**
    * This event is fired when the user mouses over the marker.
    */
-  @Output() mouseOver: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;
-    google.maps.MouseEvent
-  &gt;();
+  @Output()
+  public mouseOver: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
 
   /**
    * This event is fired when the user mouses outside the marker.
    */
-  @Output() mouseOut: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;
-    google.maps.MouseEvent
-  &gt;();
+  @Output()
+  public mouseOut: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
 
   /**
    * @internal
    */
-  @ContentChildren(NgMapsInfoWindowComponent) infoWindow: QueryList&lt;
-    NgMapsInfoWindowComponent
-  &gt; &#x3D; new QueryList&lt;NgMapsInfoWindowComponent&gt;();
+  @ContentChildren(NgMapsInfoWindowComponent)
+  public infoWindow: QueryList&lt;NgMapsInfoWindowComponent&gt; &#x3D; new QueryList&lt;NgMapsInfoWindowComponent&gt;();
 
   private _markerAddedToManger: boolean &#x3D; false;
   private _id: string;
-  private _observableSubscriptions: Subscription[] &#x3D; [];
+  private subscription: Subscription &#x3D; new Subscription();
 
-  protected readonly _fitBoundsDetails$: ReplaySubject&lt;
-    FitBoundsDetails
-  &gt; &#x3D; new ReplaySubject&lt;FitBoundsDetails&gt;(1);
+  protected readonly _fitBoundsDetails$: ReplaySubject&lt;FitBoundsDetails&gt; &#x3D; new ReplaySubject&lt;FitBoundsDetails&gt;(
+    1,
+  );
 
   constructor(private markerManager: MarkerManager) {
     this._id &#x3D; (markerId++).toString();
@@ -1753,7 +1806,7 @@ export class NgMapsMarkerComponent
   /**
    *  @internal
    */
-  ngAfterContentInit() {
+  public ngAfterContentInit() {
     this.handleInfoWindowUpdate();
     this.infoWindow.changes.subscribe(() &#x3D;&gt; this.handleInfoWindowUpdate());
   }
@@ -1770,7 +1823,7 @@ export class NgMapsMarkerComponent
   /**
    * @internal
    */
-  ngOnChanges(changes: { [key: string]: SimpleChange }) {
+  public ngOnChanges(changes: { [key: string]: SimpleChange }) {
     if (typeof this.latitude &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
       this.latitude &#x3D; Number(this.latitude);
     }
@@ -1805,6 +1858,9 @@ export class NgMapsMarkerComponent
       this.markerManager.updateDraggable(this);
     }
     if (changes.iconUrl) {
+      this.markerManager.updateIconLegacy(this);
+    }
+    if (changes.icon) {
       this.markerManager.updateIcon(this);
     }
     if (changes.opacity) {
@@ -1827,7 +1883,7 @@ export class NgMapsMarkerComponent
   /**
    * @internal
    */
-  getFitBoundsDetails$(): Observable&lt;FitBoundsDetails&gt; {
+  public getFitBoundsDetails$(): Observable&lt;FitBoundsDetails&gt; {
     return this._fitBoundsDetails$.asObservable();
   }
 
@@ -1837,75 +1893,83 @@ export class NgMapsMarkerComponent
     });
   }
 
-  private _addEventListeners() {
+  protected _addEventListeners() {
     const cs &#x3D; this.markerManager
-      .createEventObservable(&#x27;click&#x27;, this)
-      .subscribe(() &#x3D;&gt; {
-        if (this.openInfoWindow) {
-          this.infoWindow.forEach((infoWindow) &#x3D;&gt; infoWindow.open());
-        }
-        this.markerClick.emit(this);
+      .createEventObservable([&#x27;click&#x27;, &#x27;pointerdown&#x27;], this)
+      .subscribe({
+        next: (event) &#x3D;&gt; {
+          if (this.openInfoWindow) {
+            this.infoWindow.forEach((infoWindow) &#x3D;&gt; infoWindow.open(event));
+          }
+          this.markerClick.emit(this);
+        },
       });
-    this._observableSubscriptions.push(cs);
+    this.subscription.add(cs);
 
     const rc &#x3D; this.markerManager
       .createEventObservable(&#x27;rightclick&#x27;, this)
       .subscribe(() &#x3D;&gt; {
         this.markerRightClick.emit(null);
       });
-    this._observableSubscriptions.push(rc);
+    this.subscription.add(rc);
 
     const ds &#x3D; this.markerManager
       .createEventObservable&lt;google.maps.MouseEvent&gt;(&#x27;dragstart&#x27;, this)
       .subscribe((e: google.maps.MouseEvent) &#x3D;&gt; {
         this.dragStart.emit(e);
       });
-    this._observableSubscriptions.push(ds);
+    this.subscription.add(ds);
 
     const d &#x3D; this.markerManager
       .createEventObservable&lt;google.maps.MouseEvent&gt;(&#x27;drag&#x27;, this)
       .subscribe((e: google.maps.MouseEvent) &#x3D;&gt; {
         this.drag.emit(e);
       });
-    this._observableSubscriptions.push(d);
+    this.subscription.add(d);
 
     const dragend &#x3D; this.markerManager
       .createEventObservable&lt;google.maps.MouseEvent&gt;(&#x27;dragend&#x27;, this)
       .subscribe((e: google.maps.MouseEvent) &#x3D;&gt; {
         this.dragEnd.emit(e);
       });
-    this._observableSubscriptions.push(dragend);
+    this.subscription.add(dragend);
 
     const mouseover &#x3D; this.markerManager
-      .createEventObservable&lt;google.maps.MouseEvent&gt;(&#x27;mouseover&#x27;, this)
+      .createEventObservable&lt;google.maps.MouseEvent&gt;(
+        [&#x27;mouseover&#x27;, &#x27;pointerenter&#x27;],
+        this,
+      )
       .subscribe((e: google.maps.MouseEvent) &#x3D;&gt; {
         this.mouseOver.emit(e);
       });
-    this._observableSubscriptions.push(mouseover);
+    this.subscription.add(mouseover);
 
     const mouseout &#x3D; this.markerManager
-      .createEventObservable&lt;google.maps.MouseEvent&gt;(&#x27;mouseout&#x27;, this)
+      .createEventObservable&lt;google.maps.MouseEvent&gt;(
+        [&#x27;mouseout&#x27;, &#x27;pointerleave&#x27;],
+        this,
+      )
       .subscribe((e: google.maps.MouseEvent) &#x3D;&gt; {
         this.mouseOut.emit(e);
       });
-    this._observableSubscriptions.push(mouseout);
+    this.subscription.add(mouseout);
   }
 
   /** @internal */
-  id(): string {
+  public id(): string {
     return this._id;
   }
 
   /** @internal */
-  toString(): string {
+  public toString(): string {
     return &#x60;NgMapsMarker-${this._id}&#x60;;
   }
 
   /** @internal */
-  ngOnDestroy() {
+  public ngOnDestroy() {
     this.markerManager.deleteMarker(this);
-    // unsubscribe all registered observable subscriptions
-    this._observableSubscriptions.forEach((s) &#x3D;&gt; s.unsubscribe());
+    // unsubscribe all registered observable subscription
+    this.subscription.unsubscribe();
   }
 }
 </code></pre>
@@ -1939,8 +2003,8 @@ export class NgMapsMarkerComponent
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ng-content></ng-content></div>'
-    var COMPONENTS = [{'name': 'NgMapsInfoWindowComponent', 'selector': 'agm-info-window, map-info-window'},{'name': 'NgMapsMarkerComponent', 'selector': 'agm-marker, map-marker'},{'name': 'NgMapsViewComponent', 'selector': 'agm-map, map-view'}];
-    var DIRECTIVES = [{'name': 'NgMapsFitBounds', 'selector': '[mapFitBounds]'}];
+    var COMPONENTS = [{'name': 'NgMapsInfoWindowComponent', 'selector': 'map-info-window'},{'name': 'NgMapsMarkerComponent', 'selector': 'map-marker'},{'name': 'NgMapsViewComponent', 'selector': ''}];
+    var DIRECTIVES = [{'name': 'NgMapsCircleDirective', 'selector': 'map-circle'},{'name': 'NgMapsFitBoundsDirective', 'selector': '[mapFitBounds]'},{'name': 'NgMapsPolygonDirective', 'selector': 'map-polygon'},{'name': 'NgMapsPolyline', 'selector': 'map-polyline'},{'name': 'NgMapsPolylinePoint', 'selector': 'map-polyline-point'},{'name': 'NgMapsRectangleDirective', 'selector': 'map-rectangle'}];
     var ACTUAL_COMPONENT = {'name': 'NgMapsMarkerComponent'};
 </script>
 <script src="../js/tree.js"></script>
@@ -1977,6 +2041,7 @@ export class NgMapsMarkerComponent
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'NgMapsMarkerComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

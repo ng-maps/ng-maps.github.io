@@ -90,7 +90,7 @@
                             <code>
                                 ClusterManager
                                 { provide: MarkerManager, useExisting: ClusterManager }
-                                InfoWindowManager
+                                { provide: InfoWindowManager, useClass: GoogleInfoWindowManager }
                             </code>
                         </td>
                     </tr>
@@ -137,12 +137,15 @@
                                 <a href="#_addEventListeners">_addEventListeners</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#ngOnChanges">ngOnChanges</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#ngOnDestroy">ngOnDestroy</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
@@ -220,7 +223,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/lib/directives/marker-cluster.ts:74</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/lib/directives/marker-cluster.ts:73</a></div>
                             </td>
                         </tr>
 
@@ -522,7 +525,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/lib/directives/marker-cluster.ts:70</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/lib/directives/marker-cluster.ts:71</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -559,8 +562,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="117"
-                            class="link-to-prism">src/lib/directives/marker-cluster.ts:117</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="116"
+                            class="link-to-prism">src/lib/directives/marker-cluster.ts:116</a></div>
                 </td>
             </tr>
 
@@ -583,6 +586,7 @@
                     <a name="ngOnChanges"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             ngOnChanges
                         </b>
                         <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
@@ -591,15 +595,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="90"
-                            class="link-to-prism">src/lib/directives/marker-cluster.ts:90</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/lib/directives/marker-cluster.ts:89</a></div>
                 </td>
             </tr>
 
@@ -653,6 +658,7 @@
                     <a name="ngOnDestroy"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             ngOnDestroy
                         </b>
                         <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
@@ -661,15 +667,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnDestroy()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnDestroy()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="84"
-                            class="link-to-prism">src/lib/directives/marker-cluster.ts:84</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/lib/directives/marker-cluster.ts:83</a></div>
                 </td>
             </tr>
 
@@ -692,6 +699,7 @@
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             ngOnInit
                         </b>
                         <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
@@ -700,15 +708,16 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnInit()</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="133"
-                            class="link-to-prism">src/lib/directives/marker-cluster.ts:133</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/lib/directives/marker-cluster.ts:132</a></div>
                 </td>
             </tr>
 
@@ -756,7 +765,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/lib/directives/marker-cluster.ts:74</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/lib/directives/marker-cluster.ts:73</a></div>
                             </td>
                         </tr>
 
@@ -814,9 +823,9 @@ export class MyComponent {
   SimpleChanges,
 } from &#x27;@angular/core&#x27;;
 import { InfoWindowManager, MarkerManager } from &#x27;@ng-maps/core&#x27;;
+import { GoogleInfoWindowManager } from &#x27;@ng-maps/google&#x27;;
 import { Subscription } from &#x27;rxjs&#x27;;
-import { MARKER_CLUSTER_CONFIG, MarkerClusterConfig } from &#x27;../config&#x27;;
-
+import { MarkerClusterConfig, MARKER_CLUSTER_CONFIG } from &#x27;../config&#x27;;
 import { ClusterManager } from &#x27;../services/managers/cluster-manager&#x27;;
 
 /**
@@ -827,7 +836,7 @@ import { ClusterManager } from &#x27;../services/managers/cluster-manager&#x27;;
   providers: [
     ClusterManager,
     { provide: MarkerManager, useExisting: ClusterManager },
-    InfoWindowManager,
+    { provide: InfoWindowManager, useClass: GoogleInfoWindowManager },
   ],
 })
 export class MarkerClusterComponent
@@ -835,44 +844,43 @@ export class MarkerClusterComponent
   /**
    * Whether the center of each cluster should be the average of all markers in the cluster.
    */
-  @Input() averageCenter: boolean;
+  @Input() public averageCenter: boolean;
 
   /**
    * A function that calculates the cluster style and text based on the markers in the cluster.
    */
-  @Input() calculator: Calculator;
+  @Input() public calculator: Calculator;
 
   /**
    * The grid size of a cluster in pixels
    */
-  @Input() gridSize: number;
+  @Input() public gridSize: number;
 
-  @Input() imageExtension: string;
-  @Input() imagePath: string;
+  @Input() public imageExtension: string;
+  @Input() public imagePath: string;
 
   /**
    * The maximum zoom level that a marker can be part of a cluster.
    */
-  @Input() maxZoom: number;
+  @Input() public maxZoom: number;
 
   /**
    * The minimum number of markers to be in a cluster before the markers are hidden and a count is shown.
    */
-  @Input() minimumClusterSize: number;
+  @Input() public minimumClusterSize: number;
 
   /**
    * An object that has style properties.
    */
-  @Input() styles: Array&lt;ClusterIconStyle&gt;;
+  @Input() public styles: Array&lt;ClusterIconStyle&gt;;
 
   /**
    * Whether the default behaviour of clicking on a cluster is to zoom into it.
    */
-  @Input() zoomOnClick: boolean;
+  @Input() public zoomOnClick: boolean;
 
-  @Output() clusterClick: EventEmitter&lt;
-    google.maps.MouseEvent
-  &gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
+  @Output()
+  public clusterClick: EventEmitter&lt;google.maps.MouseEvent&gt; &#x3D; new EventEmitter&lt;google.maps.MouseEvent&gt;();
 
   private _observableSubscriptions: Array&lt;Subscription&gt; &#x3D; [];
 
@@ -884,13 +892,13 @@ export class MarkerClusterComponent
   ) {}
 
   /** @internal */
-  ngOnDestroy() {
+  public ngOnDestroy() {
     this._clusterManager.clearMarkers();
     this._observableSubscriptions.forEach((s) &#x3D;&gt; s.unsubscribe());
   }
 
   /** @internal */
-  ngOnChanges(changes: SimpleChanges) {
+  public ngOnChanges(changes: SimpleChanges) {
     if (changes.averageCenter) {
       this._clusterManager.setAverageCenter(this);
     }
@@ -933,7 +941,7 @@ export class MarkerClusterComponent
   }
 
   /** @internal */
-  ngOnInit() {
+  public ngOnInit() {
     this._addEventListeners();
     this._clusterManager.init({
       averageCenter: this.averageCenter,
@@ -986,6 +994,7 @@ export class MarkerClusterComponent
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
             var COMPODOC_CURRENT_PAGE_URL = 'MarkerClusterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

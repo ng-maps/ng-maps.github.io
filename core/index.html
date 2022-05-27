@@ -42,7 +42,8 @@
 <li>Npm: <code>npm install -D @types/googlemaps</code></li>
 <li>Yarn: <code>yarn add -D @types/googlemaps</code></li>
 </ul>
-<p>Now you are ready to start. Add <code>NgMapsCoreModule.forRoot({apiKey: &#39;YOUR_API_KEY&#39;})</code> to your <em>AppModule</em>. Now you can use map components.</p>
+<p>Add <code>NgMapsCoreModule</code> to your <em>AppModule</em>.</p>
+<p>Additionally you will need to add the <code>@ng-maps/google</code> module and follow <a href="https://ng-maps.github.io/google/index.html">the instruction there</a>. As alternative there is a here maps module which isn&#39;t ready for production yet.</p>
 <h3 id="lazy-loading-configuration">Lazy loading configuration</h3>
 <p>If you can not provide configuration at module import level you can load it at a later time.</p>
 <p>You just need to inject <code>MapsAPILoader</code> into a component or service and call the method <code>configure(config)</code> with a valid configuration.</p>
@@ -198,6 +199,7 @@
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
             var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="./js/libs/custom-elements.min.js"></script>

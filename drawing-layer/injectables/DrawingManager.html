@@ -143,7 +143,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(_mapsWrapper: GoogleMapsAPIWrapper, _zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
+<code>constructor(_mapsWrapper: MapsApiWrapper, _zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -169,7 +169,7 @@
                                                         <td>_mapsWrapper</td>
                                                   
                                                         <td>
-                                                                    <code>GoogleMapsAPIWrapper</code>
+                                                                    <code>MapsApiWrapper</code>
                                                         </td>
                                                   
                                                     <td>
@@ -1043,7 +1043,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, NgZone } from &#x27;@angular/core&#x27;;
-import { GoogleMapsAPIWrapper, NgMapsViewComponent } from &#x27;@ng-maps/core&#x27;;
+import { MapsApiWrapper, NgMapsViewComponent } from &#x27;@ng-maps/core&#x27;;
 import { Observable, Observer } from &#x27;rxjs&#x27;;
 import { NgMapsDrawingLayer } from &#x27;../directives/drawing-layer&#x27;;
 
@@ -1051,15 +1051,15 @@ import { NgMapsDrawingLayer } from &#x27;../directives/drawing-layer&#x27;;
   providedIn: NgMapsViewComponent,
 })
 export class DrawingManager {
-  // tslint:disable-next-line:variable-name
+  // eslint-disable-next-line @typescript-eslint/naming-convention,no-underscore-dangle,id-blacklist,id-match
   protected _drawingManagers: Map&lt;
     NgMapsDrawingLayer,
     Promise&lt;google.maps.drawing.DrawingManager&gt;
   &gt; &#x3D; new Map();
 
-  // tslint:disable-next-line:variable-name
+  // eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle, id-blacklist, id-match
   constructor(
-    protected _mapsWrapper: GoogleMapsAPIWrapper,
+    protected _mapsWrapper: MapsApiWrapper,
     protected _zone: NgZone,
   ) {}
 
@@ -1204,6 +1204,7 @@ export class DrawingManager {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
             var COMPODOC_CURRENT_PAGE_URL = 'DrawingManager.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

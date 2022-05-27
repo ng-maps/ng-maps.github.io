@@ -84,7 +84,22 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="directives-links"' : 'id="xs-directives-links"' }>
                                 <li class="link">
-                                    <a href="directives/NgMapsFitBounds.html" data-type="entity-link">NgMapsFitBounds</a>
+                                    <a href="directives/NgMapsCircleDirective.html" data-type="entity-link">NgMapsCircleDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/NgMapsFitBoundsDirective.html" data-type="entity-link">NgMapsFitBoundsDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/NgMapsPolygonDirective.html" data-type="entity-link">NgMapsPolygonDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/NgMapsPolyline.html" data-type="entity-link">NgMapsPolyline</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/NgMapsPolylinePoint.html" data-type="entity-link">NgMapsPolylinePoint</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/NgMapsRectangleDirective.html" data-type="entity-link">NgMapsRectangleDirective</a>
                                 </li>
                             </ul>
                         </li>
@@ -113,22 +128,34 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                                 <li class="link">
-                                    <a href="injectables/FitBoundsService.html" data-type="entity-link">FitBoundsService</a>
+                                    <a href="injectables/CircleManager.html" data-type="entity-link">CircleManager</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GoogleMapsAPIWrapper.html" data-type="entity-link">GoogleMapsAPIWrapper</a>
+                                    <a href="injectables/FitBoundsService.html" data-type="entity-link">FitBoundsService</a>
                                 </li>
                                 <li class="link">
                                     <a href="injectables/InfoWindowManager.html" data-type="entity-link">InfoWindowManager</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/LazyMapsAPILoader.html" data-type="entity-link">LazyMapsAPILoader</a>
-                                </li>
-                                <li class="link">
                                     <a href="injectables/MapsAPILoader.html" data-type="entity-link">MapsAPILoader</a>
                                 </li>
                                 <li class="link">
+                                    <a href="injectables/MapsApiWrapper.html" data-type="entity-link">MapsApiWrapper</a>
+                                </li>
+                                <li class="link">
                                     <a href="injectables/MarkerManager.html" data-type="entity-link">MarkerManager</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/PolygonManager.html" data-type="entity-link">PolygonManager</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/PolylineManager.html" data-type="entity-link">PolylineManager</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/RectangleManager.html" data-type="entity-link">RectangleManager</a>
+                                </li>
+                                <li class="link">
+                                    <a href="injectables/ScriptLoaderService.html" data-type="entity-link">ScriptLoaderService</a>
                                 </li>
                             </ul>
                         </li>
@@ -141,10 +168,34 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
+                                <a href="interfaces/BoundsLiteral.html" data-type="entity-link">BoundsLiteral</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/CircleOptions.html" data-type="entity-link">CircleOptions</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/FitBoundsDetails.html" data-type="entity-link">FitBoundsDetails</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/LazyMapsAPILoaderConfigLiteral.html" data-type="entity-link">LazyMapsAPILoaderConfigLiteral</a>
+                                <a href="interfaces/GeoPoint.html" data-type="entity-link">GeoPoint</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/MapOptions.html" data-type="entity-link">MapOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/MarkerIcon.html" data-type="entity-link">MarkerIcon</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/MarkerOptions.html" data-type="entity-link">MarkerOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/Padding.html" data-type="entity-link">Padding</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/RectangleOptions.html" data-type="entity-link">RectangleOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ShapeOptions.html" data-type="entity-link">ShapeOptions</a>
                             </li>
                         </ul>
                     </li>
@@ -156,9 +207,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
-                            <li class="link">
-                                <a href="miscellaneous/enumerations.html" data-type="entity-link">Enums</a>
-                            </li>
                             <li class="link">
                                 <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
                             </li>

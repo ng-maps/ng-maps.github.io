@@ -55,13 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/NgMapsMarkerClustererModule.html" data-type="entity-link">NgMapsMarkerClustererModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#directives-links-module-NgMapsMarkerClustererModule-b4b1642fbbb84c3cb88cc54f46ba8efb"' : 'data-target="#xs-directives-links-module-NgMapsMarkerClustererModule-b4b1642fbbb84c3cb88cc54f46ba8efb"' }>
+                                        'data-target="#directives-links-module-NgMapsMarkerClustererModule-a51e15668e7cc8b95d0120b6d9101d25"' : 'data-target="#xs-directives-links-module-NgMapsMarkerClustererModule-a51e15668e7cc8b95d0120b6d9101d25"' }>
                                         <span class="icon ion-md-code-working"></span>
                                         <span>Directives</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsMarkerClustererModule-b4b1642fbbb84c3cb88cc54f46ba8efb"' :
-                                        'id="xs-directives-links-module-NgMapsMarkerClustererModule-b4b1642fbbb84c3cb88cc54f46ba8efb"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsMarkerClustererModule-a51e15668e7cc8b95d0120b6d9101d25"' :
+                                        'id="xs-directives-links-module-NgMapsMarkerClustererModule-a51e15668e7cc8b95d0120b6d9101d25"' }>
                                         <li class="link">
                                             <a href="directives/MarkerClusterComponent.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules">MarkerClusterComponent</a>

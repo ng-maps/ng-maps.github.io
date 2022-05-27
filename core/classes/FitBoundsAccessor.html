@@ -89,6 +89,7 @@ of AGM.</p>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
                                     <span class="modifier">Abstract</span>
                                 <a href="#getFitBoundsDetails$">getFitBoundsDetails$</a>
                             </li>
@@ -118,6 +119,7 @@ of AGM.</p>
                     <a name="getFitBoundsDetails$"></a>
                     <span class="name">
                         <b>
+                            <span class="modifier">Public</span>
                             <span class="modifier">Abstract</span>
                             getFitBoundsDetails$
                         </b>
@@ -135,8 +137,8 @@ of AGM.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/lib/services/fit-bounds.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/lib/services/fit-bounds.ts:29</a></div>
                 </td>
             </tr>
 
@@ -164,65 +166,64 @@ of AGM.</p>
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { BehaviorSubject, from, Observable, timer } from &#x27;rxjs&#x27;;
-import { flatMap, map, sample, shareReplay, switchMap } from &#x27;rxjs/operators&#x27;;
+import {
+  flatMap,
+  map,
+  mergeMap,
+  sample,
+  shareReplay,
+  switchMap,
+} from &#x27;rxjs/operators&#x27;;
+import { BoundsLiteral } from &#x27;../interface/bounds&#x27;;
+import { GeoPoint } from &#x27;../interface/geo-point&#x27;;
 import { MapsAPILoader } from &#x27;./maps-api-loader/maps-api-loader&#x27;;
 
 export interface FitBoundsDetails {
-  latLng: google.maps.LatLng | google.maps.LatLngLiteral;
+  latLng: GeoPoint;
 }
 
 /**
  * @internal
  */
-export type BoundsMap &#x3D; Map&lt;
-  string,
-  google.maps.LatLng | google.maps.LatLngLiteral
-&gt;;
+export type BoundsMap &#x3D; Map&lt;string, GeoPoint&gt;;
 
 /**
  * Class to implement when you what to be able to make it work with the auto fit bounds feature
  * of AGM.
  */
 export abstract class FitBoundsAccessor {
-  abstract getFitBoundsDetails$(): Observable&lt;FitBoundsDetails&gt;;
+  public abstract getFitBoundsDetails$(): Observable&lt;FitBoundsDetails&gt;;
 }
 
 /**
  * The FitBoundsService is responsible for computing the bounds of the a single map.
  */
 @Injectable()
-export class FitBoundsService {
-  protected readonly bounds$: Observable&lt;google.maps.LatLngBounds&gt;;
+export abstract class FitBoundsService {
+  protected readonly bounds$: Observable&lt;BoundsLiteral&gt;;
   protected readonly _boundsChangeSampleTime$ &#x3D; new BehaviorSubject&lt;number&gt;(
     200,
   );
   protected readonly _includeInBounds$ &#x3D; new BehaviorSubject&lt;BoundsMap&gt;(
-    new Map&lt;string, google.maps.LatLng | google.maps.LatLngLiteral&gt;(),
+    new Map&lt;string, GeoPoint&gt;(),
   );
 
   constructor(loader: MapsAPILoader) {
     this.bounds$ &#x3D; from(loader.load()).pipe(
-      flatMap(() &#x3D;&gt; this._includeInBounds$),
+      mergeMap(() &#x3D;&gt; this._includeInBounds$),
       sample(
         this._boundsChangeSampleTime$.pipe(switchMap((time) &#x3D;&gt; timer(0, time))),
       ),
-      map((includeInBounds) &#x3D;&gt; this._generateBounds(includeInBounds)),
+      map((includeInBounds) &#x3D;&gt; this.generateBounds(includeInBounds)),
       shareReplay(1),
     );
   }
 
-  private _generateBounds(
-    includeInBounds: Map&lt;
-      string,
-      google.maps.LatLng | google.maps.LatLngLiteral
-    &gt;,
-  ) {
-    const bounds &#x3D; new google.maps.LatLngBounds();
-    includeInBounds.forEach((b) &#x3D;&gt; bounds.extend(b));
-    return bounds;
-  }
+  protected abstract generateBounds(
+    includeInBounds: Map&lt;string, GeoPoint&gt;,
+  ): BoundsLiteral;
 
-  addToBounds(latLng: google.maps.LatLng | google.maps.LatLngLiteral) {
+  public addToBounds(latLng: GeoPoint) {
     const id &#x3D; this._createIdentifier(latLng);
     if (this._includeInBounds$.value.has(id)) {
       return;
@@ -232,17 +233,19 @@ export class FitBoundsService {
     this._includeInBounds$.next(bounds);
   }
 
-  removeFromBounds(latLng: google.maps.LatLng | google.maps.LatLngLiteral) {
+  public removeFromBounds(
+    latLng: google.maps.LatLng | google.maps.LatLngLiteral,
+  ) {
     const bounds &#x3D; this._includeInBounds$.value;
     bounds.delete(this._createIdentifier(latLng));
     this._includeInBounds$.next(bounds);
   }
 
-  changeFitBoundsChangeSampleTime(timeMs: number) {
+  public changeFitBoundsChangeSampleTime(timeMs: number) {
     this._boundsChangeSampleTime$.next(timeMs);
   }
 
-  getBounds$(): Observable&lt;google.maps.LatLngBounds&gt; {
+  public getBounds$(): Observable&lt;BoundsLiteral&gt; {
     return this.bounds$;
   }
 
@@ -281,6 +284,7 @@ export class FitBoundsService {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
             var COMPODOC_CURRENT_PAGE_URL = 'FitBoundsAccessor.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
