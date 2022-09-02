@@ -1,6 +1,5 @@
 'use strict';
 
-
 customElements.define('compodoc-menu', class extends HTMLElement {
     constructor() {
         super();
@@ -39,6 +38,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <span class="icon ion-ios-list"></span>Dependencies
                                     </a>
                                 </li>
+                                <li class="link">
+                                    <a href="properties.html" data-type="chapter-link">
+                                        <span class="icon ion-ios-apps"></span>Properties
+                                    </a>
+                                </li>
                     </ul>
                 </li>
                     <li class="chapter modules">
@@ -52,19 +56,18 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </a>
                         <ul class="links collapse " ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
                             <li class="link">
-                                <a href="modules/NgMapsDrawingLayerModule.html" data-type="entity-link">NgMapsDrawingLayerModule</a>
+                                <a href="modules/NgMapsDrawingLayerModule.html" data-type="entity-link" >NgMapsDrawingLayerModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#directives-links-module-NgMapsDrawingLayerModule-f3c08db1b3b74ec8e942e09a7c3514ea"' : 'data-target="#xs-directives-links-module-NgMapsDrawingLayerModule-f3c08db1b3b74ec8e942e09a7c3514ea"' }>
+                                        'data-target="#directives-links-module-NgMapsDrawingLayerModule-31dc96313c3ab77906c78b8ae4adb7995e9602a7cb6391d45bec4e35d4d36bc9e9c9db06e5a46d5ebe3e826425117e42ab338f6905518783966dd4ae8081a8ac"' : 'data-target="#xs-directives-links-module-NgMapsDrawingLayerModule-31dc96313c3ab77906c78b8ae4adb7995e9602a7cb6391d45bec4e35d4d36bc9e9c9db06e5a46d5ebe3e826425117e42ab338f6905518783966dd4ae8081a8ac"' }>
                                         <span class="icon ion-md-code-working"></span>
                                         <span>Directives</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsDrawingLayerModule-f3c08db1b3b74ec8e942e09a7c3514ea"' :
-                                        'id="xs-directives-links-module-NgMapsDrawingLayerModule-f3c08db1b3b74ec8e942e09a7c3514ea"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsDrawingLayerModule-31dc96313c3ab77906c78b8ae4adb7995e9602a7cb6391d45bec4e35d4d36bc9e9c9db06e5a46d5ebe3e826425117e42ab338f6905518783966dd4ae8081a8ac"' :
+                                        'id="xs-directives-links-module-NgMapsDrawingLayerModule-31dc96313c3ab77906c78b8ae4adb7995e9602a7cb6391d45bec4e35d4d36bc9e9c9db06e5a46d5ebe3e826425117e42ab338f6905518783966dd4ae8081a8ac"' }>
                                         <li class="link">
-                                            <a href="directives/NgMapsDrawingLayer.html"
-                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules">NgMapsDrawingLayer</a>
+                                            <a href="directives/NgMapsDrawingLayer.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NgMapsDrawingLayer</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -80,7 +83,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                                 <li class="link">
-                                    <a href="injectables/DrawingManager.html" data-type="entity-link">DrawingManager</a>
+                                    <a href="injectables/DrawingManager.html" data-type="entity-link" >DrawingManager</a>
                                 </li>
                             </ul>
                         </li>

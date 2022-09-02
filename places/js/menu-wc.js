@@ -1,6 +1,5 @@
 'use strict';
 
-
 customElements.define('compodoc-menu', class extends HTMLElement {
     constructor() {
         super();
@@ -39,6 +38,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <span class="icon ion-ios-list"></span>Dependencies
                                     </a>
                                 </li>
+                                <li class="link">
+                                    <a href="properties.html" data-type="chapter-link">
+                                        <span class="icon ion-ios-apps"></span>Properties
+                                    </a>
+                                </li>
                     </ul>
                 </li>
                     <li class="chapter modules">
@@ -52,7 +56,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </a>
                         <ul class="links collapse " ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
                             <li class="link">
-                                <a href="modules/NgMapsPlacesModule.html" data-type="entity-link">NgMapsPlacesModule</a>
+                                <a href="modules/NgMapsPlacesModule.html" data-type="entity-link" >NgMapsPlacesModule</a>
                             </li>
                 </ul>
                 </li>
@@ -65,10 +69,10 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="directives-links"' : 'id="xs-directives-links"' }>
                                 <li class="link">
-                                    <a href="directives/NgMapsAutocompleteDirective.html" data-type="entity-link">NgMapsAutocompleteDirective</a>
+                                    <a href="directives/NgMapsAutocompleteDirective.html" data-type="entity-link" >NgMapsAutocompleteDirective</a>
                                 </li>
                                 <li class="link">
-                                    <a href="directives/NgMapsSearchBoxDirective.html" data-type="entity-link">NgMapsSearchBoxDirective</a>
+                                    <a href="directives/NgMapsSearchBoxDirective.html" data-type="entity-link" >NgMapsSearchBoxDirective</a>
                                 </li>
                             </ul>
                         </li>
@@ -81,7 +85,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/NgMapsPlacesConfiguration.html" data-type="entity-link">NgMapsPlacesConfiguration</a>
+                                <a href="interfaces/NgMapsPlacesConfiguration.html" data-type="entity-link" >NgMapsPlacesConfiguration</a>
                             </li>
                         </ul>
                     </li>

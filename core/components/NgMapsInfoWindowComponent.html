@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -35,7 +36,9 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>NgMapsInfoWindowComponent</li>
+  <li
+  >
+  NgMapsInfoWindowComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,32 +61,32 @@
     <code>src/lib/directives/info-window.ts</code>
 </p>
 
+
     <p class="comment">
         <h3>Description</h3>
     </p>
     <p class="comment">
         <p>NgMapsInfoWindowComponent renders a info window inside a <a href="../components/NgMapsMarkerComponent.html">NgMapsMarkerComponent</a> or standalone.</p>
 <h3 id="example">Example</h3>
-<p>```typescript</p>
-<ul>
-<li>import { Component } from &#39;@angular/core&#39;;</li>
-<li></li>
-<li>@Component({</li>
-<li>selector: &#39;my-map-cmp&#39;,</li>
-<li>styles: [<code>map-view {
-  height: 300px;
-}</code>],</li>
-<li>template: `
-&lt;map-view [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
-  &lt;map-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [label]=&quot;&#39;M&#39;&quot;&gt;<div><pre class="line-numbers"><code class="language-none">&lt;map-info-window [disableAutoPan]=&quot;true&quot;&gt;
-  Hi, this is the content of the &lt;strong&gt;info window&lt;/strong&gt;
-&lt;/map-info-window&gt;</code></pre></div>  </map-marker>
-</map-view>
-`</li>
-<li>})</li>
-<li>```</li>
-</ul>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
 
+&#64;Component({
+ selector: &#39;my-map-cmp&#39;,
+ styles: [`
+   map-view {
+     height: 300px;
+   }
+`],
+ template: `
+   &lt;map-view [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+     &lt;map-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [label]=&quot;&#39;M&#39;&quot;&gt;
+       &lt;map-info-window [disableAutoPan]=&quot;true&quot;&gt;
+         Hi, this is the content of the &lt;strong&gt;info window&lt;/strong&gt;
+       &lt;/map-info-window&gt;
+     &lt;/map-marker&gt;
+   &lt;/map-view&gt;
+ `
+})</code></pre></div>
     </p>
 
 
@@ -99,7 +102,7 @@
 
 <section>
     <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
+    <table class="table table-sm table-hover metadata">
         <tbody>
 
 
@@ -153,29 +156,29 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_id">_id</a>
+                                <a href="#_id" >_id</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_infoWindowAddedToManager">_infoWindowAddedToManager</a>
+                                <a href="#_infoWindowAddedToManager" >_infoWindowAddedToManager</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
                                     <span class="modifier">Static</span>
-                                <a href="#_infoWindowOptionsInputs">_infoWindowOptionsInputs</a>
+                                <a href="#_infoWindowOptionsInputs" >_infoWindowOptionsInputs</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#content">content</a>
+                                <a href="#content" >content</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Readonly</span>
-                                <a href="#elementRef">elementRef</a>
+                                <a href="#elementRef" >elementRef</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#hostMarker">hostMarker</a>
+                                <a href="#hostMarker" >hostMarker</a>
                             </li>
                         </ul>
                     </td>
@@ -191,44 +194,44 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_registerEventListeners">_registerEventListeners</a>
+                                <a href="#_registerEventListeners" >_registerEventListeners</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_setInfoWindowOptions">_setInfoWindowOptions</a>
+                                <a href="#_setInfoWindowOptions" >_setInfoWindowOptions</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_updateOpenState">_updateOpenState</a>
+                                <a href="#_updateOpenState" >_updateOpenState</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
-                                <a href="#close">close</a>
+                                <a href="#close" >close</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#id">id</a>
+                                <a href="#id" >id</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngOnChanges">ngOnChanges</a>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#open">open</a>
+                                <a href="#open" >open</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#toString">toString</a>
+                                <a href="#toString" >toString</a>
                             </li>
                         </ul>
                     </td>
@@ -243,22 +246,22 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#disableAutoPan">disableAutoPan</a>
+                                <a href="#disableAutoPan" >disableAutoPan</a>
                             </li>
                             <li>
-                                <a href="#isOpen">isOpen</a>
+                                <a href="#isOpen" >isOpen</a>
                             </li>
                             <li>
-                                <a href="#latitude">latitude</a>
+                                <a href="#latitude" >latitude</a>
                             </li>
                             <li>
-                                <a href="#longitude">longitude</a>
+                                <a href="#longitude" >longitude</a>
                             </li>
                             <li>
-                                <a href="#maxWidth">maxWidth</a>
+                                <a href="#maxWidth" >maxWidth</a>
                             </li>
                             <li>
-                                <a href="#zIndex">zIndex</a>
+                                <a href="#zIndex" >zIndex</a>
                             </li>
                         </ul>
                     </td>
@@ -273,7 +276,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#infoWindowClose">infoWindowClose</a>
+                                <a href="#infoWindowClose" >infoWindowClose</a>
                             </li>
                         </ul>
                     </td>
@@ -291,7 +294,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(_infoWindowManager: <a href="../injectables/InfoWindowManager.html">InfoWindowManager<any></a>, elementRef: ElementRef<HTMLElement>)</code>
+<code>constructor(_infoWindowManager: <a href="../injectables/InfoWindowManager.html" target="_self">InfoWindowManager&lt;any&gt;</a>, elementRef: ElementRef<HTMLElement>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -565,10 +568,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="_registerEventListeners"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            _registerEventListeners
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>_registerEventListeners</b></span>
                         <a href="#_registerEventListeners"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -606,10 +607,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="_setInfoWindowOptions"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            _setInfoWindowOptions
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>_setInfoWindowOptions</b></span>
                         <a href="#_setInfoWindowOptions"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -635,6 +634,7 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -678,10 +678,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="_updateOpenState"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            _updateOpenState
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>_updateOpenState</b></span>
                         <a href="#_updateOpenState"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -719,11 +717,9 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="close"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
-                            close
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>close</b></span>
                         <a href="#close"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -763,10 +759,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="id"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            id
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>id</b></span>
                         <a href="#id"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -804,10 +798,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="ngOnChanges"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngOnChanges
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnChanges</b></span>
                         <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -833,6 +825,7 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -876,10 +869,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="ngOnDestroy"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngOnDestroy
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnDestroy</b></span>
                         <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -917,10 +908,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngOnInit
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnInit</b></span>
                         <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -958,10 +947,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="open"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            open
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>open</b></span>
                         <a href="#open"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -989,6 +976,7 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -1032,10 +1020,8 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
                 <td class="col-md-4">
                     <a name="toString"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            toString
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>toString</b></span>
                         <a href="#toString"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1070,218 +1056,212 @@ InfoWindows at higher latitudes. InfoWindows are always displayed in front of ma
 </section>
     <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_id"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_id</b></span>
+                        <a href="#_id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_id"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _id</b>
-                            <a href="#_id"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(infoWindowId++).toString()</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/lib/directives/info-window.ts:120</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>(infoWindowId++).toString()</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">src/lib/directives/info-window.ts:120</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_infoWindowAddedToManager"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_infoWindowAddedToManager</b></span>
+                        <a href="#_infoWindowAddedToManager"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_infoWindowAddedToManager"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _infoWindowAddedToManager</b>
-                            <a href="#_infoWindowAddedToManager"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/lib/directives/info-window.ts:119</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>false</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/lib/directives/info-window.ts:119</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_infoWindowOptionsInputs"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                        <span ><b>_infoWindowOptionsInputs</b></span>
+                        <a href="#_infoWindowOptionsInputs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_infoWindowOptionsInputs"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                                <span class="modifier">Static</span>
-                            _infoWindowOptionsInputs</b>
-                            <a href="#_infoWindowOptionsInputs"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>Array&lt;string&gt;</code>
+
                     </td>
                 </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Array&lt;string&gt;</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
     &#x27;disableAutoPan&#x27;,
     &#x27;maxWidth&#x27;,
   ]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/lib/directives/info-window.ts:61</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="content"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            content</b>
-                            <a href="#content"><span class="icon ion-ios-link"></span></a>
-                        </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/lib/directives/info-window.ts:61</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @ViewChild(&#x27;content&#x27;, {static: true})<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/lib/directives/info-window.ts:107</a></div>
-                            </td>
-                        </tr>
 
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="content"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>content</b></span>
+                        <a href="#content"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Holds the native element that is used for the info window content.</p>
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;content&#x27;, {static: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/lib/directives/info-window.ts:107</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Holds the native element that is used for the info window content.</p>
 </div>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="elementRef"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>elementRef</b></span>
+                        <a href="#elementRef"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="elementRef"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                                <span class="modifier">Readonly</span>
-                            elementRef</b>
-                            <a href="#elementRef"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>ElementRef&lt;HTMLElement&gt;</code>
+                        <i>Type : </i>    <code>ElementRef&lt;HTMLElement&gt;</code>
 
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/lib/directives/info-window.ts:58</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="hostMarker"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            hostMarker</b>
-                            <a href="#hostMarker"><span class="icon ion-ios-link"></span></a>
-                        </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../components/NgMapsMarkerComponent.html" target="_self" >NgMapsMarkerComponent</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/lib/directives/info-window.ts:58</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/lib/directives/info-window.ts:101</a></div>
-                            </td>
-                        </tr>
 
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hostMarker"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>hostMarker</b></span>
+                        <a href="#hostMarker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Holds the marker that is the host of the info window (if available)</p>
+                        <i>Type : </i>        <code><a href="../components/NgMapsMarkerComponent.html" target="_self" >NgMapsMarkerComponent</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/lib/directives/info-window.ts:101</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Holds the marker that is the host of the info window (if available)</p>
 </div>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
 </div>
@@ -1538,14 +1518,16 @@ export class NgMapsInfoWindowComponent implements OnDestroy, OnChanges, OnInit {
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1557,6 +1539,15 @@ export class NgMapsInfoWindowComponent implements OnDestroy, OnChanges, OnInit {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
@@ -1566,9 +1557,9 @@ export class NgMapsInfoWindowComponent implements OnDestroy, OnChanges, OnInit {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

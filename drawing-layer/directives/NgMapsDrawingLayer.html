@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -35,9 +36,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Directives</li>
-  <li>NgMapsDrawingLayer</li>
+  <li >NgMapsDrawingLayer</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,36 +60,37 @@
             <code>src/lib/directives/drawing-layer.ts</code>
         </p>
 
+
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
                 <p>NgMapsDrawingLayer renders a map drawing manager inside a <a href="NgMapsViewComponent">NgMapsViewComponent</a>.</p>
 <h3 id="example">Example</h3>
-<p>```typescript</p>
-<ul>
-<li>import { Component } from &#39;@angular/core&#39;;</li>
-<li></li>
-<li>@Component({</li>
-<li>selector: &#39;my-map-cmp&#39;,</li>
-<li>styles: [<code>map-view {
-  height: 300px;
-}</code>],</li>
-<li>template: `
-&lt;map-view [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
-  &lt;map-drawing-layer<div><pre class="line-numbers"><code class="language-none">[drawingControl]=&quot;true&quot;
-[drawingControlOptions]=&quot;{
-  position: 10,
-  drawingModes: [&#39;circle&#39;, &#39;polyline&#39;]
-}&quot;
-[drawingMode]=&quot;drawingMode&quot;&gt;</code></pre></div>  </map-drawing-layer>
-</map-view>
-`</li>
-<li>})</li>
-<li>```</li>
-</ul>
+<div><pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
 
+&#64;Component({
+ selector: &#39;my-map-cmp&#39;,
+ styles: [`
+   map-view {
+     height: 300px;
+   }
+`],
+ template: `
+   &lt;map-view [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+     &lt;map-drawing-layer
+       [drawingControl]=&quot;true&quot;
+       [drawingControlOptions]=&quot;{
+         position: 10,
+         drawingModes: [&#39;circle&#39;, &#39;polyline&#39;]
+       }&quot;
+       [drawingMode]=&quot;drawingMode&quot;&gt;
+     &lt;/map-drawing-layer&gt;
+   &lt;/map-view&gt;
+ `
+})</code></pre></div>
             </p>
+
 
             <p class="comment">
                 <h3>Implements</h3>
@@ -100,7 +103,7 @@
 
         <section>
             <h3>Metadata</h3>
-            <table class="table table-sm table-hover">
+            <table class="table table-sm table-hover metadata">
                 <tbody>
 
                     <tr>
@@ -126,15 +129,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_drawingManagerAddedToManager">_drawingManagerAddedToManager</a>
+                                <a href="#_drawingManagerAddedToManager" >_drawingManagerAddedToManager</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_id">_id</a>
+                                <a href="#_id" >_id</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_observableSubscriptions">_observableSubscriptions</a>
+                                <a href="#_observableSubscriptions" >_observableSubscriptions</a>
                             </li>
                         </ul>
                     </td>
@@ -150,19 +153,19 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_addEventListeners">_addEventListeners</a>
+                                <a href="#_addEventListeners" >_addEventListeners</a>
                             </li>
                             <li>
-                                <a href="#id">id</a>
+                                <a href="#id" >id</a>
                             </li>
                             <li>
-                                <a href="#ngOnChanges">ngOnChanges</a>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
                             </li>
                             <li>
-                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
                             </li>
                             <li>
-                                <a href="#toString">toString</a>
+                                <a href="#toString" >toString</a>
                             </li>
                         </ul>
                     </td>
@@ -177,28 +180,28 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#circleOptions">circleOptions</a>
+                                <a href="#circleOptions" >circleOptions</a>
                             </li>
                             <li>
-                                <a href="#drawingControl">drawingControl</a>
+                                <a href="#drawingControl" >drawingControl</a>
                             </li>
                             <li>
-                                <a href="#drawingControlOptions">drawingControlOptions</a>
+                                <a href="#drawingControlOptions" >drawingControlOptions</a>
                             </li>
                             <li>
-                                <a href="#drawingMode">drawingMode</a>
+                                <a href="#drawingMode" >drawingMode</a>
                             </li>
                             <li>
-                                <a href="#markerOptions">markerOptions</a>
+                                <a href="#markerOptions" >markerOptions</a>
                             </li>
                             <li>
-                                <a href="#polygonOptions">polygonOptions</a>
+                                <a href="#polygonOptions" >polygonOptions</a>
                             </li>
                             <li>
-                                <a href="#polylineOptions">polylineOptions</a>
+                                <a href="#polylineOptions" >polylineOptions</a>
                             </li>
                             <li>
-                                <a href="#rectangleOptions">rectangleOptions</a>
+                                <a href="#rectangleOptions" >rectangleOptions</a>
                             </li>
                         </ul>
                     </td>
@@ -213,22 +216,22 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#circleComplete">circleComplete</a>
+                                <a href="#circleComplete" >circleComplete</a>
                             </li>
                             <li>
-                                <a href="#markerComplete">markerComplete</a>
+                                <a href="#markerComplete" >markerComplete</a>
                             </li>
                             <li>
-                                <a href="#overlayComplete">overlayComplete</a>
+                                <a href="#overlayComplete" >overlayComplete</a>
                             </li>
                             <li>
-                                <a href="#polygonComplete">polygonComplete</a>
+                                <a href="#polygonComplete" >polygonComplete</a>
                             </li>
                             <li>
-                                <a href="#polylineComplete">polylineComplete</a>
+                                <a href="#polylineComplete" >polylineComplete</a>
                             </li>
                             <li>
-                                <a href="#rectangleComplete">rectangleComplete</a>
+                                <a href="#rectangleComplete" >rectangleComplete</a>
                             </li>
                         </ul>
                     </td>
@@ -246,12 +249,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(_drawingManagerManager: <a href="../injectables/DrawingManager.html">DrawingManager</a>)</code>
+<code>constructor(_drawingManagerManager: <a href="../injectables/DrawingManager.html" target="_self">DrawingManager</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">src/lib/directives/drawing-layer.ts:150</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">src/lib/directives/drawing-layer.ts:144</a></div>
                             </td>
                         </tr>
 
@@ -553,7 +556,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/lib/directives/drawing-layer.ts:123</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">src/lib/directives/drawing-layer.ts:122</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -580,7 +583,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/lib/directives/drawing-layer.ts:109</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/lib/directives/drawing-layer.ts:110</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -607,7 +610,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">src/lib/directives/drawing-layer.ts:137</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/lib/directives/drawing-layer.ts:134</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -634,7 +637,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/lib/directives/drawing-layer.ts:130</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">src/lib/directives/drawing-layer.ts:128</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -661,7 +664,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">src/lib/directives/drawing-layer.ts:144</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">src/lib/directives/drawing-layer.ts:140</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -686,10 +689,8 @@
                 <td class="col-md-4">
                     <a name="_addEventListeners"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            _addEventListeners
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>_addEventListeners</b></span>
                         <a href="#_addEventListeners"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -704,8 +705,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="191"
-                            class="link-to-prism">src/lib/directives/drawing-layer.ts:191</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="185"
+                            class="link-to-prism">src/lib/directives/drawing-layer.ts:185</a></div>
                 </td>
             </tr>
 
@@ -727,9 +728,7 @@
                 <td class="col-md-4">
                     <a name="id"></a>
                     <span class="name">
-                        <b>
-                            id
-                        </b>
+                        <span ><b>id</b></span>
                         <a href="#id"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -743,8 +742,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="236"
-                            class="link-to-prism">src/lib/directives/drawing-layer.ts:236</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="230"
+                            class="link-to-prism">src/lib/directives/drawing-layer.ts:230</a></div>
                 </td>
             </tr>
 
@@ -766,9 +765,7 @@
                 <td class="col-md-4">
                     <a name="ngOnChanges"></a>
                     <span class="name">
-                        <b>
-                            ngOnChanges
-                        </b>
+                        <span ><b>ngOnChanges</b></span>
                         <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -782,8 +779,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="157"
-                            class="link-to-prism">src/lib/directives/drawing-layer.ts:157</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">src/lib/directives/drawing-layer.ts:151</a></div>
                 </td>
             </tr>
 
@@ -793,6 +790,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -836,9 +834,7 @@
                 <td class="col-md-4">
                     <a name="ngOnDestroy"></a>
                     <span class="name">
-                        <b>
-                            ngOnDestroy
-                        </b>
+                        <span ><b>ngOnDestroy</b></span>
                         <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -852,8 +848,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="246"
-                            class="link-to-prism">src/lib/directives/drawing-layer.ts:246</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="240"
+                            class="link-to-prism">src/lib/directives/drawing-layer.ts:240</a></div>
                 </td>
             </tr>
 
@@ -875,9 +871,7 @@
                 <td class="col-md-4">
                     <a name="toString"></a>
                     <span class="name">
-                        <b>
-                            toString
-                        </b>
+                        <span ><b>toString</b></span>
                         <a href="#toString"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -891,8 +885,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="241"
-                            class="link-to-prism">src/lib/directives/drawing-layer.ts:241</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="235"
+                            class="link-to-prism">src/lib/directives/drawing-layer.ts:235</a></div>
                 </td>
             </tr>
 
@@ -911,103 +905,100 @@
 </section>
             <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_drawingManagerAddedToManager"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_drawingManagerAddedToManager</b></span>
+                        <a href="#_drawingManagerAddedToManager"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_drawingManagerAddedToManager"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _drawingManagerAddedToManager</b>
-                            <a href="#_drawingManagerAddedToManager"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/lib/directives/drawing-layer.ts:142</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>false</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">src/lib/directives/drawing-layer.ts:148</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_id"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_id</b></span>
+                        <a href="#_id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_id"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _id</b>
-                            <a href="#_id"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/lib/directives/drawing-layer.ts:143</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">src/lib/directives/drawing-layer.ts:149</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_observableSubscriptions"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_observableSubscriptions</b></span>
+                        <a href="#_observableSubscriptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_observableSubscriptions"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _observableSubscriptions</b>
-                            <a href="#_observableSubscriptions"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>Subscription[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Subscription[]</code>
-
+                                <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">src/lib/directives/drawing-layer.ts:144</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[]</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">src/lib/directives/drawing-layer.ts:150</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
 
@@ -1123,44 +1114,38 @@ export class NgMapsDrawingLayer implements OnDestroy, OnChanges {
   /**
    * This event emitter gets emitted when the user finishes drawing any overlay.
    */
-  @Output() overlayComplete: EventEmitter&lt;
-    google.maps.drawing.OverlayCompleteEvent
-  &gt; &#x3D; new EventEmitter&lt;google.maps.drawing.OverlayCompleteEvent&gt;();
+  @Output()
+  overlayComplete: EventEmitter&lt;google.maps.drawing.OverlayCompleteEvent&gt; &#x3D; new EventEmitter&lt;google.maps.drawing.OverlayCompleteEvent&gt;();
 
   /**
    * This event emitter gets emitted when the user finishes drawing a circle.
    */
-  @Output() circleComplete: EventEmitter&lt;google.maps.Circle&gt; &#x3D; new EventEmitter&lt;
-    google.maps.Circle
-  &gt;();
+  @Output()
+  circleComplete: EventEmitter&lt;google.maps.Circle&gt; &#x3D; new EventEmitter&lt;google.maps.Circle&gt;();
 
   /**
    * This event emitter gets emitted when the user finishes drawing a marker.
    */
-  @Output() markerComplete: EventEmitter&lt;google.maps.Marker&gt; &#x3D; new EventEmitter&lt;
-    google.maps.Marker
-  &gt;();
+  @Output()
+  markerComplete: EventEmitter&lt;google.maps.Marker&gt; &#x3D; new EventEmitter&lt;google.maps.Marker&gt;();
 
   /**
    * This event emitter gets emitted when the user finishes drawing a polyline.
    */
-  @Output() polylineComplete: EventEmitter&lt;
-    google.maps.Polyline
-  &gt; &#x3D; new EventEmitter&lt;google.maps.Polyline&gt;();
+  @Output()
+  polylineComplete: EventEmitter&lt;google.maps.Polyline&gt; &#x3D; new EventEmitter&lt;google.maps.Polyline&gt;();
 
   /**
    * This event emitter gets emitted when the user finishes drawing a polygon.
    */
-  @Output() polygonComplete: EventEmitter&lt;
-    google.maps.Polygon
-  &gt; &#x3D; new EventEmitter&lt;google.maps.Polygon&gt;();
+  @Output()
+  polygonComplete: EventEmitter&lt;google.maps.Polygon&gt; &#x3D; new EventEmitter&lt;google.maps.Polygon&gt;();
 
   /**
    * This event emitter gets emitted when the user finishes drawing a rectangle.
    */
-  @Output() rectangleComplete: EventEmitter&lt;
-    google.maps.Rectangle
-  &gt; &#x3D; new EventEmitter&lt;google.maps.Rectangle&gt;();
+  @Output()
+  rectangleComplete: EventEmitter&lt;google.maps.Rectangle&gt; &#x3D; new EventEmitter&lt;google.maps.Rectangle&gt;();
 
   private _drawingManagerAddedToManager: boolean &#x3D; false;
   private _id: string;
@@ -1278,14 +1263,15 @@ export class NgMapsDrawingLayer implements OnDestroy, OnChanges {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -1297,6 +1283,15 @@ export class NgMapsDrawingLayer implements OnDestroy, OnChanges {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
@@ -1306,9 +1301,9 @@ export class NgMapsDrawingLayer implements OnDestroy, OnChanges {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

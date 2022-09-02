@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -36,9 +37,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li>HerePolygonManager</li>
+  <li >HerePolygonManager</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,6 +60,7 @@
         <p class="comment">
             <code>src/lib/managers/polygon-manager.ts</code>
         </p>
+
 
 
             <p class="comment">
@@ -82,22 +85,22 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#addPolygon">addPolygon</a>
+                                <a href="#addPolygon" >addPolygon</a>
                             </li>
                             <li>
-                                <a href="#createEventObservable">createEventObservable</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#deletePolygon">deletePolygon</a>
+                                <a href="#createEventObservable" >createEventObservable</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#setPolygonOptions">setPolygonOptions</a>
+                                <a href="#deletePolygon" >deletePolygon</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#updatePolygon">updatePolygon</a>
+                                <a href="#setPolygonOptions" >setPolygonOptions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updatePolygon" >updatePolygon</a>
                             </li>
                         </ul>
                     </td>
@@ -122,7 +125,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/lib/managers/polygon-manager.ts:6</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/lib/managers/polygon-manager.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -183,24 +186,22 @@
                 <td class="col-md-4">
                     <a name="addPolygon"></a>
                     <span class="name">
-                        <b>
-                            addPolygon
-                        </b>
+                        <span ><b>addPolygon</b></span>
                         <a href="#addPolygon"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>addPolygon(path: NgMapsPolygon)</code>
+<code>addPolygon(path: NgMapsPolygonDirective)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/lib/managers/polygon-manager.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/lib/managers/polygon-manager.ts:15</a></div>
                 </td>
             </tr>
 
@@ -210,6 +211,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -222,7 +224,7 @@
                                 <tr>
                                     <td>path</td>
                                     <td>
-                                            <code>NgMapsPolygon</code>
+                                            <code>NgMapsPolygonDirective</code>
                                     </td>
 
                                     <td>
@@ -253,24 +255,22 @@
                 <td class="col-md-4">
                     <a name="createEventObservable"></a>
                     <span class="name">
-                        <b>
-                            createEventObservable
-                        </b>
+                        <span ><b>createEventObservable</b></span>
                         <a href="#createEventObservable"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>createEventObservable(eventName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, path: NgMapsPolygon)</code>
+<code>createEventObservable(eventName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, path: NgMapsPolygonDirective)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="55"
-                            class="link-to-prism">src/lib/managers/polygon-manager.ts:55</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/lib/managers/polygon-manager.ts:59</a></div>
                 </td>
             </tr>
 
@@ -288,6 +288,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -312,7 +313,7 @@
                                 <tr>
                                     <td>path</td>
                                     <td>
-                                            <code>NgMapsPolygon</code>
+                                            <code>NgMapsPolygonDirective</code>
                                     </td>
 
                                     <td>
@@ -343,10 +344,8 @@
                 <td class="col-md-4">
                     <a name="deletePolygon"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            deletePolygon
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>deletePolygon</b></span>
                         <a href="#deletePolygon"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -354,15 +353,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>deletePolygon(polygon: NgMapsPolygon)</code>
+                    <code>deletePolygon(polygon: NgMapsPolygonDirective)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/lib/managers/polygon-manager.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/lib/managers/polygon-manager.ts:48</a></div>
                 </td>
             </tr>
 
@@ -372,6 +371,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -384,7 +384,7 @@
                                 <tr>
                                     <td>polygon</td>
                                     <td>
-                                            <code>NgMapsPolygon</code>
+                                            <code>NgMapsPolygonDirective</code>
                                     </td>
 
                                     <td>
@@ -415,10 +415,8 @@
                 <td class="col-md-4">
                     <a name="setPolygonOptions"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            setPolygonOptions
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>setPolygonOptions</b></span>
                         <a href="#setPolygonOptions"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -426,15 +424,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>setPolygonOptions(path: NgMapsPolygon, options: literal type)</code>
+                    <code>setPolygonOptions(path: NgMapsPolygonDirective, options: literal type)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/lib/managers/polygon-manager.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/lib/managers/polygon-manager.ts:43</a></div>
                 </td>
             </tr>
 
@@ -444,6 +442,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -456,7 +455,7 @@
                                 <tr>
                                     <td>path</td>
                                     <td>
-                                            <code>NgMapsPolygon</code>
+                                            <code>NgMapsPolygonDirective</code>
                                     </td>
 
                                     <td>
@@ -499,10 +498,8 @@
                 <td class="col-md-4">
                     <a name="updatePolygon"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            updatePolygon
-                        </b>
+                        <span class="modifier">Async</span>
+                        <span ><b>updatePolygon</b></span>
                         <a href="#updatePolygon"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -510,15 +507,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>updatePolygon(polygon: NgMapsPolygon)</code>
+                    <code>updatePolygon(polygon: NgMapsPolygonDirective)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/lib/managers/polygon-manager.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/lib/managers/polygon-manager.ts:33</a></div>
                 </td>
             </tr>
 
@@ -528,6 +525,7 @@
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -540,7 +538,7 @@
                                 <tr>
                                     <td>polygon</td>
                                     <td>
-                                            <code>NgMapsPolygon</code>
+                                            <code>NgMapsPolygonDirective</code>
                                     </td>
 
                                     <td>
@@ -572,7 +570,11 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, NgZone } from &#x27;@angular/core&#x27;;
-import { MapsApiWrapper, NgMapsPolygon, PolygonManager } from &#x27;@ng-maps/core&#x27;;
+import {
+  MapsApiWrapper,
+  NgMapsPolygonDirective,
+  PolygonManager,
+} from &#x27;@ng-maps/core&#x27;;
 import { EMPTY, Observable, Observer } from &#x27;rxjs&#x27;;
 
 @Injectable()
@@ -581,7 +583,7 @@ export class HerePolygonManager extends PolygonManager&lt;H.map.Polygon&gt; {
     super(_mapsWrapper, _zone);
   }
 
-  addPolygon(path: NgMapsPolygon) {
+  addPolygon(path: NgMapsPolygonDirective) {
     const polygonPromise &#x3D; this._mapsWrapper.createPolygon({
       clickable: path.clickable,
       draggable: path.draggable,
@@ -599,7 +601,7 @@ export class HerePolygonManager extends PolygonManager&lt;H.map.Polygon&gt; {
     this._polygons.set(path, polygonPromise);
   }
 
-  async updatePolygon(polygon: NgMapsPolygon): Promise&lt;void&gt; {
+  async updatePolygon(polygon: NgMapsPolygonDirective): Promise&lt;void&gt; {
     const item &#x3D; await this._polygons.get(polygon);
     const lineString &#x3D; new H.geo.LineString();
     polygon.paths.forEach((path) &#x3D;&gt; {
@@ -610,11 +612,11 @@ export class HerePolygonManager extends PolygonManager&lt;H.map.Polygon&gt; {
   }
 
   async setPolygonOptions(
-    path: NgMapsPolygon,
+    path: NgMapsPolygonDirective,
     options: { [propName: string]: any },
   ): Promise&lt;void&gt; {}
 
-  async deletePolygon(polygon: NgMapsPolygon): Promise&lt;void&gt; {
+  async deletePolygon(polygon: NgMapsPolygonDirective): Promise&lt;void&gt; {
     const p &#x3D; await this._polygons.get(polygon);
     if (p &#x3D;&#x3D; null) {
       return Promise.resolve();
@@ -627,7 +629,7 @@ export class HerePolygonManager extends PolygonManager&lt;H.map.Polygon&gt; {
 
   createEventObservable&lt;T&gt;(
     eventName: string,
-    path: NgMapsPolygon,
+    path: NgMapsPolygonDirective,
   ): Observable&lt;T&gt; {
     // return new Observable((observer: Observer&lt;T&gt;) &#x3D;&gt; {
     //   this._polygons.get(path).then((l: google.maps.Polygon) &#x3D;&gt; {
@@ -650,14 +652,15 @@ export class HerePolygonManager extends PolygonManager&lt;H.map.Polygon&gt; {
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -669,6 +672,15 @@ export class HerePolygonManager extends PolygonManager&lt;H.map.Polygon&gt; {
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
@@ -678,9 +690,9 @@ export class HerePolygonManager extends PolygonManager&lt;H.map.Polygon&gt; {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

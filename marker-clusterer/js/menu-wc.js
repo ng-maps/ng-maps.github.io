@@ -1,6 +1,5 @@
 'use strict';
 
-
 customElements.define('compodoc-menu', class extends HTMLElement {
     constructor() {
         super();
@@ -39,6 +38,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <span class="icon ion-ios-list"></span>Dependencies
                                     </a>
                                 </li>
+                                <li class="link">
+                                    <a href="properties.html" data-type="chapter-link">
+                                        <span class="icon ion-ios-apps"></span>Properties
+                                    </a>
+                                </li>
                     </ul>
                 </li>
                     <li class="chapter modules">
@@ -52,19 +56,18 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </a>
                         <ul class="links collapse " ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
                             <li class="link">
-                                <a href="modules/NgMapsMarkerClustererModule.html" data-type="entity-link">NgMapsMarkerClustererModule</a>
+                                <a href="modules/NgMapsMarkerClustererModule.html" data-type="entity-link" >NgMapsMarkerClustererModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#directives-links-module-NgMapsMarkerClustererModule-a51e15668e7cc8b95d0120b6d9101d25"' : 'data-target="#xs-directives-links-module-NgMapsMarkerClustererModule-a51e15668e7cc8b95d0120b6d9101d25"' }>
+                                        'data-target="#directives-links-module-NgMapsMarkerClustererModule-e4d4d5ba4589e20ab84df51f3c07f6914cc86169d4910c5585488149bfbeb37e46d811f90a749c56dbb715121f5c84668c46423da4b9ee583305bd43ffe26c8b"' : 'data-target="#xs-directives-links-module-NgMapsMarkerClustererModule-e4d4d5ba4589e20ab84df51f3c07f6914cc86169d4910c5585488149bfbeb37e46d811f90a749c56dbb715121f5c84668c46423da4b9ee583305bd43ffe26c8b"' }>
                                         <span class="icon ion-md-code-working"></span>
                                         <span>Directives</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsMarkerClustererModule-a51e15668e7cc8b95d0120b6d9101d25"' :
-                                        'id="xs-directives-links-module-NgMapsMarkerClustererModule-a51e15668e7cc8b95d0120b6d9101d25"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsMarkerClustererModule-e4d4d5ba4589e20ab84df51f3c07f6914cc86169d4910c5585488149bfbeb37e46d811f90a749c56dbb715121f5c84668c46423da4b9ee583305bd43ffe26c8b"' :
+                                        'id="xs-directives-links-module-NgMapsMarkerClustererModule-e4d4d5ba4589e20ab84df51f3c07f6914cc86169d4910c5585488149bfbeb37e46d811f90a749c56dbb715121f5c84668c46423da4b9ee583305bd43ffe26c8b"' }>
                                         <li class="link">
-                                            <a href="directives/MarkerClusterComponent.html"
-                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules">MarkerClusterComponent</a>
+                                            <a href="directives/MarkerClusterComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >MarkerClusterComponent</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -80,7 +83,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                                 <li class="link">
-                                    <a href="injectables/ClusterManager.html" data-type="entity-link">ClusterManager</a>
+                                    <a href="injectables/ClusterManager.html" data-type="entity-link" >ClusterManager</a>
                                 </li>
                             </ul>
                         </li>
@@ -93,7 +96,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/MarkerClusterConfig.html" data-type="entity-link">MarkerClusterConfig</a>
+                                <a href="interfaces/MarkerClusterConfig.html" data-type="entity-link" >MarkerClusterConfig</a>
                             </li>
                         </ul>
                     </li>

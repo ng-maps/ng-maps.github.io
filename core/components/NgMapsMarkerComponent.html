@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -35,7 +36,9 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>NgMapsMarkerComponent</li>
+  <li
+  >
+  NgMapsMarkerComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,12 +64,15 @@
     <code>src/lib/directives/marker.ts</code>
 </p>
 
+
     <p class="comment">
         <h3>Description</h3>
     </p>
     <p class="comment">
         <p>NgMapsMarkerComponent renders a map marker inside a <a href="../components/NgMapsViewComponent.html">NgMapsViewComponent</a>.</p>
-
+<div><pre class="line-numbers"><code class="language-html">&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
+              &lt;agm-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; label=&quot;M&quot;&gt;&lt;/agm-marker&gt;
+&lt;/agm-map&gt;</code></pre></div>
     </p>
 
 
@@ -77,24 +83,14 @@
                     <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
                     <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
                     <code><a href="https://angular.io/api/core/AfterContentInit" target="_blank" >AfterContentInit</a></code>
-                    <code><a href="../classes/FitBoundsAccessor.html" target="_self" >FitBoundsAccessor</a></code>
+                    <code><a href="../classess/FitBoundsAccessor.html" target="_self" >FitBoundsAccessor</a></code>
                     <code><a href="../interfaces/MarkerOptions.html" target="_self" >MarkerOptions</a></code>
     </p>
 
-    <p class="comment">
-        <h3>Example</h3>
-    </p>
-    <div class="io-description">
-                <div>
-                    <pre class="line-numbers"><code class="language-html">&lt;agm-map [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; [zoom]=&quot;zoom&quot;&gt;
-   &lt;agm-marker [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot; label=&quot;M&quot;&gt;&lt;/agm-marker&gt;
-&lt;/agm-map&gt;</code></pre>
-                </div>
-    </div>
 
 <section>
     <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
+    <table class="table table-sm table-hover metadata">
         <tbody>
 
 
@@ -108,7 +104,7 @@
             <tr>
                 <td class="col-md-3">providers</td>
                 <td class="col-md-9">
-                                <code><a href="../classes/FitBoundsAccessor.html" target="_self" >{
+                                <code><a href="../classess/FitBoundsAccessor.html" target="_self" >{
     provide: FitBoundsAccessor, useExisting: forwardRef(() &#x3D;&gt; NgMapsMarkerComponent),
 }</a></code>
                 </td>
@@ -154,27 +150,27 @@
                             <li>
                                     <span class="modifier">Protected</span>
                                     <span class="modifier">Readonly</span>
-                                <a href="#_fitBoundsDetails$">_fitBoundsDetails$</a>
+                                <a href="#_fitBoundsDetails$" >_fitBoundsDetails$</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_id">_id</a>
+                                <a href="#_id" >_id</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_markerAddedToManger">_markerAddedToManger</a>
+                                <a href="#_markerAddedToManger" >_markerAddedToManger</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#animation">animation</a>
+                                <a href="#animation" >animation</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#infoWindow">infoWindow</a>
+                                <a href="#infoWindow" >infoWindow</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#subscription">subscription</a>
+                                <a href="#subscription" >subscription</a>
                             </li>
                         </ul>
                     </td>
@@ -190,39 +186,39 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Protected</span>
-                                <a href="#_addEventListeners">_addEventListeners</a>
+                                <a href="#_addEventListeners" >_addEventListeners</a>
                             </li>
                             <li>
                                     <span class="modifier">Protected</span>
-                                <a href="#_updateFitBoundsDetails">_updateFitBoundsDetails</a>
+                                <a href="#_updateFitBoundsDetails" >_updateFitBoundsDetails</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#getFitBoundsDetails$">getFitBoundsDetails$</a>
+                                <a href="#getFitBoundsDetails$" >getFitBoundsDetails$</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#handleInfoWindowUpdate">handleInfoWindowUpdate</a>
+                                <a href="#handleInfoWindowUpdate" >handleInfoWindowUpdate</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#id">id</a>
+                                <a href="#id" >id</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngAfterContentInit">ngAfterContentInit</a>
+                                <a href="#ngAfterContentInit" >ngAfterContentInit</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngOnChanges">ngOnChanges</a>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#toString">toString</a>
+                                <a href="#toString" >toString</a>
                             </li>
                         </ul>
                     </td>
@@ -237,43 +233,43 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#icon">icon</a>
+                                <a href="#icon" >icon</a>
                             </li>
                             <li>
-                                <a href="#iconUrl">iconUrl</a>
+                                <a href="#iconUrl" >iconUrl</a>
                             </li>
                             <li>
-                                <a href="#label">label</a>
+                                <a href="#label" >label</a>
                             </li>
                             <li>
-                                <a href="#latitude">latitude</a>
+                                <a href="#latitude" >latitude</a>
                             </li>
                             <li>
-                                <a href="#longitude">longitude</a>
+                                <a href="#longitude" >longitude</a>
                             </li>
                             <li>
-                                <a href="#markerClickable">markerClickable</a>
+                                <a href="#markerClickable" >markerClickable</a>
                             </li>
                             <li>
-                                <a href="#markerDraggable">markerDraggable</a>
+                                <a href="#markerDraggable" >markerDraggable</a>
                             </li>
                             <li>
-                                <a href="#opacity">opacity</a>
+                                <a href="#opacity" >opacity</a>
                             </li>
                             <li>
-                                <a href="#openInfoWindow">openInfoWindow</a>
+                                <a href="#openInfoWindow" >openInfoWindow</a>
                             </li>
                             <li>
-                                <a href="#optimized">optimized</a>
+                                <a href="#optimized" >optimized</a>
                             </li>
                             <li>
-                                <a href="#title">title</a>
+                                <a href="#title" >title</a>
                             </li>
                             <li>
-                                <a href="#visible">visible</a>
+                                <a href="#visible" >visible</a>
                             </li>
                             <li>
-                                <a href="#zIndex">zIndex</a>
+                                <a href="#zIndex" >zIndex</a>
                             </li>
                         </ul>
                     </td>
@@ -288,25 +284,25 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#drag">drag</a>
+                                <a href="#drag" >drag</a>
                             </li>
                             <li>
-                                <a href="#dragEnd">dragEnd</a>
+                                <a href="#dragEnd" >dragEnd</a>
                             </li>
                             <li>
-                                <a href="#dragStart">dragStart</a>
+                                <a href="#dragStart" >dragStart</a>
                             </li>
                             <li>
-                                <a href="#markerClick">markerClick</a>
+                                <a href="#markerClick" >markerClick</a>
                             </li>
                             <li>
-                                <a href="#markerRightClick">markerRightClick</a>
+                                <a href="#markerRightClick" >markerRightClick</a>
                             </li>
                             <li>
-                                <a href="#mouseOut">mouseOut</a>
+                                <a href="#mouseOut" >mouseOut</a>
                             </li>
                             <li>
-                                <a href="#mouseOver">mouseOver</a>
+                                <a href="#mouseOver" >mouseOver</a>
                             </li>
                         </ul>
                     </td>
@@ -324,12 +320,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(markerManager: <a href="../injectables/MarkerManager.html">MarkerManager</a>)</code>
+<code>constructor(markerManager: <a href="../injectables/MarkerManager.html" target="_self">MarkerManager</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="201" class="link-to-prism">src/lib/directives/marker.ts:201</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">src/lib/directives/marker.ts:204</a></div>
                             </td>
                         </tr>
 
@@ -385,7 +381,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/lib/directives/marker.ts:104</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">src/lib/directives/marker.ts:108</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -406,13 +402,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">src/lib/directives/marker.ts:102</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">src/lib/directives/marker.ts:106</a></div>
                             </td>
                         </tr>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Icon (the URL of the image) for the foreground.
 Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
+<p>See <a href="https://developers.google.com/maps/documentation/javascript/reference/marker#Icon">google.maps.Icon</a></p>
 </div>
                     </td>
                 </tr>
@@ -434,7 +431,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/lib/directives/marker.ts:89</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/lib/directives/marker.ts:92</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -461,7 +458,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/lib/directives/marker.ts:74</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/lib/directives/marker.ts:77</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -488,7 +485,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/lib/directives/marker.ts:79</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/lib/directives/marker.ts:82</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -520,7 +517,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="139" class="link-to-prism">src/lib/directives/marker.ts:139</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/lib/directives/marker.ts:143</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -552,7 +549,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/lib/directives/marker.ts:95</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/lib/directives/marker.ts:98</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -584,7 +581,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/lib/directives/marker.ts:119</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/lib/directives/marker.ts:123</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -616,7 +613,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/lib/directives/marker.ts:114</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">src/lib/directives/marker.ts:118</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -648,7 +645,7 @@ Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/lib/directives/marker.ts:125</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/lib/directives/marker.ts:129</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -676,7 +673,7 @@ Default it is true</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/lib/directives/marker.ts:84</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/lib/directives/marker.ts:87</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -708,7 +705,7 @@ Default it is true</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/lib/directives/marker.ts:109</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/lib/directives/marker.ts:113</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -740,7 +737,7 @@ Default it is true</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">src/lib/directives/marker.ts:133</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">src/lib/directives/marker.ts:137</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -773,7 +770,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/lib/directives/marker.ts:169</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">src/lib/directives/marker.ts:173</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -800,7 +797,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">src/lib/directives/marker.ts:175</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">src/lib/directives/marker.ts:179</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -827,7 +824,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/lib/directives/marker.ts:163</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/lib/directives/marker.ts:167</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -854,7 +851,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">src/lib/directives/marker.ts:151</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/lib/directives/marker.ts:155</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -881,7 +878,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">src/lib/directives/marker.ts:157</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">src/lib/directives/marker.ts:161</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -908,7 +905,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">src/lib/directives/marker.ts:187</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">src/lib/directives/marker.ts:191</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -935,7 +932,7 @@ screen.</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="181" class="link-to-prism">src/lib/directives/marker.ts:181</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">src/lib/directives/marker.ts:185</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -960,10 +957,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="_addEventListeners"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Protected</span>
-                            _addEventListeners
-                        </b>
+                        <span class="modifier">Protected</span>
+                        <span ><b>_addEventListeners</b></span>
                         <a href="#_addEventListeners"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -978,8 +973,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="297"
-                            class="link-to-prism">src/lib/directives/marker.ts:297</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="300"
+                            class="link-to-prism">src/lib/directives/marker.ts:300</a></div>
                 </td>
             </tr>
 
@@ -1001,10 +996,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="_updateFitBoundsDetails"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Protected</span>
-                            _updateFitBoundsDetails
-                        </b>
+                        <span class="modifier">Protected</span>
+                        <span ><b>_updateFitBoundsDetails</b></span>
                         <a href="#_updateFitBoundsDetails"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1019,8 +1012,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="291"
-                            class="link-to-prism">src/lib/directives/marker.ts:291</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="294"
+                            class="link-to-prism">src/lib/directives/marker.ts:294</a></div>
                 </td>
             </tr>
 
@@ -1042,10 +1035,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="getFitBoundsDetails$"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            getFitBoundsDetails$
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>getFitBoundsDetails$</b></span>
                         <a href="#getFitBoundsDetails$"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1060,8 +1051,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="287"
-                            class="link-to-prism">src/lib/directives/marker.ts:287</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="290"
+                            class="link-to-prism">src/lib/directives/marker.ts:290</a></div>
                 </td>
             </tr>
 
@@ -1083,10 +1074,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="handleInfoWindowUpdate"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            handleInfoWindowUpdate
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>handleInfoWindowUpdate</b></span>
                         <a href="#handleInfoWindowUpdate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1101,8 +1090,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="215"
-                            class="link-to-prism">src/lib/directives/marker.ts:215</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="218"
+                            class="link-to-prism">src/lib/directives/marker.ts:218</a></div>
                 </td>
             </tr>
 
@@ -1124,10 +1113,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="id"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            id
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>id</b></span>
                         <a href="#id"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1142,8 +1129,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="360"
-                            class="link-to-prism">src/lib/directives/marker.ts:360</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="363"
+                            class="link-to-prism">src/lib/directives/marker.ts:363</a></div>
                 </td>
             </tr>
 
@@ -1165,10 +1152,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="ngAfterContentInit"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngAfterContentInit
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngAfterContentInit</b></span>
                         <a href="#ngAfterContentInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1183,14 +1168,16 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="210"
-                            class="link-to-prism">src/lib/directives/marker.ts:210</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="213"
+                            class="link-to-prism">src/lib/directives/marker.ts:213</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p> @internal</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -1206,10 +1193,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="ngOnChanges"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngOnChanges
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnChanges</b></span>
                         <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1224,8 +1209,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="227"
-                            class="link-to-prism">src/lib/directives/marker.ts:227</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="230"
+                            class="link-to-prism">src/lib/directives/marker.ts:230</a></div>
                 </td>
             </tr>
 
@@ -1235,6 +1220,7 @@ screen.</p>
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -1278,10 +1264,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="ngOnDestroy"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngOnDestroy
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnDestroy</b></span>
                         <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1296,8 +1280,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="370"
-                            class="link-to-prism">src/lib/directives/marker.ts:370</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="373"
+                            class="link-to-prism">src/lib/directives/marker.ts:373</a></div>
                 </td>
             </tr>
 
@@ -1319,10 +1303,8 @@ screen.</p>
                 <td class="col-md-4">
                     <a name="toString"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            toString
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>toString</b></span>
                         <a href="#toString"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -1337,8 +1319,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="365"
-                            class="link-to-prism">src/lib/directives/marker.ts:365</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="368"
+                            class="link-to-prism">src/lib/directives/marker.ts:368</a></div>
                 </td>
             </tr>
 
@@ -1357,216 +1339,208 @@ screen.</p>
 </section>
     <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fitBoundsDetails$"></a>
+                    <span class="name">
+                            <span class="modifier">Protected</span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>_fitBoundsDetails$</b></span>
+                        <a href="#_fitBoundsDetails$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_fitBoundsDetails$"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Protected</span>
-                                <span class="modifier">Readonly</span>
-                            _fitBoundsDetails$</b>
-                            <a href="#_fitBoundsDetails$"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="../interfaces/FitBoundsDetails.html" target="_self" >ReplaySubject&lt;FitBoundsDetails&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new ReplaySubject&lt;FitBoundsDetails&gt;(1)</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../interfaces/FitBoundsDetails.html" target="_self" >ReplaySubject&lt;FitBoundsDetails&gt;</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="203" class="link-to-prism">src/lib/directives/marker.ts:203</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new ReplaySubject&lt;FitBoundsDetails&gt;(
-    1,
-  )</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">src/lib/directives/marker.ts:199</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_id"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_id</b></span>
+                        <a href="#_id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_id"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _id</b>
-                            <a href="#_id"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">src/lib/directives/marker.ts:200</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="196" class="link-to-prism">src/lib/directives/marker.ts:196</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_markerAddedToManger"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_markerAddedToManger</b></span>
+                        <a href="#_markerAddedToManger"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="_markerAddedToManger"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            _markerAddedToManger</b>
-                            <a href="#_markerAddedToManger"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
+                                <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">src/lib/directives/marker.ts:199</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>false</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/lib/directives/marker.ts:195</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="animation"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>animation</b></span>
+                        <a href="#animation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="animation"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            animation</b>
-                            <a href="#animation"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>&quot;BOUNCE&quot; | &quot;DROP&quot; | null</code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>&quot;BOUNCE&quot; | &quot;DROP&quot; | null</code>
-
+                                <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">src/lib/directives/marker.ts:149</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">src/lib/directives/marker.ts:145</a></div>
-                            </td>
-                        </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Which animation to play when marker is added to a map.
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Which animation to play when marker is added to a map.
 This can be &#39;BOUNCE&#39; or &#39;DROP&#39;</p>
 </div>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="infoWindow"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>infoWindow</b></span>
+                        <a href="#infoWindow"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="infoWindow"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            infoWindow</b>
-                            <a href="#infoWindow"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>        <code><a href="../components/NgMapsInfoWindowComponent.html" target="_self" >QueryList&lt;NgMapsInfoWindowComponent&gt;</a></code>
+
                     </td>
                 </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../components/NgMapsInfoWindowComponent.html" target="_self" >QueryList&lt;NgMapsInfoWindowComponent&gt;</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new QueryList&lt;NgMapsInfoWindowComponent&gt;()</code>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @ContentChildren(NgMapsInfoWindowComponent)<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/lib/directives/marker.ts:193</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="subscription"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            subscription</b>
-                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Default value : </i><code>new QueryList&lt;NgMapsInfoWindowComponent&gt;()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ContentChildren(NgMapsInfoWindowComponent)<br />
+                        </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Subscription</code>
-
+                                <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">src/lib/directives/marker.ts:197</a></div>
                         </td>
                     </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subscription"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>subscription</b></span>
+                        <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subscription()</code>
+                    </td>
+                </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>new Subscription()</code>
+                                <div class="io-line">Defined in <a href="" data-line="201" class="link-to-prism">src/lib/directives/marker.ts:201</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">src/lib/directives/marker.ts:197</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
 </div>
@@ -1611,10 +1585,12 @@ export class MyComponent {
   SimpleChange,
 } from &#x27;@angular/core&#x27;;
 import { Observable, ReplaySubject, Subscription } from &#x27;rxjs&#x27;;
+
 import { MarkerIcon } from &#x27;../interface/marker-icon&#x27;;
 import { MarkerOptions } from &#x27;../interface/marker-options&#x27;;
 import { FitBoundsAccessor, FitBoundsDetails } from &#x27;../services/fit-bounds&#x27;;
 import { MarkerManager } from &#x27;../services/managers/marker.manager&#x27;;
+
 import { NgMapsInfoWindowComponent } from &#x27;./info-window&#x27;;
 
 let markerId &#x3D; 0;
@@ -1666,7 +1642,8 @@ export class NgMapsMarkerComponent
     OnChanges,
     AfterContentInit,
     FitBoundsAccessor,
-    MarkerOptions {
+    MarkerOptions
+{
   /**
    * The latitude position of the marker.
    */
@@ -1696,6 +1673,7 @@ export class NgMapsMarkerComponent
   /**
    * Icon (the URL of the image) for the foreground.
    * Can also be a MarkerIcon (google.maps.Icon in Google Maps Javascript api)
+   *
    * @see &lt;a href&#x3D;&quot;https://developers.google.com/maps/documentation/javascript/reference/marker#Icon&quot;&gt;google.maps.Icon&lt;/a&gt;
    */
   @Input() public iconUrl: string | google.maps.Icon;
@@ -1795,9 +1773,8 @@ export class NgMapsMarkerComponent
   private _id: string;
   private subscription: Subscription &#x3D; new Subscription();
 
-  protected readonly _fitBoundsDetails$: ReplaySubject&lt;FitBoundsDetails&gt; &#x3D; new ReplaySubject&lt;FitBoundsDetails&gt;(
-    1,
-  );
+  protected readonly _fitBoundsDetails$: ReplaySubject&lt;FitBoundsDetails&gt; &#x3D;
+    new ReplaySubject&lt;FitBoundsDetails&gt;(1);
 
   constructor(private markerManager: MarkerManager) {
     this._id &#x3D; (markerId++).toString();
@@ -2018,14 +1995,16 @@ export class NgMapsMarkerComponent
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -2037,6 +2016,15 @@ export class NgMapsMarkerComponent
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
@@ -2046,9 +2034,9 @@ export class NgMapsMarkerComponent
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

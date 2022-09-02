@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-	      <link rel="stylesheet" href="../styles/style.css">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
     </head>
     <body>
 
@@ -35,9 +36,10 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Directives</li>
-  <li>NgMapsAutocompleteDirective</li>
+  <li >NgMapsAutocompleteDirective</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -60,6 +62,14 @@
 
 
             <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <div><pre class="line-numbers"><code class="language-html">&lt;input [mapAutocomplete]=&#39;options&#39; (placeResult)=&#39;onPlacesResult($event)&#39; /&gt;</code></pre></div>
+            </p>
+
+
+            <p class="comment">
                 <h3>Implements</h3>
             </p>
             <p class="comment">
@@ -68,18 +78,10 @@
                             <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
             </p>
 
-            <p class="comment">
-                <h3>Example</h3>
-            </p>
-            <div class="io-description">
-                        <div>
-                            <pre class="line-numbers"><code class="language-html">&lt;input [mapAutocomplete]='options' (placeResult)='onPlacesResult($event)' /&gt;</code></pre>
-                        </div>
-            </div>
 
         <section>
             <h3>Metadata</h3>
-            <table class="table table-sm table-hover">
+            <table class="table table-sm table-hover metadata">
                 <tbody>
 
                     <tr>
@@ -105,12 +107,12 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#autocomplete">autocomplete</a>
+                                <a href="#autocomplete" >autocomplete</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
                                     <span class="modifier">Readonly</span>
-                                <a href="#subscription">subscription</a>
+                                <a href="#subscription" >subscription</a>
                             </li>
                         </ul>
                     </td>
@@ -126,28 +128,28 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#addHandler">addHandler</a>
+                                <a href="#addHandler" >addHandler</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Async</span>
-                                <a href="#init">init</a>
+                                <a href="#init" >init</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngOnChanges">ngOnChanges</a>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#removeHandler">removeHandler</a>
+                                <a href="#removeHandler" >removeHandler</a>
                             </li>
                         </ul>
                     </td>
@@ -162,7 +164,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#mapAutocomplete">mapAutocomplete</a>
+                                <a href="#mapAutocomplete" >mapAutocomplete</a>
                             </li>
                         </ul>
                     </td>
@@ -177,10 +179,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#bounds">bounds</a>
+                                <a href="#bounds" >bounds</a>
                             </li>
                             <li>
-                                <a href="#placeResult">placeResult</a>
+                                <a href="#placeResult" >placeResult</a>
                             </li>
                         </ul>
                     </td>
@@ -198,12 +200,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(element: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, mapsAPILoader: MapsAPILoader, defaultConfig: <a href="../interfaces/NgMapsPlacesConfiguration.html">NgMapsPlacesConfiguration</a>, _zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
+<code>constructor(element: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, mapsAPILoader: MapsAPILoader, defaultConfig: <a href="../interfaces/NgMapsPlacesConfiguration.html" target="_self">NgMapsPlacesConfiguration</a>, _zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/lib/directives/autocomplete.ts:55</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/lib/directives/autocomplete.ts:58</a></div>
                             </td>
                         </tr>
 
@@ -295,7 +297,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/lib/directives/autocomplete.ts:36</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/lib/directives/autocomplete.ts:39</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -326,7 +328,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/lib/directives/autocomplete.ts:52</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/lib/directives/autocomplete.ts:55</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -355,7 +357,7 @@ The event contains a LatLngBounds from GoogleMapsAPI
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/lib/directives/autocomplete.ts:44</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/lib/directives/autocomplete.ts:47</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -382,10 +384,8 @@ The event contains a PlaceResult from GoogleMapsAPI
                 <td class="col-md-4">
                     <a name="addHandler"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            addHandler
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>addHandler</b></span>
                         <a href="#addHandler"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -400,8 +400,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="138"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:138</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="141"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:141</a></div>
                 </td>
             </tr>
 
@@ -411,6 +411,7 @@ The event contains a PlaceResult from GoogleMapsAPI
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -454,11 +455,9 @@ The event contains a PlaceResult from GoogleMapsAPI
                 <td class="col-md-4">
                     <a name="init"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            <span class="modifier">Async</span>
-                            init
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>init</b></span>
                         <a href="#init"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -473,8 +472,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="94"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:94</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:97</a></div>
                 </td>
             </tr>
 
@@ -496,10 +495,8 @@ The event contains a PlaceResult from GoogleMapsAPI
                 <td class="col-md-4">
                     <a name="ngOnChanges"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngOnChanges
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnChanges</b></span>
                         <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -514,8 +511,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="114"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:114</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:117</a></div>
                 </td>
             </tr>
 
@@ -525,6 +522,7 @@ The event contains a PlaceResult from GoogleMapsAPI
 
                     <div class="io-description">
                         <b>Parameters :</b>
+                        
                         <table class="params">
                             <thead>
                                 <tr>
@@ -568,10 +566,8 @@ The event contains a PlaceResult from GoogleMapsAPI
                 <td class="col-md-4">
                     <a name="ngOnDestroy"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngOnDestroy
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnDestroy</b></span>
                         <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -586,8 +582,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="133"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:133</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="136"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:136</a></div>
                 </td>
             </tr>
 
@@ -609,10 +605,8 @@ The event contains a PlaceResult from GoogleMapsAPI
                 <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            ngOnInit
-                        </b>
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnInit</b></span>
                         <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -627,8 +621,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="66"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:66</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:69</a></div>
                 </td>
             </tr>
 
@@ -650,10 +644,8 @@ The event contains a PlaceResult from GoogleMapsAPI
                 <td class="col-md-4">
                     <a name="removeHandler"></a>
                     <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            removeHandler
-                        </b>
+                        <span class="modifier">Private</span>
+                        <span ><b>removeHandler</b></span>
                         <a href="#removeHandler"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
@@ -668,8 +660,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="145"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:145</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="148"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:148</a></div>
                 </td>
             </tr>
 
@@ -688,71 +680,69 @@ The event contains a PlaceResult from GoogleMapsAPI
 </section>
             <section>
     
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="autocomplete"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>autocomplete</b></span>
+                        <a href="#autocomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="autocomplete"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            autocomplete</b>
-                            <a href="#autocomplete"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>google.maps.places.Autocomplete</code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>google.maps.places.Autocomplete</code>
-
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/lib/directives/autocomplete.ts:57</a></div>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/lib/directives/autocomplete.ts:54</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subscription"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Readonly</span>
+                        <span ><b>subscription</b></span>
+                        <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <a name="subscription"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                                <span class="modifier">Readonly</span>
-                            subscription</b>
-                            <a href="#subscription"><span class="icon ion-ios-link"></span></a>
-                        </span>
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subscription()</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Subscription</code>
-
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/lib/directives/autocomplete.ts:58</a></div>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new Subscription()</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/lib/directives/autocomplete.ts:55</a></div>
-                            </td>
-                        </tr>
 
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </section>
 
 
@@ -773,8 +763,10 @@ The event contains a PlaceResult from GoogleMapsAPI
   Output,
   SimpleChanges,
 } from &#x27;@angular/core&#x27;;
-import { MapsAPILoader } from &#x27;@ng-maps/core&#x27;;
 import { fromEventPattern, Subscription } from &#x27;rxjs&#x27;;
+
+import { MapsAPILoader } from &#x27;@ng-maps/core&#x27;;
+
 import {
   NgMapsPlacesConfiguration,
   NG_MAPS_PLACES_DEFAULT_CONFIGURATION,
@@ -788,7 +780,8 @@ import {
   selector: &#x27;[mapAutocomplete]&#x27;,
 })
 export class NgMapsAutocompleteDirective
-  implements OnInit, OnChanges, OnDestroy {
+  implements OnInit, OnChanges, OnDestroy
+{
   /**
    * Configuration Input described by the AutocompleteOptions Interface
    * https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-widget#AutocompleteOptions
@@ -920,14 +913,15 @@ export class NgMapsAutocompleteDirective
 
 
 
-                   
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -939,6 +933,15 @@ export class NgMapsAutocompleteDirective
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
@@ -948,9 +951,9 @@ export class NgMapsAutocompleteDirective
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

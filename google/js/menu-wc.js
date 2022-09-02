@@ -1,6 +1,5 @@
 'use strict';
 
-
 customElements.define('compodoc-menu', class extends HTMLElement {
     constructor() {
         super();
@@ -39,6 +38,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                         <span class="icon ion-ios-list"></span>Dependencies
                                     </a>
                                 </li>
+                                <li class="link">
+                                    <a href="properties.html" data-type="chapter-link">
+                                        <span class="icon ion-ios-apps"></span>Properties
+                                    </a>
+                                </li>
                     </ul>
                 </li>
                     <li class="chapter modules">
@@ -52,19 +56,18 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </a>
                         <ul class="links collapse " ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
                             <li class="link">
-                                <a href="modules/NgMapsGoogleModule.html" data-type="entity-link">NgMapsGoogleModule</a>
+                                <a href="modules/NgMapsGoogleModule.html" data-type="entity-link" >NgMapsGoogleModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-NgMapsGoogleModule-24b18a6c3633b82c7dadcb8a0ae40033"' : 'data-target="#xs-components-links-module-NgMapsGoogleModule-24b18a6c3633b82c7dadcb8a0ae40033"' }>
+                                            'data-target="#components-links-module-NgMapsGoogleModule-03b4402b4329cf6c48b8b8aec2e2cfc08a41a28e19faa0900636ab6c3c9dac53bc7874f10e75312140ce4962d6383e2e50070e2c720eb9b9f33c2ef07f06571f"' : 'data-target="#xs-components-links-module-NgMapsGoogleModule-03b4402b4329cf6c48b8b8aec2e2cfc08a41a28e19faa0900636ab6c3c9dac53bc7874f10e75312140ce4962d6383e2e50070e2c720eb9b9f33c2ef07f06571f"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NgMapsGoogleModule-24b18a6c3633b82c7dadcb8a0ae40033"' :
-                                            'id="xs-components-links-module-NgMapsGoogleModule-24b18a6c3633b82c7dadcb8a0ae40033"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NgMapsGoogleModule-03b4402b4329cf6c48b8b8aec2e2cfc08a41a28e19faa0900636ab6c3c9dac53bc7874f10e75312140ce4962d6383e2e50070e2c720eb9b9f33c2ef07f06571f"' :
+                                            'id="xs-components-links-module-NgMapsGoogleModule-03b4402b4329cf6c48b8b8aec2e2cfc08a41a28e19faa0900636ab6c3c9dac53bc7874f10e75312140ce4962d6383e2e50070e2c720eb9b9f33c2ef07f06571f"' }>
                                             <li class="link">
-                                                <a href="components/GoogleComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">GoogleComponent</a>
+                                                <a href="components/GoogleComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >GoogleComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -80,31 +83,31 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </div>
                             <ul class="links collapse " ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
                                 <li class="link">
-                                    <a href="injectables/GoogleCircleManager.html" data-type="entity-link">GoogleCircleManager</a>
+                                    <a href="injectables/GoogleCircleManager.html" data-type="entity-link" >GoogleCircleManager</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GoogleInfoWindowManager.html" data-type="entity-link">GoogleInfoWindowManager</a>
+                                    <a href="injectables/GoogleInfoWindowManager.html" data-type="entity-link" >GoogleInfoWindowManager</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GoogleMapsAPIWrapper.html" data-type="entity-link">GoogleMapsAPIWrapper</a>
+                                    <a href="injectables/GoogleMapsAPIWrapper.html" data-type="entity-link" >GoogleMapsAPIWrapper</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GoogleMapsFitBoundsService.html" data-type="entity-link">GoogleMapsFitBoundsService</a>
+                                    <a href="injectables/GoogleMapsFitBoundsService.html" data-type="entity-link" >GoogleMapsFitBoundsService</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GoogleMapsMarkerManager.html" data-type="entity-link">GoogleMapsMarkerManager</a>
+                                    <a href="injectables/GoogleMapsMarkerManager.html" data-type="entity-link" >GoogleMapsMarkerManager</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GoogleMapsScriptLoader.html" data-type="entity-link">GoogleMapsScriptLoader</a>
+                                    <a href="injectables/GoogleMapsScriptLoader.html" data-type="entity-link" >GoogleMapsScriptLoader</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GooglePolygonManager.html" data-type="entity-link">GooglePolygonManager</a>
+                                    <a href="injectables/GooglePolygonManager.html" data-type="entity-link" >GooglePolygonManager</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GooglePolylineManager.html" data-type="entity-link">GooglePolylineManager</a>
+                                    <a href="injectables/GooglePolylineManager.html" data-type="entity-link" >GooglePolylineManager</a>
                                 </li>
                                 <li class="link">
-                                    <a href="injectables/GoogleRectangleManager.html" data-type="entity-link">GoogleRectangleManager</a>
+                                    <a href="injectables/GoogleRectangleManager.html" data-type="entity-link" >GoogleRectangleManager</a>
                                 </li>
                             </ul>
                         </li>
@@ -117,7 +120,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/GoogleModuleOptions.html" data-type="entity-link">GoogleModuleOptions</a>
+                                <a href="interfaces/GoogleModuleOptions.html" data-type="entity-link" >GoogleModuleOptions</a>
                             </li>
                         </ul>
                     </li>
