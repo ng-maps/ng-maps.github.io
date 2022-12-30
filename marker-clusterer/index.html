@@ -32,14 +32,13 @@
                    <div class="content-data">
 
 <h1 id="ng-mapsmarker-clusterer">@ng-maps/marker-clusterer</h1>
-<p><strong>@ng-maps/marker-clusterer</strong> is a wrapper around <a href="https://github.com/googlemaps/v3-utility-library/tree/master/markerclusterer">MarkerClusterer</a></p>
+<p><strong>@ng-maps/marker-clusterer</strong> is a wrapper around <a href="https://github.com/googlemaps/js-markerclusterer">MarkerClusterer</a></p>
 <h2 id="installation">Installation</h2>
 <ul>
 <li>Npm: <code>npm install @ng-maps/marker-clusterer</code></li>
 <li>Yarn: <code>yarn add @ng-maps/marker-clusterer</code></li>
 </ul>
-<p>Add <code>NgMapsMarkerClustererModule.forRoot({imagePath: &#39;/assets/images/m&#39;})</code> to your <em>AppModule</em></p>
-<p>You need to download images for clusters from <a href="https://github.com/googlemaps/v3-utility-library/tree/master/markerclusterer/images">https://github.com/googlemaps/v3-utility-library/tree/master/markerclusterer/images</a> or provide your own. The path you placed the images to can be specified globally through configuration like mentioned above or by setting <code>imagePath</code> attribute on the component.</p>
+<p>Add <code>NgMapsMarkerClustererModule</code> to your <em>AppModule</em></p>
 <h2 id="usage">Usage</h2>
 <h3 id="markerclusterer">MarkerClusterer</h3>
 <p>Add marker clusterer component around markers</p>
@@ -47,7 +46,9 @@
   &lt;map-marker-cluster&gt;
     &lt;map-marker [latitude]=&quot;48.858222&quot; [longitude]=&quot;2.2945&quot;&gt;&lt;/map-marker&gt;
   &lt;/map-marker-cluster&gt;
-&lt;/map-view&gt;</code></pre></div><h2 id="additional-features">Additional features</h2>
+&lt;/map-view&gt;</code></pre></div><h3 id="markerclustereroptions">MarkerClustererOptions</h3>
+<p>The only options that can be passed to the marker clusterer are the renderer and algorithm. You might want to check their documentation: <a href="https://googlemaps.github.io/js-markerclusterer/">https://googlemaps.github.io/js-markerclusterer/</a></p>
+<h2 id="additional-features">Additional features</h2>
 <p>Other features are provided in submodules. Find out more on the <a href="https://github.com/ng-maps/ng-maps">project page at github</a></p>
 
 

@@ -696,7 +696,7 @@ export class GoogleComponent extends NgMapsViewComponent&lt;google.maps.Map&gt; 
     }
 
     interface Event {
-      name: keyof google.maps.MapHandlerMap&lt;google.maps.Map&gt;;
+      name: string;
       emitter: Emitter;
     }
 

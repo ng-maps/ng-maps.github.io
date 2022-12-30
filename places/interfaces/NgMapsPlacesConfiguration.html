@@ -196,9 +196,11 @@ export interface NgMapsPlacesConfiguration {
   searchBox?: google.maps.places.SearchBoxOptions;
 }
 
-export const NG_MAPS_PLACES_DEFAULT_CONFIGURATION &#x3D; new InjectionToken&lt;NgMapsPlacesConfiguration&gt;(
-  &#x27;NgMapsPlacesDefaultConfiguration&#x27;,
-);
+export const NG_MAPS_PLACES_DEFAULT_CONFIGURATION &#x3D;
+  new InjectionToken&lt;NgMapsPlacesConfiguration&gt;(
+    &#x27;NgMapsPlacesDefaultConfiguration&#x27;,
+    { providedIn: &#x27;root&#x27;, factory: () &#x3D;&gt; ({}) },
+  );
 </code></pre>
     </div>
 </div>

@@ -232,8 +232,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:76</a></div>
                 </td>
             </tr>
 
@@ -303,8 +303,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:63</a></div>
                 </td>
             </tr>
 
@@ -374,8 +374,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="99"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:99</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:98</a></div>
                 </td>
             </tr>
 
@@ -611,8 +611,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:68</a></div>
                 </td>
             </tr>
 
@@ -872,7 +872,6 @@ export class GoogleInfoWindowManager extends InfoWindowManager&lt;google.maps.In
   public async open(infoWindow: NgMapsInfoWindowComponent): Promise&lt;void&gt; {
     const w &#x3D; this._infoWindows.get(infoWindow);
     const map &#x3D; await this._mapsWrapper.getNativeMap();
-    console.log(&#x27;open&#x27;, w);
     if (infoWindow.hostMarker !&#x3D; null) {
       const marker &#x3D; await this._markerManager.getNativeMarker(
         infoWindow.hostMarker,

@@ -33,6 +33,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <span class="icon ion-ios-paper"></span>README
                             </a>
                         </li>
+                        <li class="link">
+                            <a href="changelog.html"  data-type="chapter-link">
+                                <span class="icon ion-ios-paper"></span>CHANGELOG
+                            </a>
+                        </li>
                                 <li class="link">
                                     <a href="dependencies.html" data-type="chapter-link">
                                         <span class="icon ion-ios-list"></span>Dependencies
@@ -59,13 +64,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/NgMapsGoogleModule.html" data-type="entity-link" >NgMapsGoogleModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-NgMapsGoogleModule-03b4402b4329cf6c48b8b8aec2e2cfc08a41a28e19faa0900636ab6c3c9dac53bc7874f10e75312140ce4962d6383e2e50070e2c720eb9b9f33c2ef07f06571f"' : 'data-target="#xs-components-links-module-NgMapsGoogleModule-03b4402b4329cf6c48b8b8aec2e2cfc08a41a28e19faa0900636ab6c3c9dac53bc7874f10e75312140ce4962d6383e2e50070e2c720eb9b9f33c2ef07f06571f"' }>
+                                            'data-target="#components-links-module-NgMapsGoogleModule-a5f66bfcf75983c546e1e852cc81d694d427a7408111d1bebe5a3a3e9426df41fa4ee3ba5a5be6384ceb078b527571620dad93e8f6cb9a9e8e92780008a845de"' : 'data-target="#xs-components-links-module-NgMapsGoogleModule-a5f66bfcf75983c546e1e852cc81d694d427a7408111d1bebe5a3a3e9426df41fa4ee3ba5a5be6384ceb078b527571620dad93e8f6cb9a9e8e92780008a845de"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NgMapsGoogleModule-03b4402b4329cf6c48b8b8aec2e2cfc08a41a28e19faa0900636ab6c3c9dac53bc7874f10e75312140ce4962d6383e2e50070e2c720eb9b9f33c2ef07f06571f"' :
-                                            'id="xs-components-links-module-NgMapsGoogleModule-03b4402b4329cf6c48b8b8aec2e2cfc08a41a28e19faa0900636ab6c3c9dac53bc7874f10e75312140ce4962d6383e2e50070e2c720eb9b9f33c2ef07f06571f"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NgMapsGoogleModule-a5f66bfcf75983c546e1e852cc81d694d427a7408111d1bebe5a3a3e9426df41fa4ee3ba5a5be6384ceb078b527571620dad93e8f6cb9a9e8e92780008a845de"' :
+                                            'id="xs-components-links-module-NgMapsGoogleModule-a5f66bfcf75983c546e1e852cc81d694d427a7408111d1bebe5a3a3e9426df41fa4ee3ba5a5be6384ceb078b527571620dad93e8f6cb9a9e8e92780008a845de"' }>
                                             <li class="link">
                                                 <a href="components/GoogleComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >GoogleComponent</a>
                                             </li>

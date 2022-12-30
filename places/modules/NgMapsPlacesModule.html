@@ -94,14 +94,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/lib/places.module.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/lib/places.module.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>configure the NgMapsPlacesModule with a value</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -165,14 +167,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/lib/places.module.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/lib/places.module.ts:45</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>configure the NgMapsPlacesModule with a factory</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -252,6 +256,10 @@ export function placesDirectives() {
   exports: placesDirectives(),
 })
 export class NgMapsPlacesModule {
+  /**
+   * configure the NgMapsPlacesModule with a value
+   * @param config
+   */
   public static forRoot(
     config: NgMapsPlacesConfiguration,
   ): ModuleWithProviders&lt;NgMapsPlacesModule&gt; {
@@ -266,6 +274,11 @@ export class NgMapsPlacesModule {
     };
   }
 
+  /**
+   * configure the NgMapsPlacesModule with a factory
+   * @param factory
+   * @param deps
+   */
   public static forRootFactory(
     factory: (...args: Array&lt;any&gt;) &#x3D;&gt; NgMapsPlacesConfiguration,
     deps?: Array&lt;any&gt;,

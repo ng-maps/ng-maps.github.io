@@ -32,7 +32,7 @@
                    <div class="content-data">
 
 <h1 id="ng-mapsplaces">@ng-maps/places</h1>
-<p>Components related</p>
+<p>Components related to places library. Currently only an autocomplete directive is implemented that can be attached to an input field to provide places suggestions</p>
 <h2 id="installation">Installation</h2>
 <ul>
 <li>Npm: <code>npm install @ng-maps/places</code></li>
@@ -46,7 +46,11 @@
     …
     libraries: [&#39;places&#39;]
   }
-}</code></pre></div><h2 id="directives">Directives</h2>
+}</code></pre></div><h3 id="configuration">Configuration</h3>
+<p>There are different possibilities to add a default configuration to the module.</p>
+<p>You can use either <code>NgMapsPlacesModule.forRoot(&lt;ConfigOptions&gt;)</code> or <code>NgMapsPlacesModule.forRootFactory(() =&gt; &lt;ConfigOptions&gt;, [...depts])</code>.</p>
+<p>Or you can provide a configuration with the <code>NG_MAPS_PLACES_DEFAULT_CONFIGURATION</code> injection token.</p>
+<h2 id="directives">Directives</h2>
 <h3 id="autocomplete">Autocomplete</h3>
 <p>Add <code>mapAutocomplete</code> to an input field like <code>&lt;input mapAutocomplete /&gt;</code> or with options <code>&lt;input [mapAutocomplete]=&quot;options&quot; /&gt;</code></p>
 <ul>

@@ -205,7 +205,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/lib/directives/autocomplete.ts:58</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/lib/directives/autocomplete.ts:60</a></div>
                             </td>
                         </tr>
 
@@ -328,7 +328,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/lib/directives/autocomplete.ts:55</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/lib/directives/autocomplete.ts:56</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -400,8 +400,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="141"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:141</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:137</a></div>
                 </td>
             </tr>
 
@@ -472,8 +472,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:93</a></div>
                 </td>
             </tr>
 
@@ -511,8 +511,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="117"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:117</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:113</a></div>
                 </td>
             </tr>
 
@@ -582,8 +582,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="136"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:136</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:132</a></div>
                 </td>
             </tr>
 
@@ -621,8 +621,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:71</a></div>
                 </td>
             </tr>
 
@@ -660,8 +660,8 @@ The event contains a PlaceResult from GoogleMapsAPI
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="148"
-                            class="link-to-prism">src/lib/directives/autocomplete.ts:148</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="144"
+                            class="link-to-prism">src/lib/directives/autocomplete.ts:144</a></div>
                 </td>
             </tr>
 
@@ -703,7 +703,7 @@ The event contains a PlaceResult from GoogleMapsAPI
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/lib/directives/autocomplete.ts:57</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/lib/directives/autocomplete.ts:59</a></div>
                         </td>
                     </tr>
 
@@ -736,7 +736,7 @@ The event contains a PlaceResult from GoogleMapsAPI
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/lib/directives/autocomplete.ts:58</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/lib/directives/autocomplete.ts:60</a></div>
                         </td>
                     </tr>
 
@@ -796,7 +796,8 @@ export class NgMapsAutocompleteDirective
    * https://developers.google.com/maps/documentation/javascript/reference/3.exp/places-service#PlaceResult
    */
   @Output()
-  public placeResult: EventEmitter&lt;google.maps.places.PlaceResult&gt; &#x3D; new EventEmitter&lt;google.maps.places.PlaceResult&gt;();
+  public placeResult: EventEmitter&lt;google.maps.places.PlaceResult&gt; &#x3D;
+    new EventEmitter&lt;google.maps.places.PlaceResult&gt;();
 
   /**
    * This event is fired on selection of an element from the autocomplete list.
@@ -804,7 +805,8 @@ export class NgMapsAutocompleteDirective
    * https://developers.google.com/maps/documentation/javascript/reference/3.exp/coordinates#LatLngBounds
    */
   @Output()
-  public bounds: EventEmitter&lt;google.maps.LatLngBounds&gt; &#x3D; new EventEmitter&lt;google.maps.LatLngBounds&gt;();
+  public bounds: EventEmitter&lt;google.maps.LatLngBounds&gt; &#x3D;
+    new EventEmitter&lt;google.maps.LatLngBounds&gt;();
 
   private autocomplete: google.maps.places.Autocomplete;
   private readonly subscription: Subscription &#x3D; new Subscription();
@@ -822,18 +824,12 @@ export class NgMapsAutocompleteDirective
     if (typeof this.config &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
       this.config &#x3D; {
         types: [&#x27;address&#x27;],
-      };
-    }
-
-    if (typeof this.config &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
-      this.config &#x3D; {
-        types: [&#x27;address&#x27;],
-        ...this.defaultConfig.autocomplete,
+        ...(this.defaultConfig?.autocomplete ?? {}),
       };
     } else {
       this.config &#x3D; {
         types: [&#x27;address&#x27;],
-        ...this.defaultConfig.searchBox,
+        ...(this.defaultConfig?.autocomplete ?? {}),
         ...this.config,
       };
     }

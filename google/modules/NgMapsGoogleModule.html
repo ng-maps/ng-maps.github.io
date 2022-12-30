@@ -281,14 +281,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/lib/google.module.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/lib/google.module.ts:25</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>configure the NgMapsGoogleModule with a value</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -345,21 +347,23 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>forRootFactory(factory: () => void)</code>
+                    <code>forRootFactory(factory: (args: Array<any>) => void, deps?: Array<any>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/lib/google.module.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/lib/google.module.ts:43</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>configure the NgMapsGoogleModule with a factory</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -381,6 +385,18 @@
 
                                     <td>
                                         No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>deps</td>
+                                    <td>
+                                            <code>Array&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
                                     </td>
 
 
@@ -426,6 +442,10 @@ import { GOOGLE_MAPS_API_CONFIG, GoogleModuleOptions } from &#x27;./options&#x27
   ],
 })
 export class NgMapsGoogleModule {
+  /**
+   * configure the NgMapsGoogleModule with a value
+   * @param config
+   */
   public static forRoot(
     config: GoogleModuleOptions,
   ): ModuleWithProviders&lt;NgMapsGoogleModule&gt; {
@@ -440,8 +460,13 @@ export class NgMapsGoogleModule {
     };
   }
 
+  /**
+   * configure the NgMapsGoogleModule with a factory
+   * @param factory
+   */
   public static forRootFactory(
-    factory: () &#x3D;&gt; GoogleModuleOptions | Promise&lt;GoogleModuleOptions&gt;,
+    factory: (...args: Array&lt;any&gt;) &#x3D;&gt; GoogleModuleOptions,
+    deps?: Array&lt;any&gt;,
   ): ModuleWithProviders&lt;NgMapsGoogleModule&gt; {
     return {
       ngModule: NgMapsGoogleModule,
@@ -449,6 +474,7 @@ export class NgMapsGoogleModule {
         {
           provide: GOOGLE_MAPS_API_CONFIG,
           useFactory: factory,
+          deps,
         },
       ],
     };
