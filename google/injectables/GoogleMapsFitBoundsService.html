@@ -260,7 +260,7 @@ export class GoogleMapsFitBoundsService extends FitBoundsService {
     includeInBounds: Map&lt;string, GeoPoint&gt;,
   ): BoundsLiteral {
     if (includeInBounds.size &#x3D;&#x3D;&#x3D; 0) {
-      return null;
+      return new google.maps.LatLngBounds().toJSON();
     } else {
       const bounds &#x3D; new google.maps.LatLngBounds();
       includeInBounds.forEach((b) &#x3D;&gt; bounds.extend(b));

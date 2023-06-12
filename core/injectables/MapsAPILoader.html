@@ -79,10 +79,12 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Protected</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#_document" >_document</a>
                             </li>
                             <li>
                                     <span class="modifier">Protected</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#_window" >_window</a>
                             </li>
                         </ul>
@@ -250,6 +252,7 @@
                     <a name="_document"></a>
                     <span class="name">
                             <span class="modifier">Protected</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>_document</b></span>
                         <a href="#_document"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -277,6 +280,7 @@
                     <a name="_window"></a>
                     <span class="name">
                             <span class="modifier">Protected</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>_window</b></span>
                         <a href="#_window"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -284,7 +288,7 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>Window</code>
+                        <i>Type : </i>    <code>Window | null</code>
 
                     </td>
                 </tr>
@@ -307,8 +311,8 @@
 
 @Injectable()
 export abstract class MapsAPILoader {
-  protected _window: Window;
-  protected _document: Document;
+  protected _window?: Window | null;
+  protected _document?: Document;
   public abstract load(): Promise&lt;void&gt;;
   public abstract configure(config: any): void;
 }

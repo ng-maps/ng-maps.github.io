@@ -162,6 +162,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#animation" >animation</a>
                             </li>
                             <li>
@@ -973,8 +974,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="307"
-                            class="link-to-prism">src/lib/directives/marker.ts:307</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="309"
+                            class="link-to-prism">src/lib/directives/marker.ts:309</a></div>
                 </td>
             </tr>
 
@@ -1129,8 +1130,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="370"
-                            class="link-to-prism">src/lib/directives/marker.ts:370</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="372"
+                            class="link-to-prism">src/lib/directives/marker.ts:372</a></div>
                 </td>
             </tr>
 
@@ -1280,8 +1281,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="380"
-                            class="link-to-prism">src/lib/directives/marker.ts:380</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="382"
+                            class="link-to-prism">src/lib/directives/marker.ts:382</a></div>
                 </td>
             </tr>
 
@@ -1319,8 +1320,8 @@ screen.</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="375"
-                            class="link-to-prism">src/lib/directives/marker.ts:375</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="377"
+                            class="link-to-prism">src/lib/directives/marker.ts:377</a></div>
                 </td>
             </tr>
 
@@ -1441,6 +1442,7 @@ screen.</p>
                     <a name="animation"></a>
                     <span class="name">
                             <span class="modifier">Public</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>animation</b></span>
                         <a href="#animation"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -1647,22 +1649,22 @@ export class NgMapsMarkerComponent
   /**
    * The latitude position of the marker.
    */
-  @Input() public latitude: number;
+  @Input() public latitude?: number;
 
   /**
    * The longitude position of the marker.
    */
-  @Input() public longitude: number;
+  @Input() public longitude?: number;
 
   /**
    * The title of the marker.
    */
-  @Input() public title: string;
+  @Input() public title?: string;
 
   /**
    * The label (a single uppercase character) for the marker.
    */
-  @Input() public label: string | google.maps.MarkerLabel;
+  @Input() public label?: string | google.maps.MarkerLabel;
 
   /**
    * If true, the marker can be dragged. Default value is false.
@@ -1676,9 +1678,9 @@ export class NgMapsMarkerComponent
    *
    * @see &lt;a href&#x3D;&quot;https://developers.google.com/maps/documentation/javascript/reference/marker#Icon&quot;&gt;google.maps.Icon&lt;/a&gt;
    */
-  @Input() public iconUrl: string | google.maps.Icon;
+  @Input() public iconUrl?: string | google.maps.Icon;
 
-  @Input() public icon: MarkerIcon;
+  @Input() public icon?: MarkerIcon;
 
   /**
    * If true, the marker is visible
@@ -1719,7 +1721,7 @@ export class NgMapsMarkerComponent
    * Which animation to play when marker is added to a map.
    * This can be &#x27;BOUNCE&#x27; or &#x27;DROP&#x27;
    */
-  public animation: &#x27;BOUNCE&#x27; | &#x27;DROP&#x27; | null;
+  public animation?: &#x27;BOUNCE&#x27; | &#x27;DROP&#x27; | null;
 
   /**
    * This event emitter gets emitted when the user clicks on the marker.
@@ -1872,9 +1874,11 @@ export class NgMapsMarkerComponent
   }
 
   protected _updateFitBoundsDetails() {
-    this._fitBoundsDetails$.next({
-      latLng: { lat: this.latitude, lng: this.longitude },
-    });
+    if (this.latitude &amp;&amp; this.longitude) {
+      this._fitBoundsDetails$.next({
+        latLng: { lat: this.latitude, lng: this.longitude },
+      });
+    }
   }
 
   protected _addEventListeners() {
@@ -1893,7 +1897,7 @@ export class NgMapsMarkerComponent
     const rc &#x3D; this.markerManager
       .createEventObservable(&#x27;rightclick&#x27;, this)
       .subscribe(() &#x3D;&gt; {
-        this.markerRightClick.emit(null);
+        this.markerRightClick.emit();
       });
     this.subscription.add(rc);
 

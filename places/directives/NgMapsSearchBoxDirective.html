@@ -107,6 +107,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#searchBox" >searchBox</a>
                             </li>
                             <li>
@@ -690,6 +691,7 @@ The event contains a PlaceResult from GoogleMapsAPI
                     <a name="searchBox"></a>
                     <span class="name">
                             <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>searchBox</b></span>
                         <a href="#searchBox"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -806,7 +808,7 @@ export class NgMapsSearchBoxDirective implements OnInit, OnChanges, OnDestroy {
   public bounds: EventEmitter&lt;google.maps.LatLngBounds&gt; &#x3D;
     new EventEmitter&lt;google.maps.LatLngBounds&gt;();
 
-  private searchBox: google.maps.places.SearchBox;
+  private searchBox?: google.maps.places.SearchBox;
   private readonly subscription: Subscription &#x3D; new Subscription();
 
   constructor(
@@ -848,8 +850,8 @@ export class NgMapsSearchBoxDirective implements OnInit, OnChanges, OnDestroy {
         () &#x3D;&gt; this.removeHandler(),
       ).subscribe({
         next: () &#x3D;&gt; {
-          this.placeResult.emit(this.searchBox.getPlaces());
-          this.bounds.emit(this.searchBox.getBounds());
+          this.placeResult.emit(this.searchBox!.getPlaces());
+          this.bounds.emit(this.searchBox!.getBounds());
         },
       }),
     );
@@ -860,7 +862,7 @@ export class NgMapsSearchBoxDirective implements OnInit, OnChanges, OnDestroy {
     if (typeof changes.config !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp; !changes.config.firstChange) {
       const config &#x3D; changes.config
         .currentValue as google.maps.places.SearchBoxOptions;
-      if (typeof config.bounds !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      if (typeof config.bounds !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp; this.searchBox) {
         this.searchBox.setBounds(config.bounds);
       }
     }
@@ -873,14 +875,14 @@ export class NgMapsSearchBoxDirective implements OnInit, OnChanges, OnDestroy {
 
   /** @internal */
   private addHandler(handler: (...args: Array&lt;any&gt;) &#x3D;&gt; void) {
-    return this.searchBox.addListener(&#x27;places_changed&#x27;, () &#x3D;&gt;
+    return this.searchBox?.addListener(&#x27;places_changed&#x27;, () &#x3D;&gt;
       this._zone.run(handler),
     );
   }
 
   /** @internal */
   private removeHandler() {
-    this.searchBox.unbindAll();
+    this.searchBox?.unbindAll();
   }
 }
 </code></pre>

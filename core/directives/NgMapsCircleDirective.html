@@ -135,10 +135,12 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#getBounds" >getBounds</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#getCenter" >getCenter</a>
                             </li>
                             <li>
@@ -1177,6 +1179,7 @@ the center and around the circumference of the circle. Defaults to false.</p>
                     <a name="getBounds"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
                         <span ><b>getBounds</b></span>
                         <a href="#getBounds"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -1204,7 +1207,7 @@ the center and around the circumference of the circle. Defaults to false.</p>
 </div>
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/BoundsLiteral.html" target="_self" >Promise&lt;BoundsLiteral&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/BoundsLiteral.html" target="_self" >Promise&lt;BoundsLiteral | null&gt;</a></code>
 
                     </div>
                 </td>
@@ -1218,6 +1221,7 @@ the center and around the circumference of the circle. Defaults to false.</p>
                     <a name="getCenter"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
                         <span ><b>getCenter</b></span>
                         <a href="#getCenter"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -1243,7 +1247,7 @@ the center and around the circumference of the circle. Defaults to false.</p>
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/GeoPoint.html" target="_self" >Promise&lt;GeoPoint&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/GeoPoint.html" target="_self" >Promise&lt;GeoPoint | null&gt;</a></code>
 
                     </div>
                 </td>
@@ -1558,12 +1562,12 @@ export class NgMapsCircleDirective
   /**
    * The latitude position of the circle (required).
    */
-  @Input() public latitude: number;
+  @Input() public latitude?: number;
 
   /**
    * The clickable position of the circle (required).
    */
-  @Input() public longitude: number;
+  @Input() public longitude?: number;
 
   /**
    * Indicates whether this Circle handles mouse events. Defaults to true.
@@ -1584,12 +1588,12 @@ export class NgMapsCircleDirective
   /**
    * The fill color. All CSS3 colors are supported except for extended named colors.
    */
-  @Input() public fillColor: string;
+  @Input() public fillColor?: string;
 
   /**
    * The fill opacity between 0.0 and 1.0.
    */
-  @Input() public fillOpacity: number;
+  @Input() public fillOpacity?: number;
 
   /**
    * The radius in meters on the Earth&#x27;s surface.
@@ -1599,12 +1603,12 @@ export class NgMapsCircleDirective
   /**
    * The stroke color. All CSS3 colors are supported except for extended named colors.
    */
-  @Input() public strokeColor: string;
+  @Input() public strokeColor?: string;
 
   /**
    * The stroke opacity between 0.0 and 1.0
    */
-  @Input() public strokeOpacity: number;
+  @Input() public strokeOpacity?: number;
 
   /**
    * The stroke position. Defaults to CENTER.
@@ -1628,7 +1632,7 @@ export class NgMapsCircleDirective
   /**
    * The zIndex compared to other polys.
    */
-  @Input() public zIndex: number;
+  @Input() public zIndex?: number;
 
   /**
    * This event is fired when the circle&#x27;s center is changed.
@@ -1822,11 +1826,11 @@ export class NgMapsCircleDirective
   /**
    * Gets the LatLngBounds of this Circle.
    */
-  public getBounds(): Promise&lt;BoundsLiteral&gt; {
+  public async getBounds(): Promise&lt;BoundsLiteral | null&gt; {
     return this._manager.getBounds(this);
   }
 
-  public getCenter(): Promise&lt;GeoPoint&gt; {
+  public async getCenter(): Promise&lt;GeoPoint | null&gt; {
     return this._manager.getCenter(this);
   }
 }

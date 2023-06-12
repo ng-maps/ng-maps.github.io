@@ -156,6 +156,7 @@ element <code>map-view</code>.</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Protected</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#_fitBoundsSubscription" >_fitBoundsSubscription</a>
                             </li>
                             <li>
@@ -169,6 +170,7 @@ element <code>map-view</code>.</p>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#container" >container</a>
                             </li>
                             <li>
@@ -189,6 +191,7 @@ element <code>map-view</code>.</p>
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Protected</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#_fitBounds" >_fitBounds</a>
                             </li>
                             <li>
@@ -1833,7 +1836,7 @@ on a marker or infoWindow).</p>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.MapTypeId&gt;</code>
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.MapTypeId | string&gt;</code>
 
                     </td>
                 </tr>
@@ -1919,6 +1922,7 @@ on a marker or infoWindow).</p>
                     <a name="_fitBounds"></a>
                     <span class="name">
                         <span class="modifier">Protected</span>
+                        <span class="modifier">Async</span>
                         <span ><b>_fitBounds</b></span>
                         <a href="#_fitBounds"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -2902,6 +2906,7 @@ Returns a promise that gets resolved after the event was triggered.</p>
                     <a name="_fitBoundsSubscription"></a>
                     <span class="name">
                             <span class="modifier">Protected</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>_fitBoundsSubscription</b></span>
                         <a href="#_fitBoundsSubscription"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -3029,6 +3034,7 @@ Returns a promise that gets resolved after the event was triggered.</p>
                     <a name="container"></a>
                     <span class="name">
                             <span class="modifier">Public</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>container</b></span>
                         <a href="#container"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -3230,13 +3236,13 @@ export class NgMapsViewComponent&lt;T&gt;
    * The minimal zoom level of the map allowed. When not provided, no restrictions to the zoom level
    * are enforced.
    */
-  @Input() public minZoom: number;
+  @Input() public minZoom?: number;
 
   /**
    * The maximal zoom level of the map allowed. When not provided, no restrictions to the zoom level
    * are enforced.
    */
-  @Input() public maxZoom: number;
+  @Input() public maxZoom?: number;
 
   /**
    * Enables/disables if map is draggable.
@@ -3263,7 +3269,7 @@ export class NgMapsViewComponent&lt;T&gt;
    * Color used for the background of the Map div. This color will be visible when tiles have not
    * yet loaded as the user pans. This option can only be set when the map is initialized.
    */
-  @Input() public backgroundColor: string;
+  @Input() public backgroundColor?: string;
 
   /**
    * The name or url of the cursor to display when mousing over a draggable map. This property uses
@@ -3271,7 +3277,7 @@ export class NgMapsViewComponent&lt;T&gt;
    * least one fallback cursor that is not a URL. For example:
    * [draggableCursor]&#x3D;&quot;&#x27;url(http://www.example.com/icon.png), auto;&#x27;&quot;
    */
-  @Input() public draggableCursor: string;
+  @Input() public draggableCursor?: string;
 
   /**
    * The name or url of the cursor to display when the map is being dragged. This property uses the
@@ -3279,7 +3285,7 @@ export class NgMapsViewComponent&lt;T&gt;
    * one fallback cursor that is not a URL. For example:
    * [draggingCursor]&#x3D;&quot;&#x27;url(http://www.example.com/icon.png), auto;&#x27;&quot;
    */
-  @Input() public draggingCursor: string;
+  @Input() public draggingCursor?: string;
 
   /**
    * If false, prevents the map from being controlled by the keyboard. Keyboard shortcuts are
@@ -3295,7 +3301,7 @@ export class NgMapsViewComponent&lt;T&gt;
   /**
    * Options for the Zoom control.
    */
-  @Input() public zoomControlOptions: google.maps.ZoomControlOptions;
+  @Input() public zoomControlOptions?: google.maps.ZoomControlOptions;
 
   /**
    * Styles to apply to each of the default map types. Note that for Satellite/Hybrid and Terrain
@@ -3315,13 +3321,13 @@ export class NgMapsViewComponent&lt;T&gt;
    * This control is part of the default UI, and should be set to false when displaying a map type
    * on which the Street View road overlay should not appear (e.g. a non-Earth map type).
    */
-  @Input() public streetViewControl: boolean;
+  @Input() public streetViewControl?: boolean;
 
   /**
    * Options for the Street View control.
    */
   @Input()
-  public streetViewControlOptions: google.maps.StreetViewControlOptions;
+  public streetViewControlOptions?: google.maps.StreetViewControlOptions;
 
   /**
    * Sets the viewport to contain the given bounds.
@@ -3332,7 +3338,7 @@ export class NgMapsViewComponent&lt;T&gt;
   /**
    * Padding amount for bounds. This optional parameter is undefined by default.
    */
-  @Input() public boundsPadding: number | Padding;
+  @Input() public boundsPadding?: number | Padding;
 
   /**
    * The initial enabled/disabled state of the Scale control. This is disabled by default.
@@ -3342,7 +3348,7 @@ export class NgMapsViewComponent&lt;T&gt;
   /**
    * Options for the scale control.
    */
-  @Input() public scaleControlOptions: google.maps.ScaleControlOptions;
+  @Input() public scaleControlOptions?: google.maps.ScaleControlOptions;
 
   /**
    * The initial enabled/disabled state of the Map type control.
@@ -3352,7 +3358,7 @@ export class NgMapsViewComponent&lt;T&gt;
   /**
    * Options for the Map type control.
    */
-  @Input() public mapTypeControlOptions: google.maps.MapTypeControlOptions;
+  @Input() public mapTypeControlOptions?: google.maps.MapTypeControlOptions;
 
   /**
    * The initial enabled/disabled state of the Pan control.
@@ -3362,7 +3368,7 @@ export class NgMapsViewComponent&lt;T&gt;
   /**
    * Options for the Pan control.
    */
-  @Input() public panControlOptions: google.maps.PanControlOptions;
+  @Input() public panControlOptions?: google.maps.PanControlOptions;
 
   /**
    * The initial enabled/disabled state of the Rotate control.
@@ -3372,7 +3378,7 @@ export class NgMapsViewComponent&lt;T&gt;
   /**
    * Options for the Rotate control.
    */
-  @Input() public rotateControlOptions: google.maps.RotateControlOptions;
+  @Input() public rotateControlOptions?: google.maps.RotateControlOptions;
 
   /**
    * The initial enabled/disabled state of the Fullscreen control.
@@ -3383,7 +3389,7 @@ export class NgMapsViewComponent&lt;T&gt;
    * Options for the Fullscreen control.
    */
   @Input()
-  public fullscreenControlOptions: google.maps.FullscreenControlOptions;
+  public fullscreenControlOptions?: google.maps.FullscreenControlOptions;
 
   /**
    * The map mapTypeId. Defaults to &#x27;roadmap&#x27;.
@@ -3399,7 +3405,7 @@ export class NgMapsViewComponent&lt;T&gt;
   /**
    * Add layers https://developers.google.com/maps/documentation/javascript/trafficlayer to map
    */
-  @Input() public layers: Array&lt;LayerTypes&gt; | LayerTypes;
+  @Input() public layers?: Array&lt;LayerTypes&gt; | LayerTypes;
 
   private _layerInstance: Map&lt;
     LayerTypes,
@@ -3442,7 +3448,7 @@ export class NgMapsViewComponent&lt;T&gt;
   @Input() public tilt: number &#x3D; 0;
 
   protected subscription: Subscription &#x3D; new Subscription();
-  protected _fitBoundsSubscription: Subscription;
+  protected _fitBoundsSubscription?: Subscription;
 
   /**
    * This event emitter gets emitted when the user clicks on the map (but not when they click on a
@@ -3485,8 +3491,8 @@ export class NgMapsViewComponent&lt;T&gt;
    * This event is fired when the mapTypeId property changes.
    */
   @Output()
-  public mapTypeIdChange: EventEmitter&lt;google.maps.MapTypeId&gt; &#x3D;
-    new EventEmitter&lt;google.maps.MapTypeId&gt;();
+  public mapTypeIdChange: EventEmitter&lt;google.maps.MapTypeId | string&gt; &#x3D;
+    new EventEmitter&lt;google.maps.MapTypeId | string&gt;();
 
   /**
    * This event is fired when the map becomes idle after panning or zooming.
@@ -3510,11 +3516,11 @@ export class NgMapsViewComponent&lt;T&gt;
    */
   @Output() public tilesLoaded: EventEmitter&lt;void&gt; &#x3D; new EventEmitter&lt;void&gt;();
 
-  @ViewChild(&#x27;container&#x27;, { static: true }) public container: ElementRef;
+  @ViewChild(&#x27;container&#x27;, { static: true }) public container?: ElementRef;
 
   /** @internal */
   public ngOnInit() {
-    this._initMapInstance(this.container.nativeElement);
+    this._initMapInstance(this.container?.nativeElement);
   }
 
   protected async _initMapInstance(el: HTMLElement) {
@@ -3635,7 +3641,7 @@ export class NgMapsViewComponent&lt;T&gt;
       const map &#x3D; await this._mapsWrapper.getNativeMap();
       const layers &#x3D; Array.isArray(this.layers) ? this.layers : [this.layers];
       layers.forEach((layer) &#x3D;&gt; {
-        if (!this._layerInstance.has(layer)) {
+        if (layer &amp;&amp; !this._layerInstance.has(layer)) {
           const i:
             | google.maps.TrafficLayer
             | google.maps.TransitLayer
@@ -3648,7 +3654,7 @@ export class NgMapsViewComponent&lt;T&gt;
       Array.from(this._layerInstance.keys()).forEach((layer) &#x3D;&gt; {
         if (!layers.includes(layer)) {
           const i &#x3D; this._layerInstance.get(layer);
-          i.setMap(null);
+          i?.setMap(null);
           this._layerInstance.delete(layer);
         }
       });
@@ -3701,8 +3707,8 @@ export class NgMapsViewComponent&lt;T&gt;
       !(
         typeof this.latitude !&#x3D;&#x3D; &#x27;number&#x27; || typeof this.longitude !&#x3D;&#x3D; &#x27;number&#x27;
       ) &amp;&amp;
-      this.latitude !&#x3D;&#x3D; center.lat &amp;&amp;
-      this.longitude !&#x3D;&#x3D; center.lng
+      this.latitude !&#x3D;&#x3D; center?.lat &amp;&amp;
+      this.longitude !&#x3D;&#x3D; center?.lng
     ) {
       await this._setCenter();
       return;
@@ -3721,7 +3727,7 @@ export class NgMapsViewComponent&lt;T&gt;
     }
   }
 
-  protected _fitBounds() {
+  protected async _fitBounds() {
     switch (this.fitBounds) {
       case true:
         this._subscribeToFitBoundsUpdates();

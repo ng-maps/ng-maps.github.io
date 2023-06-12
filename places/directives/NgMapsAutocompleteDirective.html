@@ -107,6 +107,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#autocomplete" >autocomplete</a>
                             </li>
                             <li>
@@ -690,6 +691,7 @@ The event contains a PlaceResult from GoogleMapsAPI
                     <a name="autocomplete"></a>
                     <span class="name">
                             <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>autocomplete</b></span>
                         <a href="#autocomplete"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -788,7 +790,7 @@ export class NgMapsAutocompleteDirective
    */
   // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input(&#x27;mapAutocomplete&#x27;)
-  public config: Partial&lt;google.maps.places.AutocompleteOptions&gt;;
+  public config?: Partial&lt;google.maps.places.AutocompleteOptions&gt;;
 
   /**
    * This event is fired on selection of an element from the autocomplete list.
@@ -808,7 +810,7 @@ export class NgMapsAutocompleteDirective
   public bounds: EventEmitter&lt;google.maps.LatLngBounds&gt; &#x3D;
     new EventEmitter&lt;google.maps.LatLngBounds&gt;();
 
-  private autocomplete: google.maps.places.Autocomplete;
+  private autocomplete?: google.maps.places.Autocomplete;
   private readonly subscription: Subscription &#x3D; new Subscription();
 
   constructor(
@@ -854,8 +856,8 @@ export class NgMapsAutocompleteDirective
         () &#x3D;&gt; this.removeHandler(),
       ).subscribe({
         next: () &#x3D;&gt; {
-          this.placeResult.emit(this.autocomplete.getPlace());
-          this.bounds.emit(this.autocomplete.getBounds());
+          this.placeResult.emit(this.autocomplete!.getPlace());
+          this.bounds.emit(this.autocomplete!.getBounds());
         },
       }),
     );
@@ -867,15 +869,15 @@ export class NgMapsAutocompleteDirective
       const config &#x3D; changes.config
         .currentValue as google.maps.places.AutocompleteOptions;
       if (typeof config.bounds !&#x3D;&#x3D; &#x27;undefined&#x27;) {
-        this.autocomplete.setBounds(config.bounds);
+        this.autocomplete?.setBounds(config.bounds);
       }
       if (typeof config.componentRestrictions !&#x3D;&#x3D; &#x27;undefined&#x27;) {
-        this.autocomplete.setComponentRestrictions(
+        this.autocomplete?.setComponentRestrictions(
           config.componentRestrictions,
         );
       }
       if (typeof config.types !&#x3D;&#x3D; &#x27;undefined&#x27;) {
-        this.autocomplete.setTypes(config.types);
+        this.autocomplete?.setTypes(config.types);
       }
     }
   }
@@ -887,14 +889,14 @@ export class NgMapsAutocompleteDirective
 
   /** @internal */
   private addHandler(handler: (...args: Array&lt;any&gt;) &#x3D;&gt; void) {
-    return this.autocomplete.addListener(&#x27;place_changed&#x27;, () &#x3D;&gt;
+    return this.autocomplete?.addListener(&#x27;place_changed&#x27;, () &#x3D;&gt;
       this._zone.run(handler),
     );
   }
 
   /** @internal */
   private removeHandler() {
-    this.autocomplete.unbindAll();
+    this.autocomplete?.unbindAll();
   }
 }
 </code></pre>

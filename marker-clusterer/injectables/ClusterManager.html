@@ -89,6 +89,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#_resolver" >_resolver</a>
                             </li>
                         </ul>
@@ -105,6 +106,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#addMarker" >addMarker</a>
                             </li>
@@ -123,6 +125,8 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
                                 <a href="#deleteMarker" >deleteMarker</a>
                             </li>
                         </ul>
@@ -210,6 +214,7 @@
                     <a name="addMarker"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
+                        <span class="modifier"></span>
                         <span class="modifier">Async</span>
                         <span ><b>addMarker</b></span>
                         <a href="#addMarker"><span class="icon ion-ios-link"></span></a>
@@ -226,8 +231,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/lib/services/managers/cluster-manager.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/lib/services/managers/cluster-manager.ts:47</a></div>
                 </td>
             </tr>
 
@@ -297,8 +302,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="83"
-                            class="link-to-prism">src/lib/services/managers/cluster-manager.ts:83</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/lib/services/managers/cluster-manager.ts:93</a></div>
                 </td>
             </tr>
 
@@ -408,8 +413,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="89"
-                            class="link-to-prism">src/lib/services/managers/cluster-manager.ts:89</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/lib/services/managers/cluster-manager.ts:99</a></div>
                 </td>
             </tr>
 
@@ -484,6 +489,8 @@
                     <a name="deleteMarker"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
+                        <span class="modifier"></span>
+                        <span class="modifier">Async</span>
                         <span ><b>deleteMarker</b></span>
                         <a href="#deleteMarker"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -499,8 +506,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/lib/services/managers/cluster-manager.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/lib/services/managers/cluster-manager.ts:76</a></div>
                 </td>
             </tr>
 
@@ -588,6 +595,7 @@
                     <a name="_resolver"></a>
                     <span class="name">
                             <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>_resolver</b></span>
                         <a href="#_resolver"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -635,7 +643,7 @@ import { MarkerClusterComponent } from &#x27;../../directives/marker-cluster&#x2
 })
 export class ClusterManager extends GoogleMapsMarkerManager {
   private _clustererInstance: Promise&lt;MarkerClusterer&gt;;
-  private _resolver: (value?: any) &#x3D;&gt; void;
+  private _resolver?: (value?: any) &#x3D;&gt; void;
   constructor(_mapsWrapper: MapsApiWrapper, _zone: NgZone) {
     super(_mapsWrapper, _zone);
     this._clustererInstance &#x3D; new Promise&lt;MarkerClusterer&gt;((resolver) &#x3D;&gt; {
@@ -645,20 +653,28 @@ export class ClusterManager extends GoogleMapsMarkerManager {
 
   public async createCluster(options: MarkerClustererOptions): Promise&lt;void&gt; {
     const map &#x3D; await this._mapsWrapper.getNativeMap();
-    this._resolver(
-      new MarkerClusterer({
-        map,
-        markers: [...this._markers.values()],
-        ...options,
-      }),
-    );
+    if (this._resolver) {
+      this._resolver(
+        new MarkerClusterer({
+          map,
+          markers: [...this._markers.values()],
+          ...options,
+        }),
+      );
+    }
   }
 
   /**
    * @todo fix commented options
    * @param marker
    */
-  public async addMarker(marker: NgMapsMarkerComponent): Promise&lt;void&gt; {
+  public override async addMarker(
+    marker: NgMapsMarkerComponent,
+  ): Promise&lt;void&gt; {
+    if (!marker.latitude || !marker.longitude) {
+      return;
+    }
+
     const cluster: MarkerClusterer &#x3D; await this._clustererInstance;
     const markers &#x3D; await this._mapsWrapper.createMarker(
       {
@@ -681,7 +697,9 @@ export class ClusterManager extends GoogleMapsMarkerManager {
     this._markers.set(marker, markers);
   }
 
-  public deleteMarker(marker: NgMapsMarkerComponent): Promise&lt;void&gt; {
+  public override async deleteMarker(
+    marker: NgMapsMarkerComponent,
+  ): Promise&lt;void&gt; {
     const m &#x3D; this._markers.get(marker);
     if (m &#x3D;&#x3D; null) {
       // marker already deleted

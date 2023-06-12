@@ -33,6 +33,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <span class="icon ion-ios-paper"></span>README
                             </a>
                         </li>
+                        <li class="link">
+                            <a href="changelog.html"  data-type="chapter-link">
+                                <span class="icon ion-ios-paper"></span>CHANGELOG
+                            </a>
+                        </li>
                                 <li class="link">
                                     <a href="dependencies.html" data-type="chapter-link">
                                         <span class="icon ion-ios-list"></span>Dependencies
@@ -59,13 +64,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/NgMapsDrawingLayerModule.html" data-type="entity-link" >NgMapsDrawingLayerModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#directives-links-module-NgMapsDrawingLayerModule-31dc96313c3ab77906c78b8ae4adb7995e9602a7cb6391d45bec4e35d4d36bc9e9c9db06e5a46d5ebe3e826425117e42ab338f6905518783966dd4ae8081a8ac"' : 'data-target="#xs-directives-links-module-NgMapsDrawingLayerModule-31dc96313c3ab77906c78b8ae4adb7995e9602a7cb6391d45bec4e35d4d36bc9e9c9db06e5a46d5ebe3e826425117e42ab338f6905518783966dd4ae8081a8ac"' }>
+                                        'data-target="#directives-links-module-NgMapsDrawingLayerModule-ee88d41c8d8da70113061f3dda15649e6d6a98b606fcbe6e58c400dc8523217c2be8ae1861ef74cf19c61d96702ef36ab96912e3d73c9ae5aec708820ca15ff4"' : 'data-target="#xs-directives-links-module-NgMapsDrawingLayerModule-ee88d41c8d8da70113061f3dda15649e6d6a98b606fcbe6e58c400dc8523217c2be8ae1861ef74cf19c61d96702ef36ab96912e3d73c9ae5aec708820ca15ff4"' }>
                                         <span class="icon ion-md-code-working"></span>
                                         <span>Directives</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsDrawingLayerModule-31dc96313c3ab77906c78b8ae4adb7995e9602a7cb6391d45bec4e35d4d36bc9e9c9db06e5a46d5ebe3e826425117e42ab338f6905518783966dd4ae8081a8ac"' :
-                                        'id="xs-directives-links-module-NgMapsDrawingLayerModule-31dc96313c3ab77906c78b8ae4adb7995e9602a7cb6391d45bec4e35d4d36bc9e9c9db06e5a46d5ebe3e826425117e42ab338f6905518783966dd4ae8081a8ac"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsDrawingLayerModule-ee88d41c8d8da70113061f3dda15649e6d6a98b606fcbe6e58c400dc8523217c2be8ae1861ef74cf19c61d96702ef36ab96912e3d73c9ae5aec708820ca15ff4"' :
+                                        'id="xs-directives-links-module-NgMapsDrawingLayerModule-ee88d41c8d8da70113061f3dda15649e6d6a98b606fcbe6e58c400dc8523217c2be8ae1861ef74cf19c61d96702ef36ab96912e3d73c9ae5aec708820ca15ff4"' }>
                                         <li class="link">
                                             <a href="directives/NgMapsDrawingLayer.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NgMapsDrawingLayer</a>
                                         </li>

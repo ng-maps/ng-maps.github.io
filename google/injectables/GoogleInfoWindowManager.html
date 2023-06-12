@@ -232,8 +232,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="76"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:76</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:82</a></div>
                 </td>
             </tr>
 
@@ -303,8 +303,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:69</a></div>
                 </td>
             </tr>
 
@@ -374,8 +374,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="98"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:98</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:109</a></div>
                 </td>
             </tr>
 
@@ -540,8 +540,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:56</a></div>
                 </td>
             </tr>
 
@@ -611,8 +611,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:74</a></div>
                 </td>
             </tr>
 
@@ -765,8 +765,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/lib/managers/info-window.manager.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/lib/managers/info-window.manager.ts:48</a></div>
                 </td>
             </tr>
 
@@ -857,16 +857,22 @@ export class GoogleInfoWindowManager extends InfoWindowManager&lt;google.maps.In
   }
 
   public setPosition(infoWindow: NgMapsInfoWindowComponent): void {
+    if (!infoWindow.latitude || !infoWindow.longitude) {
+      return;
+    }
     const i &#x3D; this._infoWindows.get(infoWindow);
-    i.setPosition({
+    i?.setPosition({
       lat: infoWindow.latitude,
       lng: infoWindow.longitude,
     });
   }
 
   public setZIndex(infoWindow: NgMapsInfoWindowComponent): void {
+    if (!infoWindow.zIndex) {
+      return;
+    }
     const i &#x3D; this._infoWindows.get(infoWindow);
-    i.setZIndex(infoWindow.zIndex);
+    i?.setZIndex(infoWindow.zIndex);
   }
 
   public async open(infoWindow: NgMapsInfoWindowComponent): Promise&lt;void&gt; {
@@ -876,15 +882,15 @@ export class GoogleInfoWindowManager extends InfoWindowManager&lt;google.maps.In
       const marker &#x3D; await this._markerManager.getNativeMarker(
         infoWindow.hostMarker,
       );
-      w.open(map, marker);
+      w?.open(map, marker);
     } else {
-      w.open(map);
+      w?.open(map);
     }
   }
 
   public close(infoWindow: NgMapsInfoWindowComponent): void {
     const w &#x3D; this._infoWindows.get(infoWindow);
-    w.close();
+    w?.close();
   }
 
   public setOptions(
@@ -892,17 +898,17 @@ export class GoogleInfoWindowManager extends InfoWindowManager&lt;google.maps.In
     options: google.maps.InfoWindowOptions,
   ) {
     const i &#x3D; this._infoWindows.get(infoWindow);
-    i.setOptions(options);
+    i?.setOptions(options);
   }
 
   public async addInfoWindow(infoWindow: NgMapsInfoWindowComponent) {
     const options: google.maps.InfoWindowOptions &#x3D; {
-      content: infoWindow.content.nativeElement,
+      content: infoWindow.content?.nativeElement,
       maxWidth: infoWindow.maxWidth,
       zIndex: infoWindow.zIndex,
       disableAutoPan: infoWindow.disableAutoPan,
     };
-    const center: GeoPoint &#x3D;
+    const center: GeoPoint | null &#x3D;
       typeof infoWindow.latitude &#x3D;&#x3D;&#x3D; &#x27;number&#x27; &amp;&amp;
       typeof infoWindow.longitude &#x3D;&#x3D;&#x3D; &#x27;number&#x27;
         ? {
@@ -910,8 +916,13 @@ export class GoogleInfoWindowManager extends InfoWindowManager&lt;google.maps.In
             lng: infoWindow.longitude,
           }
         : null;
-    const instance &#x3D; await this._mapsWrapper.createInfoWindow(center, options);
-    this._infoWindows.set(infoWindow, instance);
+    if (center) {
+      const instance &#x3D; await this._mapsWrapper.createInfoWindow(
+        center,
+        options,
+      );
+      this._infoWindows.set(infoWindow, instance);
+    }
   }
 
   /**
@@ -923,7 +934,7 @@ export class GoogleInfoWindowManager extends InfoWindowManager&lt;google.maps.In
   ): Observable&lt;T&gt; {
     const i &#x3D; this._infoWindows.get(infoWindow);
     return new Observable((observer: Observer&lt;T&gt;) &#x3D;&gt; {
-      i.addListener(eventName, (e: T) &#x3D;&gt;
+      i?.addListener(eventName, (e: T) &#x3D;&gt;
         this._zone.run(() &#x3D;&gt; observer.next(e)),
       );
     });

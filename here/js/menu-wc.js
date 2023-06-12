@@ -59,13 +59,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/NgMapsHereModule.html" data-type="entity-link" >NgMapsHereModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' : 'data-target="#xs-components-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' }>
+                                            'data-target="#components-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' : 'data-target="#xs-components-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' :
-                                            'id="xs-components-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' :
+                                            'id="xs-components-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' }>
                                             <li class="link">
                                                 <a href="components/HereComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >HereComponent</a>
                                             </li>
@@ -73,13 +73,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#directives-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' : 'data-target="#xs-directives-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' }>
+                                        'data-target="#directives-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' : 'data-target="#xs-directives-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' }>
                                         <span class="icon ion-md-code-working"></span>
                                         <span>Directives</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' :
-                                        'id="xs-directives-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' :
+                                        'id="xs-directives-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' }>
                                         <li class="link">
                                             <a href="directives/MarkerClusterComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >MarkerClusterComponent</a>
                                         </li>
@@ -87,13 +87,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' : 'data-target="#xs-injectables-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' }>
+                                        'data-target="#injectables-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' : 'data-target="#xs-injectables-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' :
-                                        'id="xs-injectables-links-module-NgMapsHereModule-0df010813ef5feeffc5549807efd263cac0bdbf28a2c71eb15d09c1e4c9fb4d333d4b7f12b76e0e843f6262e59b39f10e72bbd1bbad1102222683daee276ba3e"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' :
+                                        'id="xs-injectables-links-module-NgMapsHereModule-93168673fa8cf5e24889f704adfea7b16edd074ac734874eeaad5c26ae55c07356afbfaf6f4b7d92e803fc97f0c2d700922078356549946424a82e5e60425e5c"' }>
                                         <li class="link">
                                             <a href="injectables/HereMapsPlatformProvider.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >HereMapsPlatformProvider</a>
                                         </li>

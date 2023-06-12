@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ng-maps/direction</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">@ng-maps/direction</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="ng-mapsdirection">@ng-maps/direction</h1>
+<p><a href="https://github.com/@ng-maps/direction">@ng-maps/direction</a> is the directive for <a href="https://github.com/ng-maps/ng-maps">@ng-maps/core</a></p>
+<ul>
+<li>Angular</li>
+<li>Google Map API</li>
+</ul>
+<p><img src="https://i.imgur.com/DCIoXqS.jpg" alt="@ng-maps/direction" class="img-responsive"></p>
+<h2 id="credit">Credit</h2>
+<h4 id="sebastianmangular-google-maps---directions-service-495"><a href="https://github.com/SebastianM/angular-google-maps">SebastianM/angular-google-maps</a> - <a href="https://github.com/SebastianM/angular-google-maps/issues/495">Directions service #495</a></h4>
+<h4 id="explooosionagm-direction"><a href="https://github.com/explooosion/Agm-Direction">explooosion/Agm-Direction</a></h4>
+<h2 id="installation">Installation</h2>
+<p>Installation is done using the
+<a href="https://docs.npmjs.com/getting-started/installing-npm-packages-locally"><code>npm install</code> command</a>:</p>
+<div><pre class="line-numbers"><code class="language-sh">npm install &#64;ng-maps/direction
+# or
+yarn add &#64;ng-maps/direction</code></pre></div><h2 id="importing-modules">Importing Modules</h2>
+<div><pre class="line-numbers"><code class="language-typescript">import { BrowserModule } from &#39;&#64;angular/platform-browser&#39;;
+import { NgModule } from &#39;&#64;angular/core&#39;;
+import { AppComponent } from &#39;./app.component&#39;;
+
+import { NgMapsCoreModule } from &#39;&#64;ng-maps/core&#39;;
+import { NgMapsGoogleModule } from &#39;&#64;ng-maps/google&#39;;
+import { NgMapsDirectionModule } from &#39;&#64;ng-maps/direction&#39;;
+
+&#64;NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    NgMapsCoreModule, //&#64;ng-maps/core
+    NgMapsGoogleModule, //&#64;ng-maps/google
+    NgMapsDirectionModule, //&#64;ng-maps/direction
+  ],
+  providers: [
+    {
+      provide: GOOGLE_MAPS_API_CONFIG,
+      useValue: {
+        apiKey: &#39;YOUR_API_KEY&#39;,
+      },
+    },
+  ],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}</code></pre></div><h2 id="usage">Usage</h2>
+<p>HTML</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;map-view [latitude]=&quot;lat&quot; [longitude]=&quot;lng&quot;&gt;
+  &lt;map-direction [origin]=&quot;origin&quot; [destination]=&quot;destination&quot;&gt; &lt;/map-direction&gt;
+&lt;/map-view&gt;</code></pre></div><p>CSS</p>
+<div><pre class="line-numbers"><code class="language-css">map-view {
+  height: 400px;
+}</code></pre></div><p>TS</p>
+<div><pre class="line-numbers"><code class="language-typescript">public lat = 24.799448;
+public lng = 120.979021;
+
+public origin: any;
+public destination: any;
+
+ngOnInit() {
+  this.getDirection();
+}
+
+getDirection() {
+  this.origin = { lat: 24.799448, lng: 120.979021 };
+  this.destination = { lat: 24.799524, lng: 120.975017 };
+
+  // Location within a string
+  // this.origin = &#39;Taipei Main Station&#39;;
+  // this.destination = &#39;Taiwan Presidential Office&#39;;
+}</code></pre></div><h2 id="document">Document</h2>
+<ul>
+<li>Document <a href="https://github.com/ng-maps/ng-maps#packages">ng-maps-Docs</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p><a href="http://opensource.org/licenses/MIT">MIT</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

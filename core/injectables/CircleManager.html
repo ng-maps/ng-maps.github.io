@@ -293,7 +293,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>Promise | void</code>
 
                     </div>
                     <div class="io-description">
@@ -326,8 +326,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="56"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:56</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:62</a></div>
                 </td>
             </tr>
 
@@ -418,8 +418,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:38</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:40</a></div>
                 </td>
             </tr>
 
@@ -457,7 +457,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/BoundsLiteral.html" target="_self" >Promise&lt;BoundsLiteral&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/BoundsLiteral.html" target="_self" >Promise&lt;BoundsLiteral | null&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -484,78 +484,6 @@
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
                     <code>getCenter(circle: <a href="../directives/NgMapsCircleDirective.html" target="_self">NgMapsCircleDirective</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:42</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>circle</td>
-                                    <td>
-                                                <code><a href="../directives/NgMapsCircleDirective.html" target="_self" >NgMapsCircleDirective</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/GeoPoint.html" target="_self" >Promise&lt;GeoPoint&gt;</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getRadius"></a>
-                    <span class="name">
-                        <span class="modifier">Public</span>
-                        <span class="modifier">Abstract</span>
-                        <span ><b>getRadius</b></span>
-                        <a href="#getRadius"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getRadius(circle: <a href="../directives/NgMapsCircleDirective.html" target="_self">NgMapsCircleDirective</a>)</code>
                 </td>
             </tr>
 
@@ -601,7 +529,79 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+                        <b>Returns : </b>        <code><a href="../interfaces/GeoPoint.html" target="_self" >Promise&lt;GeoPoint | null&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRadius"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Abstract</span>
+                        <span ><b>getRadius</b></span>
+                        <a href="#getRadius"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRadius(circle: <a href="../directives/NgMapsCircleDirective.html" target="_self">NgMapsCircleDirective</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>circle</td>
+                                    <td>
+                                                <code><a href="../directives/NgMapsCircleDirective.html" target="_self" >NgMapsCircleDirective</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;number | null&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -634,8 +634,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:29</a></div>
                 </td>
             </tr>
 
@@ -708,8 +708,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:52</a></div>
                 </td>
             </tr>
 
@@ -780,8 +780,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:56</a></div>
                 </td>
             </tr>
 
@@ -852,8 +852,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:54</a></div>
                 </td>
             </tr>
 
@@ -924,8 +924,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:35</a></div>
                 </td>
             </tr>
 
@@ -1017,8 +1017,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:54</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:60</a></div>
                 </td>
             </tr>
 
@@ -1089,8 +1089,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="52"
-                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:52</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/lib/services/managers/circle-manager.ts:58</a></div>
                 </td>
             </tr>
 
@@ -1206,7 +1206,9 @@ export abstract class CircleManager&lt;T &#x3D; any&gt; {
   /**
    * @param circle
    */
-  public abstract addCircle(circle: NgMapsCircleDirective);
+  public abstract addCircle(
+    circle: NgMapsCircleDirective,
+  ): Promise&lt;void&gt; | void;
 
   /**
    * Removes the given circle from the map.
@@ -1224,11 +1226,15 @@ export abstract class CircleManager&lt;T &#x3D; any&gt; {
 
   public abstract getBounds(
     circle: NgMapsCircleDirective,
-  ): Promise&lt;BoundsLiteral&gt;;
+  ): Promise&lt;BoundsLiteral | null&gt;;
 
-  public abstract getCenter(circle: NgMapsCircleDirective): Promise&lt;GeoPoint&gt;;
+  public abstract getCenter(
+    circle: NgMapsCircleDirective,
+  ): Promise&lt;GeoPoint | null&gt;;
 
-  public abstract getRadius(circle: NgMapsCircleDirective): Promise&lt;number&gt;;
+  public abstract getRadius(
+    circle: NgMapsCircleDirective,
+  ): Promise&lt;number | null&gt;;
 
   public abstract setCenter(circle: NgMapsCircleDirective): Promise&lt;void&gt;;
 

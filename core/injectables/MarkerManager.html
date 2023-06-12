@@ -340,8 +340,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/lib/services/managers/marker.manager.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/lib/services/managers/marker.manager.ts:71</a></div>
                 </td>
             </tr>
 
@@ -503,8 +503,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/lib/services/managers/marker.manager.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/lib/services/managers/marker.manager.ts:67</a></div>
                 </td>
             </tr>
 
@@ -542,7 +542,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>T</code>
+                        <b>Returns : </b>    <code>T | undefined</code>
 
                     </div>
                     <div class="io-description">
@@ -1433,6 +1433,9 @@ export abstract class MarkerManager&lt;T &#x3D; any&gt; {
   public abstract updateAnimation(marker: NgMapsMarkerComponent): void;
 
   public async addMarker(marker: NgMapsMarkerComponent): Promise&lt;void&gt; {
+    if (!marker.latitude || !marker.longitude) {
+      return;
+    }
     const m &#x3D; await this._mapsWrapper.createMarker(
       { lat: marker.latitude, lng: marker.longitude },
       {
@@ -1454,7 +1457,7 @@ export abstract class MarkerManager&lt;T &#x3D; any&gt; {
     this._markers.set(marker, m);
   }
 
-  public getNativeMarker(marker: NgMapsMarkerComponent): T {
+  public getNativeMarker(marker: NgMapsMarkerComponent): T | undefined {
     return this._markers.get(marker);
   }
 

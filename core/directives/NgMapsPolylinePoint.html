@@ -163,7 +163,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/lib/directives/polyline-point.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/lib/directives/polyline-point.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -287,8 +287,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/lib/directives/polyline-point.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/lib/directives/polyline-point.ts:37</a></div>
                 </td>
             </tr>
 
@@ -363,18 +363,19 @@ export class NgMapsPolylinePoint implements OnChanges {
   /**
    * The latitude position of the point.
    */
-  @Input() public latitude: number;
+  @Input() public latitude?: number;
 
   /**
    * The longitude position of the point;
    */
-  @Input() public longitude: number;
+  @Input() public longitude?: number;
 
   /**
    * This event emitter gets emitted when the position of the point changed.
    */
   @Output()
-  public positionChanged: EventEmitter&lt;google.maps.LatLngLiteral&gt; &#x3D; new EventEmitter&lt;google.maps.LatLngLiteral&gt;();
+  public positionChanged: EventEmitter&lt;google.maps.LatLngLiteral&gt; &#x3D;
+    new EventEmitter&lt;google.maps.LatLngLiteral&gt;();
 
   constructor() {}
 

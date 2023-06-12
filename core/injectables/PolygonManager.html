@@ -258,7 +258,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>Promise | void</code>
 
                     </div>
                     <div class="io-description">
@@ -291,8 +291,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/lib/services/managers/polygon.manager.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/lib/services/managers/polygon.manager.ts:32</a></div>
                 </td>
             </tr>
 
@@ -383,8 +383,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/lib/services/managers/polygon.manager.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/lib/services/managers/polygon.manager.ts:30</a></div>
                 </td>
             </tr>
 
@@ -455,8 +455,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/lib/services/managers/polygon.manager.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/lib/services/managers/polygon.manager.ts:25</a></div>
                 </td>
             </tr>
 
@@ -539,8 +539,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/lib/services/managers/polygon.manager.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/lib/services/managers/polygon.manager.ts:23</a></div>
                 </td>
             </tr>
 
@@ -653,7 +653,9 @@ export abstract class PolygonManager&lt;T &#x3D; any&gt; {
     protected _zone: NgZone,
   ) {}
 
-  public abstract addPolygon(path: NgMapsPolygonDirective);
+  public abstract addPolygon(
+    path: NgMapsPolygonDirective,
+  ): Promise&lt;void&gt; | void;
 
   public abstract updatePolygon(polygon: NgMapsPolygonDirective): Promise&lt;void&gt;;
 

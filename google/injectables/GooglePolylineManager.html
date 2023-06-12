@@ -86,6 +86,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Protected</span>
+                                    <span class="modifier"></span>
                                 <a href="#_convertPoints" >_convertPoints</a>
                             </li>
                             <li>
@@ -102,6 +103,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#setPolylineOptions" >setPolylineOptions</a>
                             </li>
                             <li>
@@ -193,6 +195,7 @@
                     <a name="_convertPoints"></a>
                     <span class="name">
                         <span class="modifier">Protected</span>
+                        <span class="modifier"></span>
                         <span ><b>_convertPoints</b></span>
                         <a href="#_convertPoints"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -350,8 +353,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="82"
-                            class="link-to-prism">src/lib/managers/polyline.manager.ts:82</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">src/lib/managers/polyline.manager.ts:81</a></div>
                 </td>
             </tr>
 
@@ -441,8 +444,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">src/lib/managers/polyline.manager.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/lib/managers/polyline.manager.ts:68</a></div>
                 </td>
             </tr>
 
@@ -497,6 +500,7 @@
                     <a name="setPolylineOptions"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
                         <span ><b>setPolylineOptions</b></span>
                         <a href="#setPolylineOptions"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -666,7 +670,7 @@ export class GooglePolylineManager extends PolylineManager&lt;google.maps.Polyli
     super(_mapsWrapper, _zone);
   }
 
-  protected _convertPoints(
+  protected override _convertPoints(
     line: NgMapsPolyline,
   ): Array&lt;google.maps.LatLngLiteral&gt; {
     return line._getPoints().map(
@@ -709,13 +713,12 @@ export class GooglePolylineManager extends PolylineManager&lt;google.maps.Polyli
     );
   }
 
-  public setPolylineOptions(
+  public async setPolylineOptions(
     line: NgMapsPolyline,
     options: { [propName: string]: any },
   ): Promise&lt;void&gt; {
-    return this._polylines.get(line).then((l: google.maps.Polyline) &#x3D;&gt; {
-      l.setOptions(options);
-    });
+    const l &#x3D; await this._polylines.get(line);
+    l?.setOptions(options);
   }
 
   public deletePolyline(line: NgMapsPolyline): Promise&lt;void&gt; {
@@ -736,7 +739,7 @@ export class GooglePolylineManager extends PolylineManager&lt;google.maps.Polyli
     line: NgMapsPolyline,
   ): Observable&lt;T&gt; {
     return new Observable((observer: Observer&lt;T&gt;) &#x3D;&gt; {
-      this._polylines.get(line).then((l: google.maps.Polyline) &#x3D;&gt; {
+      this._polylines.get(line)?.then((l: google.maps.Polyline) &#x3D;&gt; {
         l.addListener(eventName, (e: T) &#x3D;&gt;
           this._zone.run(() &#x3D;&gt; observer.next(e)),
         );

@@ -79,10 +79,12 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Protected</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#_api" >_api</a>
                             </li>
                             <li>
                                     <span class="modifier">Protected</span>
+                                    <span class="modifier">Optional</span>
                                 <a href="#_mapResolver" >_mapResolver</a>
                             </li>
                         </ul>
@@ -348,8 +350,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:83</a></div>
                 </td>
             </tr>
 
@@ -432,8 +434,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="75"
-                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:78</a></div>
                 </td>
             </tr>
 
@@ -483,7 +485,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
 
                     </div>
                     <div class="io-description">
@@ -516,8 +518,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:73</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:75</a></div>
                 </td>
             </tr>
 
@@ -663,7 +665,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>void | Promise</code>
 
                     </div>
                     <div class="io-description">
@@ -792,8 +794,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="89"
-                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:89</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:95</a></div>
                 </td>
             </tr>
 
@@ -864,8 +866,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="87"
-                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:87</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:93</a></div>
                 </td>
             </tr>
 
@@ -936,8 +938,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="82"
-                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:82</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:88</a></div>
                 </td>
             </tr>
 
@@ -1071,7 +1073,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>void | Promise</code>
 
                     </div>
                     <div class="io-description">
@@ -1114,7 +1116,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/BoundsLiteral.html" target="_self" >Promise&lt;BoundsLiteral&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/BoundsLiteral.html" target="_self" >Promise&lt;BoundsLiteral | undefined&gt;</a></code>
 
                     </div>
                 </td>
@@ -1154,7 +1156,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/GeoPoint.html" target="_self" >Promise&lt;GeoPoint&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/GeoPoint.html" target="_self" >Promise&lt;GeoPoint | undefined&gt;</a></code>
 
                     </div>
                 </td>
@@ -1194,7 +1196,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;google.maps.MapTypeId | string&gt;</code>
+                        <b>Returns : </b>    <code>Promise&lt;google.maps.MapTypeId | string | undefined&gt;</code>
 
                     </div>
                 </td>
@@ -1234,7 +1236,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;T&gt;</code>
+                        <b>Returns : </b>    <code>Promise&lt;T | undefined&gt;</code>
 
                     </div>
                 </td>
@@ -1274,7 +1276,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+                        <b>Returns : </b>    <code>Promise&lt;number | undefined&gt;</code>
 
                     </div>
                 </td>
@@ -1427,7 +1429,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>void | Promise</code>
 
                     </div>
                     <div class="io-description">
@@ -1571,7 +1573,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>void | Promise</code>
 
                     </div>
                     <div class="io-description">
@@ -1676,8 +1678,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="71"
-                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:71</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/lib/services/maps-api-wrapper.ts:73</a></div>
                 </td>
             </tr>
 
@@ -1810,6 +1812,7 @@
                     <a name="_api"></a>
                     <span class="name">
                             <span class="modifier">Protected</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>_api</b></span>
                         <a href="#_api"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -1837,6 +1840,7 @@
                     <a name="_mapResolver"></a>
                     <span class="name">
                             <span class="modifier">Protected</span>
+                            <span class="modifier">Optional</span>
                         <span ><b>_mapResolver</b></span>
                         <a href="#_mapResolver"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -1878,8 +1882,8 @@ import { MapsAPILoader } from &#x27;./maps-api-loader/maps-api-loader&#x27;;
 
 @Injectable()
 export abstract class MapsApiWrapper&lt;T &#x3D; any, C &#x3D; any, R &#x3D; any, I &#x3D; any&gt; {
-  protected _api: Promise&lt;T&gt;;
-  protected _mapResolver: (value?: T) &#x3D;&gt; void;
+  protected _api?: Promise&lt;T&gt;;
+  protected _mapResolver?: (value: T) &#x3D;&gt; void;
 
   constructor(protected _loader: MapsAPILoader, protected _zone: NgZone) {
     this._api &#x3D; new Promise&lt;T&gt;((resolve) &#x3D;&gt; {
@@ -1891,9 +1895,9 @@ export abstract class MapsApiWrapper&lt;T &#x3D; any, C &#x3D; any, R &#x3D; any
     el: HTMLElement,
     center: GeoPoint,
     options: MapOptions,
-  );
+  ): void | Promise&lt;void&gt;;
 
-  public abstract setMapOptions(options: MapOptions);
+  public abstract setMapOptions(options: MapOptions): void | Promise&lt;void&gt;;
 
   public abstract createMarker(
     position: GeoPoint,
@@ -1903,13 +1907,13 @@ export abstract class MapsApiWrapper&lt;T &#x3D; any, C &#x3D; any, R &#x3D; any
 
   public abstract clearInstanceListeners(): void;
 
-  public async getNativeMap(): Promise&lt;T&gt; {
+  public async getNativeMap(): Promise&lt;T | undefined&gt; {
     return this._api;
   }
 
   public abstract triggerMapEvent(eventName: string): Promise&lt;void&gt;;
 
-  public abstract getCenter(): Promise&lt;GeoPoint&gt;;
+  public abstract getCenter(): Promise&lt;GeoPoint | undefined&gt;;
 
   public abstract setCenter(newCenter: GeoPoint): Promise&lt;void&gt;;
 
@@ -1918,26 +1922,32 @@ export abstract class MapsApiWrapper&lt;T &#x3D; any, C &#x3D; any, R &#x3D; any
   public abstract panToBounds(
     bounds: BoundsLiteral,
     boundsPadding?: number | Padding,
-  );
+  ): void | Promise&lt;void&gt;;
 
   public abstract fitBounds(
     bounds: BoundsLiteral,
     boundsPadding?: number | Padding,
-  );
+  ): void | Promise&lt;void&gt;;
 
-  public abstract getBounds(): Promise&lt;BoundsLiteral&gt;;
+  public abstract getBounds(): Promise&lt;BoundsLiteral | undefined&gt;;
 
-  public abstract getZoom(): Promise&lt;number&gt;;
+  public abstract getZoom(): Promise&lt;number | undefined&gt;;
 
   public abstract setZoom(zoom: number): Promise&lt;any&gt;;
 
-  public abstract getMapTypeId(): Promise&lt;google.maps.MapTypeId | string&gt;;
+  public abstract getMapTypeId(): Promise&lt;
+    google.maps.MapTypeId | string | undefined
+  &gt;;
 
   public abstract subscribeToMapEvent(eventName: string): Observable&lt;any&gt;;
 
   public abstract createInfoWindow(center: GeoPoint, options: any): Promise&lt;I&gt;;
 
-  public abstract createDrawingManager(param: any, addToMap?: boolean);
+  // TODO typings
+  public abstract createDrawingManager(
+    param: any,
+    addToMap?: boolean,
+  ): Promise&lt;any&gt;;
 
   public abstract createCircle(
     center: GeoPoint,

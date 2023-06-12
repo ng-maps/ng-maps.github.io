@@ -1,0 +1,2101 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ng-maps/direction</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ng-maps/direction</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li >NgMapsDirectionDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/directives/direction.directive.ts</code>
+        </p>
+
+
+
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                            <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                            <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+            </p>
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover metadata">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>map-direction</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#destinationMarker" >destinationMarker</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#directionsRenderer" >directionsRenderer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#directionsService" >directionsService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isFirstChange" >isFirstChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#map" >map</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#originMarker" >originMarker</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#waypointsMarker" >waypointsMarker</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#destroyMarkers" >destroyMarkers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#directionDraw" >directionDraw</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#removeDirections" >removeDirections</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#removeMarkers" >removeMarkers</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setMarker" >setMarker</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#avoidFerries" >avoidFerries</a>
+                            </li>
+                            <li>
+                                <a href="#avoidHighways" >avoidHighways</a>
+                            </li>
+                            <li>
+                                <a href="#avoidTolls" >avoidTolls</a>
+                            </li>
+                            <li>
+                                <a href="#destination" >destination</a>
+                            </li>
+                            <li>
+                                <a href="#drivingOptions" >drivingOptions</a>
+                            </li>
+                            <li>
+                                <a href="#infoWindow" >infoWindow</a>
+                            </li>
+                            <li>
+                                <a href="#markerOptions" >markerOptions</a>
+                            </li>
+                            <li>
+                                <a href="#optimizeWaypoints" >optimizeWaypoints</a>
+                            </li>
+                            <li>
+                                <a href="#origin" >origin</a>
+                            </li>
+                            <li>
+                                <a href="#panel" >panel</a>
+                            </li>
+                            <li>
+                                <a href="#provideRouteAlternatives" >provideRouteAlternatives</a>
+                            </li>
+                            <li>
+                                <a href="#renderOptions" >renderOptions</a>
+                            </li>
+                            <li>
+                                <a href="#renderRoute" >renderRoute</a>
+                            </li>
+                            <li>
+                                <a href="#transitOptions" >transitOptions</a>
+                            </li>
+                            <li>
+                                <a href="#travelMode" >travelMode</a>
+                            </li>
+                            <li>
+                                <a href="#unitSystem" >unitSystem</a>
+                            </li>
+                            <li>
+                                <a href="#visible" >visible</a>
+                            </li>
+                            <li>
+                                <a href="#waypoints" >waypoints</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#destinationDrag" >destinationDrag</a>
+                            </li>
+                            <li>
+                                <a href="#directionChange" >directionChange</a>
+                            </li>
+                            <li>
+                                <a href="#directionResponse" >directionResponse</a>
+                            </li>
+                            <li>
+                                <a href="#originDrag" >originDrag</a>
+                            </li>
+                            <li>
+                                <a href="#sendInfoWindow" >sendInfoWindow</a>
+                            </li>
+                            <li>
+                                <a href="#status" >status</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(mapProvider: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, mapsApiWrapper: MapsApiWrapper, mapsAPILoader: MapsAPILoader, zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/lib/directives/direction.directive.ts:113</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>mapProvider</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>mapsApiWrapper</td>
+                                                  
+                                                        <td>
+                                                                    <code>MapsApiWrapper</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>mapsAPILoader</td>
+                                                  
+                                                        <td>
+                                                                    <code>MapsAPILoader</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>zone</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="avoidFerries"></a>
+                        <b>avoidFerries</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/lib/directives/direction.directive.ts:58</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="avoidHighways"></a>
+                        <b>avoidHighways</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/lib/directives/direction.directive.ts:54</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="avoidTolls"></a>
+                        <b>avoidTolls</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/lib/directives/direction.directive.ts:56</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="destination"></a>
+                        <b>destination</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | google.maps.Place | google.maps.LatLng | google.maps.LatLngLiteral</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/lib/directives/direction.directive.ts:36</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="drivingOptions"></a>
+                        <b>drivingOptions</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.DrivingOptions</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/lib/directives/direction.directive.ts:46</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="infoWindow"></a>
+                        <b>infoWindow</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.InfoWindow</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/lib/directives/direction.directive.ts:74</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="markerOptions"></a>
+                        <b>markerOptions</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/lib/directives/direction.directive.ts:66</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="optimizeWaypoints"></a>
+                        <b>optimizeWaypoints</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/lib/directives/direction.directive.ts:50</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="origin"></a>
+                        <b>origin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | google.maps.Place | google.maps.LatLng | google.maps.LatLngLiteral</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/lib/directives/direction.directive.ts:30</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="panel"></a>
+                        <b>panel</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Element</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/lib/directives/direction.directive.ts:64</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="provideRouteAlternatives"></a>
+                        <b>provideRouteAlternatives</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/lib/directives/direction.directive.ts:52</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="renderOptions"></a>
+                        <b>renderOptions</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.DirectionsRendererOptions</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/lib/directives/direction.directive.ts:62</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="renderRoute"></a>
+                        <b>renderRoute</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.DirectionsResult | null</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/lib/directives/direction.directive.ts:80</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transitOptions"></a>
+                        <b>transitOptions</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.TransitOptions</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/lib/directives/direction.directive.ts:44</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="travelMode"></a>
+                        <b>travelMode</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.TravelMode</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/lib/directives/direction.directive.ts:42</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="unitSystem"></a>
+                        <b>unitSystem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.UnitSystem</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/lib/directives/direction.directive.ts:60</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="visible"></a>
+                        <b>visible</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/lib/directives/direction.directive.ts:77</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="waypoints"></a>
+                        <b>waypoints</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;google.maps.DirectionsWaypoint&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/lib/directives/direction.directive.ts:48</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+            <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="destinationDrag"></a>
+                        <b>destinationDrag</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/lib/directives/direction.directive.ts:101</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="directionChange"></a>
+                        <b>directionChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.DirectionsResult&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/lib/directives/direction.directive.ts:83</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="directionResponse"></a>
+                        <b>directionResponse</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.DirectionsResult&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/lib/directives/direction.directive.ts:88</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="originDrag"></a>
+                        <b>originDrag</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/lib/directives/direction.directive.ts:100</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sendInfoWindow"></a>
+                        <b>sendInfoWindow</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.InfoWindow&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/lib/directives/direction.directive.ts:92</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="status"></a>
+                        <b>status</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;google.maps.DirectionsStatus&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/lib/directives/direction.directive.ts:96</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="destroyMarkers"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>destroyMarkers</b></span>
+                        <a href="#destroyMarkers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>destroyMarkers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="429"
+                            class="link-to-prism">src/lib/directives/direction.directive.ts:429</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This event is fired when destroy markers</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="directionDraw"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>directionDraw</b></span>
+                        <a href="#directionDraw"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>directionDraw()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">src/lib/directives/direction.directive.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This event is fired when the user creating or updating this direction</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(obj: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">src/lib/directives/direction.directive.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>obj</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">src/lib/directives/direction.directive.ts:164</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="122"
+                            class="link-to-prism">src/lib/directives/direction.directive.ts:122</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeDirections"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>removeDirections</b></span>
+                        <a href="#removeDirections"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeDirections()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="418"
+                            class="link-to-prism">src/lib/directives/direction.directive.ts:418</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This event is fired when remove directions</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeMarkers"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>removeMarkers</b></span>
+                        <a href="#removeMarkers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeMarkers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="401"
+                            class="link-to-prism">src/lib/directives/direction.directive.ts:401</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This event is fired when remove markers</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setMarker"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setMarker</b></span>
+                        <a href="#setMarker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setMarker(map: google.maps.Map, marker: google.maps.Marker | google.maps.DirectionsWaypoint, markerOpts: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, content: google.maps.LatLng | string)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="372"
+                            class="link-to-prism">src/lib/directives/direction.directive.ts:372</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Custom Origin and Destination Icon</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>map</td>
+                                    <td>
+                                            <code>google.maps.Map</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>map</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>marker</td>
+                                    <td>
+                                            <code>google.maps.Marker | google.maps.DirectionsWaypoint</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>marker</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>markerOpts</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>properties</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>content</td>
+                                    <td>
+                                            <code>google.maps.LatLng | string</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>marker&#39;s infowindow content</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>google.maps.Marker</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>new marker</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="destinationMarker"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>destinationMarker</b></span>
+                        <a href="#destinationMarker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">src/lib/directives/direction.directive.ts:108</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="directionsRenderer"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>directionsRenderer</b></span>
+                        <a href="#directionsRenderer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.DirectionsRenderer</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/lib/directives/direction.directive.ts:104</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="directionsService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>directionsService</b></span>
+                        <a href="#directionsService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.DirectionsService</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/lib/directives/direction.directive.ts:103</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isFirstChange"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>isFirstChange</b></span>
+                        <a href="#isFirstChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/lib/directives/direction.directive.ts:112</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="map"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>map</b></span>
+                        <a href="#map"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>google.maps.Map</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/lib/directives/direction.directive.ts:113</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="originMarker"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>originMarker</b></span>
+                        <a href="#originMarker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/lib/directives/direction.directive.ts:107</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="waypointsMarker"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>waypointsMarker</b></span>
+                        <a href="#waypointsMarker"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;google.maps.Marker&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/lib/directives/direction.directive.ts:109</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Directive,
+  EventEmitter,
+  Host,
+  Inject,
+  Input,
+  NgZone,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  Optional,
+  Output,
+  SimpleChanges,
+  SkipSelf,
+} from &#x27;@angular/core&#x27;;
+
+import {
+  MAP_PROVIDER,
+  MapsAPILoader,
+  MapsApiWrapper,
+  MarkerManager,
+  NgMapsMarkerComponent,
+  NgMapsViewComponent,
+} from &#x27;@ng-maps/core&#x27;;
+
+@Directive({
+  selector: &#x27;map-direction&#x27;,
+})
+export class NgMapsDirectionDirective implements OnChanges, OnInit, OnDestroy {
+  @Input() public origin?:
+    | string
+    | google.maps.Place
+    | google.maps.LatLng
+    | google.maps.LatLngLiteral;
+
+  @Input() public destination?:
+    | string
+    | google.maps.Place
+    | google.maps.LatLng
+    | google.maps.LatLngLiteral;
+
+  @Input() public travelMode?: google.maps.TravelMode;
+
+  @Input() public transitOptions?: google.maps.TransitOptions;
+
+  @Input() public drivingOptions?: google.maps.DrivingOptions;
+
+  @Input() public waypoints: Array&lt;google.maps.DirectionsWaypoint&gt; &#x3D; [];
+
+  @Input() public optimizeWaypoints &#x3D; true;
+
+  @Input() public provideRouteAlternatives &#x3D; false;
+
+  @Input() public avoidHighways &#x3D; false;
+
+  @Input() public avoidTolls &#x3D; false;
+
+  @Input() public avoidFerries &#x3D; false;
+
+  @Input() public unitSystem?: google.maps.UnitSystem;
+
+  @Input() public renderOptions?: google.maps.DirectionsRendererOptions;
+
+  @Input() public panel?: Element;
+
+  @Input() public markerOptions?: {
+    origin: { infoWindow?: string | Node } &amp; google.maps.MarkerOptions;
+    destination: { infoWindow?: string | Node } &amp; google.maps.MarkerOptions;
+    waypoints?: Array&lt;
+      { infoWindow?: string | Node } &amp; google.maps.MarkerOptions
+    &gt;;
+  };
+
+  @Input() public infoWindow?: google.maps.InfoWindow;
+
+  // Remove or draw direction
+  @Input() public visible &#x3D; true;
+
+  // Render exist direction
+  @Input() public renderRoute?: google.maps.DirectionsResult | null;
+
+  // Direction change event handler
+  @Output() public directionChange: EventEmitter&lt;google.maps.DirectionsResult&gt; &#x3D;
+    new EventEmitter&lt;google.maps.DirectionsResult&gt;();
+
+  // Direction response for the new request
+  @Output()
+  public directionResponse: EventEmitter&lt;google.maps.DirectionsResult&gt; &#x3D;
+    new EventEmitter&lt;google.maps.DirectionsResult&gt;();
+
+  // Send a custom infowindow
+  @Output() public sendInfoWindow: EventEmitter&lt;google.maps.InfoWindow&gt; &#x3D;
+    new EventEmitter&lt;google.maps.InfoWindow&gt;();
+
+  // Status of Directions Query (google.maps.DirectionsStatus.OVER_QUERY_LIMIT)
+  @Output() public status: EventEmitter&lt;google.maps.DirectionsStatus&gt; &#x3D;
+    new EventEmitter&lt;google.maps.DirectionsStatus&gt;();
+
+  // Marker drag event handler
+  @Output() public originDrag: EventEmitter&lt;any&gt; &#x3D; new EventEmitter&lt;any&gt;();
+  @Output() public destinationDrag: EventEmitter&lt;any&gt; &#x3D; new EventEmitter&lt;any&gt;();
+
+  public directionsService!: google.maps.DirectionsService;
+  public directionsRenderer!: google.maps.DirectionsRenderer;
+
+  // Use for custom marker
+  private originMarker?: any;
+  private destinationMarker?: any;
+  private waypointsMarker: Array&lt;google.maps.Marker&gt; &#x3D; [];
+
+  // Use for visible flag
+  private isFirstChange &#x3D; true;
+  private map: google.maps.Map &#x3D; null;
+
+  constructor(
+    @Inject(MAP_PROVIDER) @SkipSelf() private mapProvider: string,
+    private mapsApiWrapper: MapsApiWrapper,
+    private mapsAPILoader: MapsAPILoader,
+    protected zone: NgZone,
+  ) {}
+
+  ngOnInit(): void {
+    if (this.mapProvider !&#x3D;&#x3D; &#x27;GoogleMaps&#x27;) {
+      throw new Error(&#x27;&lt;map-direction&gt; only support google-maps provider yet&#x27;);
+    }
+  }
+
+  ngOnChanges(obj: SimpleChanges): void {
+    /**
+     * When visible is false then remove the direction layer
+     */
+    if (!this.visible) {
+      try {
+        this.removeMarkers();
+        this.removeDirections();
+      } catch (e) {
+        /* empty */
+      }
+    } else {
+      if (this.isFirstChange) {
+        /**
+         * When visible is false at the first time
+         */
+        if (typeof this.directionsRenderer &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+          this.directionDraw();
+        }
+        this.isFirstChange &#x3D; false;
+        return;
+      }
+
+      /**
+       * When renderOptions are not first change then reset the display
+       */
+      if (typeof obj.renderOptions !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+        if (obj.renderOptions.firstChange &#x3D;&#x3D;&#x3D; false) {
+          this.removeMarkers();
+          this.removeDirections();
+        }
+      }
+      this.directionDraw();
+    }
+  }
+
+  ngOnDestroy() {
+    this.destroyMarkers();
+    this.removeDirections();
+  }
+
+  /**
+   * This event is fired when the user creating or updating this direction
+   */
+  private async directionDraw() {
+    await this.mapsAPILoader.load();
+    this.map &#x3D; await this.mapsApiWrapper.getNativeMap();
+
+    if (this.map &#x3D;&#x3D;&#x3D; null) {
+      throw new Error(&#x27;Missing map reference&#x27;);
+    }
+
+    if (this.waypoints.length !&#x3D;&#x3D; this.markerOptions.waypoints.length) {
+      throw new Error(
+        &#x27;waypoints.length does not match markerOptions.waypoints.length&#x27;,
+      );
+    }
+
+    if (typeof this.directionsRenderer &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      this.directionsRenderer &#x3D; new google.maps.DirectionsRenderer(
+        this.renderOptions,
+      );
+      this.directionsRenderer.setMap(this.map);
+      this.directionsRenderer.addListener(&#x27;directions_changed&#x27;, () &#x3D;&gt; {
+        this.directionChange.emit(this.directionsRenderer.getDirections());
+      });
+    }
+
+    if (typeof this.directionsService &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      this.directionsService &#x3D; new google.maps.DirectionsService();
+    }
+
+    if (typeof this.panel &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      this.directionsRenderer.setPanel(null);
+    } else {
+      this.directionsRenderer.setPanel(this.panel as any);
+    }
+
+    // Render exist direction
+    if (this.renderRoute) {
+      this.directionsRenderer.setDirections(this.renderRoute);
+      this.renderRoute &#x3D; undefined;
+    } else {
+      // Request new direction
+      this.directionsService.route(
+        {
+          origin: this.origin,
+          destination: this.destination,
+          travelMode: this.travelMode || google.maps.TravelMode.DRIVING,
+          transitOptions: this.transitOptions,
+          drivingOptions: this.drivingOptions,
+          waypoints: this.waypoints,
+          optimizeWaypoints: this.optimizeWaypoints,
+          provideRouteAlternatives: this.provideRouteAlternatives,
+          avoidHighways: this.avoidHighways,
+          avoidTolls: this.avoidTolls,
+          avoidFerries: this.avoidFerries,
+          unitSystem: this.unitSystem,
+        },
+        async (response: any, status) &#x3D;&gt; {
+          this.directionResponse.emit(response);
+
+          // Emit Query Status
+          this.status.emit(status);
+
+          /**
+           * DirectionsStatus
+           * https://developers.google.com/maps/documentation/javascript/directions#DirectionsStatus
+           */
+          switch (status) {
+            case google.maps.DirectionsStatus.OK:
+              this.directionsRenderer.setDirections(response);
+
+              /**
+               * Emit The DirectionsResult Object
+               * https://developers.google.com/maps/documentation/javascript/directions?hl&#x3D;en#DirectionsResults
+               */
+              // Custom Markers
+              if (typeof this.markerOptions !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+                this.destroyMarkers();
+
+                // Set custom markers
+                const _route &#x3D; response.routes[0];
+
+                try {
+                  if (_route.legs.length &#x3D;&#x3D;&#x3D; 0) {
+                    console.warn(&#x27;The route has no legs.&#x27;);
+                    return;
+                  }
+
+                  // Origin Marker
+                  if (typeof this.markerOptions.origin !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+                    this.markerOptions.origin.map &#x3D; this.map;
+                    this.markerOptions.origin.position &#x3D;
+                      _route.legs[0].start_location;
+                    this.originMarker &#x3D; this.setMarker(
+                      this.map,
+                      this.originMarker,
+                      this.markerOptions.origin,
+                      _route.legs[0].start_address,
+                    );
+
+                    if (this.markerOptions.origin.draggable) {
+                      this.originMarker.addListener(&#x27;dragend&#x27;, () &#x3D;&gt; {
+                        this.origin &#x3D; this.originMarker.position;
+                        this.directionDraw();
+                        this.originDrag.emit(this.origin);
+                      });
+                    }
+                  }
+
+                  // Destination Marker
+                  if (typeof this.markerOptions.destination !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+                    this.markerOptions.destination.map &#x3D; this.map;
+                    this.markerOptions.destination.position &#x3D;
+                      _route.legs[_route.legs.length - 1].end_location;
+                    this.destinationMarker &#x3D; this.setMarker(
+                      this.map,
+                      this.destinationMarker,
+                      this.markerOptions.destination,
+                      _route.legs[_route.legs.length - 1].end_address,
+                    );
+                    if (this.markerOptions.destination.draggable) {
+                      this.destinationMarker.addListener(&#x27;dragend&#x27;, () &#x3D;&gt; {
+                        this.destination &#x3D; this.destinationMarker.position;
+                        this.directionDraw();
+                        this.destinationDrag.emit(this.destination);
+                      });
+                    }
+                  }
+
+                  // Waypoints Marker
+                  if (
+                    typeof this.markerOptions !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp;
+                    typeof this.markerOptions.waypoints !&#x3D;&#x3D; &#x27;undefined&#x27;
+                  ) {
+                    let addedWaypointIndex &#x3D; 0;
+                    for (let i &#x3D; 0; i &lt; _route.legs.length; i++) {
+                      const leg &#x3D; _route.legs[i];
+                      if (i !&#x3D;&#x3D; _route.legs.length - 1) {
+                        //Stopover: false - waypoints position equals leg.via_waypoint[j].location
+                        for (let j &#x3D; 0; j &lt; leg.via_waypoint.length; j++) {
+                          const via_waypoint &#x3D; leg.via_waypoint[j];
+                          this.markerOptions.waypoints[addedWaypointIndex].map &#x3D;
+                            this.map;
+                          this.markerOptions.waypoints[
+                            addedWaypointIndex
+                          ].position &#x3D; via_waypoint.location;
+                          this.waypointsMarker[addedWaypointIndex] &#x3D;
+                            this.setMarker(
+                              this.map,
+                              this.waypoints[addedWaypointIndex],
+                              this.markerOptions.waypoints[addedWaypointIndex],
+                              null,
+                            );
+                          addedWaypointIndex++;
+                        }
+
+                        //Stopover: true - waypoints position equals leg.end_location
+                        this.markerOptions.waypoints[addedWaypointIndex].map &#x3D;
+                          this.map;
+                        this.markerOptions.waypoints[
+                          addedWaypointIndex
+                        ].position &#x3D; leg.end_location;
+                        this.waypointsMarker[addedWaypointIndex] &#x3D;
+                          this.setMarker(
+                            this.map,
+                            this.waypoints[addedWaypointIndex],
+                            this.markerOptions.waypoints[addedWaypointIndex],
+                            leg.start_address,
+                          );
+                        addedWaypointIndex++;
+                      }
+                    }
+                  }
+                } catch (err) {
+                  console.error(&#x27;MarkerOptions error.&#x27;, err);
+                }
+              }
+
+              break;
+
+            case google.maps.DirectionsStatus.OVER_QUERY_LIMIT:
+              console.warn(
+                &#x27;The webpage has sent too many requests within the allowed time period.&#x27;,
+              );
+              break;
+            default:
+              // console.warn(status);
+              break;
+          } // End switch
+        },
+      );
+    }
+  }
+
+  /**
+   * Custom Origin and Destination Icon
+   * @param map map
+   * @param marker marker
+   * @param markerOpts properties
+   * @param content marker&#x27;s infowindow content
+   * @returns new marker
+   */
+  private setMarker(
+    map: google.maps.Map,
+    marker: google.maps.Marker | google.maps.DirectionsWaypoint,
+    markerOpts: any,
+    content: google.maps.LatLng | string,
+  ): google.maps.Marker {
+    if (typeof this.infoWindow &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      this.infoWindow &#x3D; new google.maps.InfoWindow();
+      this.sendInfoWindow.emit(this.infoWindow);
+    }
+
+    marker &#x3D; new google.maps.Marker(markerOpts);
+    // https://developers.google.com/maps/documentation/javascript/reference/marker?hl&#x3D;zh-tw#MarkerOptions.clickable
+    if (marker.getClickable()) {
+      marker.addListener(&#x27;click&#x27;, () &#x3D;&gt; {
+        const infoWindowContent: string &#x3D;
+          typeof markerOpts.infoWindow &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;
+            ? content
+            : markerOpts.infoWindow;
+        this.infoWindow.setContent(infoWindowContent);
+        this.infoWindow.open(map, marker as google.maps.MVCObject);
+      });
+    }
+    return marker;
+  }
+
+  /**
+   * This event is fired when remove markers
+   */
+  private removeMarkers(): void {
+    if (typeof this.originMarker !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      this.originMarker.setMap(null);
+    }
+    if (typeof this.destinationMarker !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      this.destinationMarker.setMap(null);
+    }
+    this.waypointsMarker.forEach((w: google.maps.Marker) &#x3D;&gt; {
+      if (typeof w !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+        w.setMap(null);
+      }
+    });
+  }
+
+  /**
+   * This event is fired when remove directions
+   */
+  private removeDirections(): void {
+    if (this.directionsRenderer !&#x3D;&#x3D; undefined) {
+      this.directionsRenderer.setPanel(null);
+      this.directionsRenderer.setMap(null);
+      this.directionsRenderer &#x3D; undefined;
+    }
+  }
+
+  /**
+   * This event is fired when destroy markers
+   */
+  private destroyMarkers(): void {
+    // Remove origin markers
+    try {
+      if (
+        typeof this.markerOptions !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp;
+        typeof this.originMarker !&#x3D;&#x3D; &#x27;undefined&#x27;
+      ) {
+        google.maps.event.clearListeners(this.originMarker, &#x27;click&#x27;);
+        if (this.markerOptions.origin.draggable) {
+          google.maps.event.clearListeners(this.originMarker, &#x27;dragend&#x27;);
+        }
+      }
+      if (
+        typeof this.markerOptions !&#x3D;&#x3D; &#x27;undefined&#x27; &amp;&amp;
+        typeof this.destinationMarker !&#x3D;&#x3D; &#x27;undefined&#x27;
+      ) {
+        google.maps.event.clearListeners(this.destinationMarker, &#x27;click&#x27;);
+        if (this.markerOptions.origin.draggable) {
+          google.maps.event.clearListeners(this.destinationMarker, &#x27;dragend&#x27;);
+        }
+      }
+      this.waypointsMarker.forEach((w: google.maps.Marker) &#x3D;&gt; {
+        if (typeof w !&#x3D;&#x3D; &#x27;undefined&#x27;) {
+          google.maps.event.clearListeners(w, &#x27;click&#x27;);
+        }
+      });
+      this.removeMarkers();
+    } catch (err) {
+      console.error(&#x27;Can not reset custom marker.&#x27;, err);
+    }
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'NgMapsDirectionDirective.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

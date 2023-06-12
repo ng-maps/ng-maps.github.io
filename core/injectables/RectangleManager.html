@@ -442,7 +442,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/BoundsLiteral.html" target="_self" >Promise&lt;BoundsLiteral&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/BoundsLiteral.html" target="_self" >Promise&lt;BoundsLiteral | null&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -977,7 +977,7 @@ export abstract class RectangleManager&lt;T &#x3D; any&gt; {
 
   public abstract getBounds(
     rectangle: NgMapsRectangleDirective,
-  ): Promise&lt;BoundsLiteral&gt;;
+  ): Promise&lt;BoundsLiteral | null&gt;;
 
   public abstract setBounds(rectangle: NgMapsRectangleDirective): Promise&lt;void&gt;;
 
